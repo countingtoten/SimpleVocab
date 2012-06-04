@@ -48,7 +48,6 @@
                 <navigationController id="rwi-eO-94j" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Dictionary" image="book" id="7"/>
                     <toolbarItems/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="Szb-tb-fep">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
