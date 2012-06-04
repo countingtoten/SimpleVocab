@@ -12,20 +12,29 @@
 		0B0A676C157C275D00C79FC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0A676B157C275D00C79FC2 /* CoreGraphics.framework */; };
 		0B0A6772157C275D00C79FC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A6770157C275D00C79FC2 /* InfoPlist.strings */; };
 		0B0A6774157C275D00C79FC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A6773157C275D00C79FC2 /* main.m */; };
-		0B0A6778157C275D00C79FC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A6777157C275D00C79FC2 /* AppDelegate.m */; };
+		0B0A6778157C275D00C79FC2 /* StudyDictionaryAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A6777157C275D00C79FC2 /* StudyDictionaryAppDelegate.m */; };
 		0B0A677B157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A6779157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard */; };
 		0B0A677E157C275E00C79FC2 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A677C157C275E00C79FC2 /* MainStoryboard_iPad.storyboard */; };
-		0B0A6781157C275E00C79FC2 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A6780157C275E00C79FC2 /* FirstViewController.m */; };
-		0B0A6783157C275E00C79FC2 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A6782157C275E00C79FC2 /* first.png */; };
-		0B0A6785157C275E00C79FC2 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A6784157C275E00C79FC2 /* first@2x.png */; };
-		0B0A6788157C275E00C79FC2 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A6787157C275E00C79FC2 /* SecondViewController.m */; };
-		0B0A678A157C275E00C79FC2 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A6789157C275E00C79FC2 /* second.png */; };
-		0B0A678C157C275E00C79FC2 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A678B157C275E00C79FC2 /* second@2x.png */; };
 		0B0A6794157C275E00C79FC2 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0A6793157C275E00C79FC2 /* SenTestingKit.framework */; };
 		0B0A6795157C275E00C79FC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0A6767157C275D00C79FC2 /* UIKit.framework */; };
 		0B0A6796157C275E00C79FC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0A6769157C275D00C79FC2 /* Foundation.framework */; };
 		0B0A679E157C275E00C79FC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A679C157C275E00C79FC2 /* InfoPlist.strings */; };
 		0B0A67A1157C275E00C79FC2 /* StudyDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A67A0157C275E00C79FC2 /* StudyDictionaryTests.m */; };
+		0B71392F157D2F360018D022 /* DictionarySearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B71392E157D2F360018D022 /* DictionarySearchViewController.m */; };
+		0B713932157D2F8E0018D022 /* Wordnik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B713931157D2F8E0018D022 /* Wordnik.framework */; };
+		0B713938157D304D0018D022 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B713937157D304D0018D022 /* CoreText.framework */; };
+		0B71393A157D305A0018D022 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B713939157D305A0018D022 /* SystemConfiguration.framework */; };
+		0B71393C157D306A0018D022 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B71393B157D306A0018D022 /* libsqlite3.dylib */; };
+		0B713954157D37F70018D022 /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B713949157D37F70018D022 /* book.png */; };
+		0B713955157D37F70018D022 /* book@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B71394A157D37F70018D022 /* book@2x.png */; };
+		0B713956157D37F70018D022 /* flashcards.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B71394B157D37F70018D022 /* flashcards.png */; };
+		0B713957157D37F70018D022 /* flashcards@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B71394C157D37F70018D022 /* flashcards@2x.png */; };
+		0B713958157D37F70018D022 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B71394D157D37F70018D022 /* gear.png */; };
+		0B713959157D37F70018D022 /* gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B71394E157D37F70018D022 /* gear@2x.png */; };
+		0B71395A157D37F70018D022 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B71394F157D37F70018D022 /* info.png */; };
+		0B71395B157D37F70018D022 /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B713950157D37F70018D022 /* info@2x.png */; };
+		0B71395C157D37F70018D022 /* notepad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B713951157D37F70018D022 /* notepad.png */; };
+		0B71395D157D37F70018D022 /* notepad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B713952157D37F70018D022 /* notepad@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,28 +52,37 @@
 		0B0A6767157C275D00C79FC2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0B0A6769157C275D00C79FC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0B0A676B157C275D00C79FC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0B0A676F157C275D00C79FC2 /* StudyDictionary-Info.plist */ = {isa = PBXFileReference; path = "StudyDictionary-Info.plist"; sourceTree = "<group>"; };
+		0B0A676F157C275D00C79FC2 /* StudyDictionary-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StudyDictionary-Info.plist"; sourceTree = "<group>"; };
 		0B0A6771157C275D00C79FC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0B0A6773157C275D00C79FC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0B0A6775157C275D00C79FC2 /* StudyDictionary-Prefix.pch */ = {isa = PBXFileReference; path = "StudyDictionary-Prefix.pch"; sourceTree = "<group>"; };
-		0B0A6776157C275D00C79FC2 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
-		0B0A6777157C275D00C79FC2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0B0A6775157C275D00C79FC2 /* StudyDictionary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StudyDictionary-Prefix.pch"; sourceTree = "<group>"; };
+		0B0A6776157C275D00C79FC2 /* StudyDictionaryAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyDictionaryAppDelegate.h; sourceTree = "<group>"; };
+		0B0A6777157C275D00C79FC2 /* StudyDictionaryAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyDictionaryAppDelegate.m; sourceTree = "<group>"; };
 		0B0A677A157C275D00C79FC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		0B0A677D157C275E00C79FC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		0B0A677F157C275E00C79FC2 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
-		0B0A6780157C275E00C79FC2 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		0B0A6782157C275E00C79FC2 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		0B0A6784157C275E00C79FC2 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		0B0A6786157C275E00C79FC2 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
-		0B0A6787157C275E00C79FC2 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		0B0A6789157C275E00C79FC2 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		0B0A678B157C275E00C79FC2 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		0B0A6792157C275E00C79FC2 /* StudyDictionaryTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyDictionaryTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B0A6793157C275E00C79FC2 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		0B0A679B157C275E00C79FC2 /* StudyDictionaryTests-Info.plist */ = {isa = PBXFileReference; path = "StudyDictionaryTests-Info.plist"; sourceTree = "<group>"; };
+		0B0A679B157C275E00C79FC2 /* StudyDictionaryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StudyDictionaryTests-Info.plist"; sourceTree = "<group>"; };
 		0B0A679D157C275E00C79FC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0B0A679F157C275E00C79FC2 /* StudyDictionaryTests.h */ = {isa = PBXFileReference; path = StudyDictionaryTests.h; sourceTree = "<group>"; };
+		0B0A679F157C275E00C79FC2 /* StudyDictionaryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyDictionaryTests.h; sourceTree = "<group>"; };
 		0B0A67A0157C275E00C79FC2 /* StudyDictionaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyDictionaryTests.m; sourceTree = "<group>"; };
+		0B71392D157D2F360018D022 /* DictionarySearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionarySearchViewController.h; sourceTree = "<group>"; };
+		0B71392E157D2F360018D022 /* DictionarySearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionarySearchViewController.m; sourceTree = "<group>"; };
+		0B713931157D2F8E0018D022 /* Wordnik.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wordnik.framework; path = "External/wordkit/frameworks/objective-c/Wordnik WordKit 1.02/iOS Framework/Wordnik.framework"; sourceTree = "<group>"; };
+		0B713937157D304D0018D022 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		0B713939157D305A0018D022 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0B71393B157D306A0018D022 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		0B713941157D32700018D022 /* StudyDictionaryAPIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyDictionaryAPIConstants.h; sourceTree = "<group>"; };
+		0B713949157D37F70018D022 /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book.png; sourceTree = "<group>"; };
+		0B71394A157D37F70018D022 /* book@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book@2x.png"; sourceTree = "<group>"; };
+		0B71394B157D37F70018D022 /* flashcards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flashcards.png; sourceTree = "<group>"; };
+		0B71394C157D37F70018D022 /* flashcards@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashcards@2x.png"; sourceTree = "<group>"; };
+		0B71394D157D37F70018D022 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
+		0B71394E157D37F70018D022 /* gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear@2x.png"; sourceTree = "<group>"; };
+		0B71394F157D37F70018D022 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		0B713950157D37F70018D022 /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@2x.png"; sourceTree = "<group>"; };
+		0B713951157D37F70018D022 /* notepad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notepad.png; sourceTree = "<group>"; };
+		0B713952157D37F70018D022 /* notepad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notepad@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +90,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B71393C157D306A0018D022 /* libsqlite3.dylib in Frameworks */,
+				0B71393A157D305A0018D022 /* SystemConfiguration.framework in Frameworks */,
+				0B713938157D304D0018D022 /* CoreText.framework in Frameworks */,
+				0B713932157D2F8E0018D022 /* Wordnik.framework in Frameworks */,
 				0B0A6768157C275D00C79FC2 /* UIKit.framework in Frameworks */,
 				0B0A676A157C275D00C79FC2 /* Foundation.framework in Frameworks */,
 				0B0A676C157C275D00C79FC2 /* CoreGraphics.framework in Frameworks */,
@@ -113,6 +135,10 @@
 		0B0A6766157C275D00C79FC2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B71393B157D306A0018D022 /* libsqlite3.dylib */,
+				0B713939157D305A0018D022 /* SystemConfiguration.framework */,
+				0B713937157D304D0018D022 /* CoreText.framework */,
+				0B713931157D2F8E0018D022 /* Wordnik.framework */,
 				0B0A6767157C275D00C79FC2 /* UIKit.framework */,
 				0B0A6769157C275D00C79FC2 /* Foundation.framework */,
 				0B0A676B157C275D00C79FC2 /* CoreGraphics.framework */,
@@ -124,18 +150,13 @@
 		0B0A676D157C275D00C79FC2 /* StudyDictionary */ = {
 			isa = PBXGroup;
 			children = (
-				0B0A6776157C275D00C79FC2 /* AppDelegate.h */,
-				0B0A6777157C275D00C79FC2 /* AppDelegate.m */,
+				0B0A6776157C275D00C79FC2 /* StudyDictionaryAppDelegate.h */,
+				0B0A6777157C275D00C79FC2 /* StudyDictionaryAppDelegate.m */,
+				0B713941157D32700018D022 /* StudyDictionaryAPIConstants.h */,
 				0B0A6779157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard */,
 				0B0A677C157C275E00C79FC2 /* MainStoryboard_iPad.storyboard */,
-				0B0A677F157C275E00C79FC2 /* FirstViewController.h */,
-				0B0A6780157C275E00C79FC2 /* FirstViewController.m */,
-				0B0A6782157C275E00C79FC2 /* first.png */,
-				0B0A6784157C275E00C79FC2 /* first@2x.png */,
-				0B0A6786157C275E00C79FC2 /* SecondViewController.h */,
-				0B0A6787157C275E00C79FC2 /* SecondViewController.m */,
-				0B0A6789157C275E00C79FC2 /* second.png */,
-				0B0A678B157C275E00C79FC2 /* second@2x.png */,
+				0B71392D157D2F360018D022 /* DictionarySearchViewController.h */,
+				0B71392E157D2F360018D022 /* DictionarySearchViewController.m */,
 				0B0A676E157C275D00C79FC2 /* Supporting Files */,
 			);
 			path = StudyDictionary;
@@ -144,6 +165,7 @@
 		0B0A676E157C275D00C79FC2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0B713946157D37D20018D022 /* Images */,
 				0B0A676F157C275D00C79FC2 /* StudyDictionary-Info.plist */,
 				0B0A6770157C275D00C79FC2 /* InfoPlist.strings */,
 				0B0A6773157C275D00C79FC2 /* main.m */,
@@ -169,6 +191,32 @@
 				0B0A679C157C275E00C79FC2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0B713946157D37D20018D022 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0B713947157D37F70018D022 /* TabBar */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		0B713947157D37F70018D022 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0B713949157D37F70018D022 /* book.png */,
+				0B71394A157D37F70018D022 /* book@2x.png */,
+				0B71394B157D37F70018D022 /* flashcards.png */,
+				0B71394C157D37F70018D022 /* flashcards@2x.png */,
+				0B71394D157D37F70018D022 /* gear.png */,
+				0B71394E157D37F70018D022 /* gear@2x.png */,
+				0B71394F157D37F70018D022 /* info.png */,
+				0B713950157D37F70018D022 /* info@2x.png */,
+				0B713951157D37F70018D022 /* notepad.png */,
+				0B713952157D37F70018D022 /* notepad@2x.png */,
+			);
+			name = TabBar;
+			path = Images/TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,10 +293,16 @@
 				0B0A6772157C275D00C79FC2 /* InfoPlist.strings in Resources */,
 				0B0A677B157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard in Resources */,
 				0B0A677E157C275E00C79FC2 /* MainStoryboard_iPad.storyboard in Resources */,
-				0B0A6783157C275E00C79FC2 /* first.png in Resources */,
-				0B0A6785157C275E00C79FC2 /* first@2x.png in Resources */,
-				0B0A678A157C275E00C79FC2 /* second.png in Resources */,
-				0B0A678C157C275E00C79FC2 /* second@2x.png in Resources */,
+				0B713954157D37F70018D022 /* book.png in Resources */,
+				0B713955157D37F70018D022 /* book@2x.png in Resources */,
+				0B713956157D37F70018D022 /* flashcards.png in Resources */,
+				0B713957157D37F70018D022 /* flashcards@2x.png in Resources */,
+				0B713958157D37F70018D022 /* gear.png in Resources */,
+				0B713959157D37F70018D022 /* gear@2x.png in Resources */,
+				0B71395A157D37F70018D022 /* info.png in Resources */,
+				0B71395B157D37F70018D022 /* info@2x.png in Resources */,
+				0B71395C157D37F70018D022 /* notepad.png in Resources */,
+				0B71395D157D37F70018D022 /* notepad@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,9 +338,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B0A6774157C275D00C79FC2 /* main.m in Sources */,
-				0B0A6778157C275D00C79FC2 /* AppDelegate.m in Sources */,
-				0B0A6781157C275E00C79FC2 /* FirstViewController.m in Sources */,
-				0B0A6788157C275E00C79FC2 /* SecondViewController.m in Sources */,
+				0B0A6778157C275D00C79FC2 /* StudyDictionaryAppDelegate.m in Sources */,
+				0B71392F157D2F360018D022 /* DictionarySearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,10 +447,17 @@
 		0B0A67A5157C275E00C79FC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/External/wordkit/frameworks/objective-c/Wordnik WordKit 1.02/iOS Framework\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StudyDictionary/StudyDictionary-Prefix.pch";
 				INFOPLIST_FILE = "StudyDictionary/StudyDictionary-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -405,10 +465,17 @@
 		0B0A67A6157C275E00C79FC2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/External/wordkit/frameworks/objective-c/Wordnik WordKit 1.02/iOS Framework\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StudyDictionary/StudyDictionary-Prefix.pch";
 				INFOPLIST_FILE = "StudyDictionary/StudyDictionary-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -466,6 +533,7 @@
 				0B0A67A6157C275E00C79FC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B0A67A7157C275E00C79FC2 /* Build configuration list for PBXNativeTarget "StudyDictionaryTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +542,7 @@
 				0B0A67A9157C275E00C79FC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

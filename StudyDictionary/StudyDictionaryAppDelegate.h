@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  StudyDictionaryAppDelegate.h
 //  StudyDictionary
 //
 //  Created by James Weinert on 6/3/12.
@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Wordnik/Wordnik.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface StudyDictionaryAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (readonly, strong, nonatomic) WNClient *wordnikClient;
 
 @end
