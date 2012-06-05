@@ -84,6 +84,7 @@
                     <navigationItem key="navigationItem" title="Study Dictionary" id="ZLt-gZ-eRZ"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="Q8G-5M-jZw" id="lmd-JK-4mk"/>
+                        <segue destination="7fq-y4-4TT" kind="push" identifier="WordDefine" id="v2u-dC-YML"/>
                     </connections>
                 </viewController>
                 <searchDisplayController id="Q8G-5M-jZw">
@@ -96,7 +97,34 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1193" y="-138"/>
+            <point key="canvasLocation" x="1183" y="-138"/>
+        </scene>
+        <!--Word Definition View Controller-->
+        <scene sceneID="iIq-1a-seQ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gz-an-cec" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="7fq-y4-4TT" customClass="WordDefinitionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Idt-st-bHx">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="tRV-b4-Lfh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tJj-2t-eeW"/>
+                    <connections>
+                        <outlet property="wordDefinition" destination="tRV-b4-Lfh" id="gfe-xq-7mJ"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1634" y="-138"/>
         </scene>
     </scenes>
     <resources>
@@ -107,9 +135,15 @@
         <class className="DictionarySearchViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DictionarySearchViewController.h"/>
         </class>
+        <class className="WordDefinitionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WordDefinitionViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="wordDefinition" candidateClass="UITextView"/>
+            </relationships>
+        </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>

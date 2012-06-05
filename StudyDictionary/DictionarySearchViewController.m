@@ -7,31 +7,39 @@
 //
 
 #import "DictionarySearchViewController.h"
-#import "StudyDictionaryAppDelegate.h"
+#import "StudyDictionaryAPIConstants.h"
+#import "WordDefinitionViewController.h"
 
 @interface DictionarySearchViewController ()
 - (void)searchForWordFromString:(NSString *)searchString;
 @end
 
 @implementation DictionarySearchViewController
+@synthesize wordnikClient = _wordnikClient;
+@synthesize searchRequest;
 @synthesize searchResults;
-//@synthesize wordnikClient, searchRequest;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-    StudyDictionaryAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    wordnikClient = [appDelegate wordnikClient];
-    [wordnikClient addObserver: self];
+    [self.wordnikClient addObserver: self];
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
-    [searchRequest cancel];
+    [self.searchRequest cancel];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"WordDefine"]) {
+        WordDefinitionViewController *wordDefViewController = segue.destinationViewController;
+        NSIndexPath *indexPath = (NSIndexPath *)sender;
+        wordDefViewController.wordToDefine = [self.searchResults objectAtIndex:indexPath.row];
+    }
 }
 
 #pragma mark - Table view data source
@@ -50,6 +58,7 @@
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     cell.textLabel.text = [searchResults objectAtIndex:indexPath.row];
@@ -60,13 +69,7 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    [self performSegueWithIdentifier:@"WordDefine" sender:indexPath];
 }
 
 #pragma mark Search Bar
@@ -76,8 +79,7 @@
 
 - (void)searchForWordFromString:(NSString *)searchString {
     if (searchString != nil && [searchString length] > 0) {
-//        NSLog(@"searcfForWordFromString");
-        [searchRequest cancel];
+        [self.searchRequest cancel];
         /* Submit an autocompletion request */
         WNWordSearchRequest *req = [WNWordSearchRequest requestWithWordFragment:searchString
                                                                            skip:0 
@@ -92,14 +94,13 @@
                                                                       maxLength:0
                                                                 resultCollation:WNAutocompleteWordCollationFrequencyDescending];
         
-        searchRequest = [wordnikClient autocompletedWordsWithRequest:req];
+        self.searchRequest = [self.wordnikClient autocompletedWordsWithRequest:req];
     }
 }
 
 #pragma mark Wordnik
 - (void) client: (WNClient *) client autocompleteWordRequestDidFailWithError: (NSError *) error requestTicket: (WNRequestTicket *) requestTicket {
-    NSLog(@"autocompleteWordRequestDidFailWithError");
-    searchRequest = nil;
+    self.searchRequest = nil;
     
     /* Report error */
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Lookup Failure" 
@@ -112,9 +113,8 @@
 
 // from WNClientObserver protocol
 - (void) client: (WNClient *) client didReceiveAutocompleteWordResponse: (WNWordSearchResponse *) response requestTicket: (WNRequestTicket *) requestTicket {
-//    NSLog(@"didReceiveAutoCompleteWordResponse");
-    if ([searchRequest isEqual:requestTicket]) {  
-        searchRequest = nil;
+    if ([self.searchRequest isEqual:requestTicket]) {  
+        self.searchRequest = nil;
         
         /* Display results */
         // NSLog([response.words componentsJoinedByString: @"\n"]);
@@ -123,6 +123,33 @@
         self.searchResults = [tempResults array];
         [self.searchDisplayController.searchResultsTableView reloadData];
     }
+}
+
+#pragma mark - Wordnik Client
+- (WNClient *)wordnikClient {
+    if (_wordnikClient != nil) {
+        return _wordnikClient;
+    }
+    
+    WNClientConfig *config = [WNClientConfig configWithAPIKey:WORDNIK_API_KEY];
+    _wordnikClient = [[WNClient alloc] initWithClientConfig: config];
+    
+    [_wordnikClient requestAPIUsageStatusWithCompletionBlock: ^(WNClientAPIUsageStatus *status, NSError *error) {
+        if (error != nil) {
+            NSLog(@"Usage request failed: %@", error);
+            return;
+        }
+        
+        NSMutableString *output = [NSMutableString string];
+        [output appendFormat: @"Expires at: %@\n", status.expirationDate];
+        [output appendFormat: @"Reset at: %@\n", status.resetDate];
+        [output appendFormat: @"Total calls permitted: %ld\n", (long) status.totalPermittedRequestCount];
+        [output appendFormat: @"Total calls remaining: %ld\n", (long) status.remainingPermittedRequestCount];
+        
+        NSLog(@"API Usage:\n%@", output);
+    }];
+    
+    return _wordnikClient;
 }
 
 @end

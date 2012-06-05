@@ -16,8 +16,8 @@
     NSArray *searchResults;
 }
 
-//@property (strong, nonatomic) WNClient *wordnikClient;
-//@property (strong, nonatomic) WNRequestTicket *searchRequest;
+@property (strong, nonatomic) WNClient *wordnikClient;
+@property (strong, nonatomic) WNRequestTicket *searchRequest;
 
 @property (strong, nonatomic) NSArray *searchResults;
 
