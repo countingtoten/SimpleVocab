@@ -7,11 +7,22 @@
 //
 
 #import "DictionarySearchViewController.h"
-#import "StudyDictionaryAPIConstants.h"
+
+#import "AllLists.h"
+#import "List.h"
+#import "SearchBarContents.h"
+#import "StudyDictionaryAppDelegate.h"
+#import "StudyDictionaryConstants.h"
+#import "StudyDictionaryHelpers.h"
+#import "Word.h"
 #import "WordDefinitionViewController.h"
 
 @interface DictionarySearchViewController ()
+- (void)applicationWillResignActive:(NSNotification *)notification;
+- (void)loadSearchBarState;
+- (void)saveSearchBarState;
 - (void)searchForWordFromString:(NSString *)searchString;
+- (void)updateWordLookupCount:(NSString *)wordToLookup;
 @end
 
 @implementation DictionarySearchViewController
@@ -23,11 +34,23 @@
     [super viewDidLoad];
 	
     [self.wordnikClient addObserver: self];
+    
+    [self loadSearchBarState];
+    
+    UIApplication *app = [UIApplication sharedApplication];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(applicationWillResignActive:)
+												 name:UIApplicationWillResignActiveNotification
+											   object:app];
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
     [self.searchRequest cancel];
+}
+
+- (void)applicationWillResignActive:(NSNotification *)notification {
+    [self saveSearchBarState];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -39,6 +62,102 @@
         WordDefinitionViewController *wordDefViewController = segue.destinationViewController;
         NSIndexPath *indexPath = (NSIndexPath *)sender;
         wordDefViewController.wordToDefine = [self.searchResults objectAtIndex:indexPath.row];
+    }
+}
+
+#pragma mark - Core Data Records
+- (void)loadSearchBarState {
+    StudyDictionaryAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *moc = [appDelegate managedObjectContext];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:kSearchBarEntityName inManagedObjectContext:moc];
+    
+    [request setEntity:entity];
+    
+    NSError *error = nil;
+    NSArray *array = [moc executeFetchRequest:request error:&error];
+    
+    if (array != nil) {
+        if ([array count] > 0) {
+            SearchBarContents *searchBar = [array objectAtIndex:0];
+            
+            if (searchBar.savedSearchString && ![searchBar.savedSearchString isEqualToString:@""]) {
+                [self.searchDisplayController setActive:[searchBar.searchWasActive boolValue]];
+                [self.searchDisplayController.searchBar setText:searchBar.savedSearchString];
+                
+                [self searchForWordFromString:searchBar.savedSearchString];
+            }
+        }
+    } else {
+        NSLog(@"Error");
+    }
+}
+
+- (void)saveSearchBarState {
+    StudyDictionaryAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *moc = [appDelegate managedObjectContext];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:kSearchBarEntityName inManagedObjectContext:moc];
+    
+    [request setEntity:entity];
+    
+    NSError *error = nil;
+    NSArray *array = [moc executeFetchRequest:request error:&error];
+    
+    if (array != nil) {
+        SearchBarContents *searchBar = nil;
+        if ([array count] > 0) {
+            searchBar = [array objectAtIndex:0];
+        } else {
+            searchBar = [NSEntityDescription insertNewObjectForEntityForName:kSearchBarEntityName inManagedObjectContext:moc];
+        }
+        
+        searchBar.savedSearchString = self.searchDisplayController.searchBar.text;
+        searchBar.searchWasActive = [NSNumber numberWithBool:[[self searchDisplayController] isActive]];
+        
+        [moc save:&error];
+    } else {
+        NSLog(@"Error");
+    }
+}
+
+- (void)updateWordLookupCount:(NSString *)wordToLookup {
+    StudyDictionaryAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *moc = [appDelegate managedObjectContext];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:kWordEntityName inManagedObjectContext:moc];
+    [request setEntity:entity];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(word = %@)", wordToLookup];
+    [request setPredicate:predicate];
+    
+    NSError *error = nil;
+    NSArray *wordObjects = [moc executeFetchRequest:request error:&error];
+    
+    Word *word = nil;
+    if (wordObjects != nil) {
+        if ([wordObjects count] > 0) {
+            word = [wordObjects objectAtIndex:0];
+        } else {
+            word = [NSEntityDescription insertNewObjectForEntityForName:kWordEntityName inManagedObjectContext:moc];
+            word.word = wordToLookup;
+            
+            // Since we are creating a Word entity entry in the database add it to the default list
+            List *defaultList = [StudyDictionaryHelpers getOrCreateDefaultList];
+            [word addBelongsToListObject:defaultList];
+        }
+        
+        NSUInteger count = [word.lookupCount unsignedIntegerValue];
+        count++;
+        word.lookupCount = [NSNumber numberWithUnsignedInteger:count];
+        
+        [moc save:&error];
+    } else {
+        NSLog(@"And Error Happened");
     }
 }
 
@@ -69,6 +188,7 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self updateWordLookupCount:[searchResults objectAtIndex:indexPath.row]];
     [self performSegueWithIdentifier:@"WordDefine" sender:indexPath];
 }
 

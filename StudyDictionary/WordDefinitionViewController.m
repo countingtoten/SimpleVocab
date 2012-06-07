@@ -7,7 +7,8 @@
 //
 
 #import "WordDefinitionViewController.h"
-#import "StudyDictionaryAPIConstants.h"
+
+#import "StudyDictionaryConstants.h"
 #import "SVProgressHUD.h"
 
 @interface NSArray (WNAdditions)

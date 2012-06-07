@@ -24,7 +24,6 @@
 		0B713932157D2F8E0018D022 /* Wordnik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B713931157D2F8E0018D022 /* Wordnik.framework */; };
 		0B713938157D304D0018D022 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B713937157D304D0018D022 /* CoreText.framework */; };
 		0B71393A157D305A0018D022 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B713939157D305A0018D022 /* SystemConfiguration.framework */; };
-		0B71393C157D306A0018D022 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B71393B157D306A0018D022 /* libsqlite3.dylib */; };
 		0B713954157D37F70018D022 /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B713949157D37F70018D022 /* book.png */; };
 		0B713955157D37F70018D022 /* book@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B71394A157D37F70018D022 /* book@2x.png */; };
 		0B713956157D37F70018D022 /* flashcards.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B71394B157D37F70018D022 /* flashcards.png */; };
@@ -38,6 +37,21 @@
 		0B713960157D400A0018D022 /* WordDefinitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B71395F157D400A0018D022 /* WordDefinitionViewController.m */; };
 		0B713965157D42930018D022 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B713962157D42930018D022 /* SVProgressHUD.bundle */; };
 		0B713966157D42930018D022 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B713964157D42930018D022 /* SVProgressHUD.m */; };
+		0B8113AC15801D8800D79DCA /* StudyDictionaryHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8113AB15801D8800D79DCA /* StudyDictionaryHelpers.m */; };
+		0B8113AD15801D8800D79DCA /* StudyDictionaryHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8113AB15801D8800D79DCA /* StudyDictionaryHelpers.m */; };
+		0B8FD9FA157E966300AE370B /* StudyDictionary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B8FD9F8157E966300AE370B /* StudyDictionary.xcdatamodeld */; };
+		0B8FD9FD157E9EC900AE370B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8FD9FC157E9EC900AE370B /* CoreData.framework */; };
+		0B8FD9FF157E9EE900AE370B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8FD9FE157E9EE900AE370B /* libsqlite3.dylib */; };
+		0BBC0032157EF3E10062B82F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBC0031157EF3E00062B82F /* ListViewController.m */; };
+		0BBC0033157EF3E10062B82F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBC0031157EF3E00062B82F /* ListViewController.m */; };
+		0BBCFFD5157EC1AB0062B82F /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFD4157EC1AB0062B82F /* Word.m */; };
+		0BBCFFD6157EC1AB0062B82F /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFD4157EC1AB0062B82F /* Word.m */; };
+		0BBCFFD9157EC1AB0062B82F /* SearchBarContents.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFD8157EC1AB0062B82F /* SearchBarContents.m */; };
+		0BBCFFDA157EC1AB0062B82F /* SearchBarContents.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFD8157EC1AB0062B82F /* SearchBarContents.m */; };
+		0BBCFFDD157EC1AB0062B82F /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFDC157EC1AB0062B82F /* List.m */; };
+		0BBCFFDE157EC1AB0062B82F /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFDC157EC1AB0062B82F /* List.m */; };
+		0BBCFFE1157EC1AB0062B82F /* AllLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFE0157EC1AB0062B82F /* AllLists.m */; };
+		0BBCFFE2157EC1AB0062B82F /* AllLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFE0157EC1AB0062B82F /* AllLists.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,8 +88,7 @@
 		0B713931157D2F8E0018D022 /* Wordnik.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wordnik.framework; path = "External/wordkit/frameworks/objective-c/Wordnik WordKit 1.02/iOS Framework/Wordnik.framework"; sourceTree = "<group>"; };
 		0B713937157D304D0018D022 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		0B713939157D305A0018D022 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		0B71393B157D306A0018D022 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		0B713941157D32700018D022 /* StudyDictionaryAPIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyDictionaryAPIConstants.h; sourceTree = "<group>"; };
+		0B713941157D32700018D022 /* StudyDictionaryConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyDictionaryConstants.h; sourceTree = "<group>"; };
 		0B713949157D37F70018D022 /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book.png; sourceTree = "<group>"; };
 		0B71394A157D37F70018D022 /* book@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book@2x.png"; sourceTree = "<group>"; };
 		0B71394B157D37F70018D022 /* flashcards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flashcards.png; sourceTree = "<group>"; };
@@ -91,6 +104,21 @@
 		0B713962157D42930018D022 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = ../External/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
 		0B713963157D42930018D022 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		0B713964157D42930018D022 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		0B8113AA15801D8800D79DCA /* StudyDictionaryHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyDictionaryHelpers.h; sourceTree = "<group>"; };
+		0B8113AB15801D8800D79DCA /* StudyDictionaryHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyDictionaryHelpers.m; sourceTree = "<group>"; };
+		0B8FD9F9157E966300AE370B /* StudyDictionary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudyDictionary.xcdatamodel; sourceTree = "<group>"; };
+		0B8FD9FC157E9EC900AE370B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0B8FD9FE157E9EE900AE370B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		0BBC0030157EF3E00062B82F /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		0BBC0031157EF3E00062B82F /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		0BBCFFD3157EC1AB0062B82F /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
+		0BBCFFD4157EC1AB0062B82F /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
+		0BBCFFD7157EC1AB0062B82F /* SearchBarContents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBarContents.h; sourceTree = "<group>"; };
+		0BBCFFD8157EC1AB0062B82F /* SearchBarContents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBarContents.m; sourceTree = "<group>"; };
+		0BBCFFDB157EC1AB0062B82F /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
+		0BBCFFDC157EC1AB0062B82F /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
+		0BBCFFDF157EC1AB0062B82F /* AllLists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllLists.h; sourceTree = "<group>"; };
+		0BBCFFE0157EC1AB0062B82F /* AllLists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllLists.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B71393C157D306A0018D022 /* libsqlite3.dylib in Frameworks */,
+				0B8FD9FF157E9EE900AE370B /* libsqlite3.dylib in Frameworks */,
+				0B8FD9FD157E9EC900AE370B /* CoreData.framework in Frameworks */,
 				0B71393A157D305A0018D022 /* SystemConfiguration.framework in Frameworks */,
 				0B713938157D304D0018D022 /* CoreText.framework in Frameworks */,
 				0B713932157D2F8E0018D022 /* Wordnik.framework in Frameworks */,
@@ -143,14 +172,15 @@
 		0B0A6766157C275D00C79FC2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0B71393B157D306A0018D022 /* libsqlite3.dylib */,
-				0B713939157D305A0018D022 /* SystemConfiguration.framework */,
-				0B713937157D304D0018D022 /* CoreText.framework */,
-				0B713931157D2F8E0018D022 /* Wordnik.framework */,
-				0B0A6767157C275D00C79FC2 /* UIKit.framework */,
-				0B0A6769157C275D00C79FC2 /* Foundation.framework */,
+				0B8FD9FC157E9EC900AE370B /* CoreData.framework */,
 				0B0A676B157C275D00C79FC2 /* CoreGraphics.framework */,
+				0B713937157D304D0018D022 /* CoreText.framework */,
+				0B0A6769157C275D00C79FC2 /* Foundation.framework */,
+				0B8FD9FE157E9EE900AE370B /* libsqlite3.dylib */,
 				0B0A6793157C275E00C79FC2 /* SenTestingKit.framework */,
+				0B713939157D305A0018D022 /* SystemConfiguration.framework */,
+				0B0A6767157C275D00C79FC2 /* UIKit.framework */,
+				0B713931157D2F8E0018D022 /* Wordnik.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -161,13 +191,18 @@
 				0B713961157D42930018D022 /* SVProgressHUD */,
 				0B0A6776157C275D00C79FC2 /* StudyDictionaryAppDelegate.h */,
 				0B0A6777157C275D00C79FC2 /* StudyDictionaryAppDelegate.m */,
-				0B713941157D32700018D022 /* StudyDictionaryAPIConstants.h */,
+				0B713941157D32700018D022 /* StudyDictionaryConstants.h */,
+				0B8113AA15801D8800D79DCA /* StudyDictionaryHelpers.h */,
+				0B8113AB15801D8800D79DCA /* StudyDictionaryHelpers.m */,
 				0B0A6779157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard */,
 				0B0A677C157C275E00C79FC2 /* MainStoryboard_iPad.storyboard */,
 				0B71392D157D2F360018D022 /* DictionarySearchViewController.h */,
 				0B71392E157D2F360018D022 /* DictionarySearchViewController.m */,
+				0BBC0030157EF3E00062B82F /* ListViewController.h */,
+				0BBC0031157EF3E00062B82F /* ListViewController.m */,
 				0B71395E157D400A0018D022 /* WordDefinitionViewController.h */,
 				0B71395F157D400A0018D022 /* WordDefinitionViewController.m */,
+				0BBCFFCA157EBC590062B82F /* Core Data */,
 				0B0A676E157C275D00C79FC2 /* Supporting Files */,
 			);
 			path = StudyDictionary;
@@ -247,6 +282,22 @@
 				0B713962157D42930018D022 /* SVProgressHUD.bundle */,
 			);
 			name = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		0BBCFFCA157EBC590062B82F /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				0B8FD9F8157E966300AE370B /* StudyDictionary.xcdatamodeld */,
+				0BBCFFDF157EC1AB0062B82F /* AllLists.h */,
+				0BBCFFE0157EC1AB0062B82F /* AllLists.m */,
+				0BBCFFDB157EC1AB0062B82F /* List.h */,
+				0BBCFFDC157EC1AB0062B82F /* List.m */,
+				0BBCFFD7157EC1AB0062B82F /* SearchBarContents.h */,
+				0BBCFFD8157EC1AB0062B82F /* SearchBarContents.m */,
+				0BBCFFD3157EC1AB0062B82F /* Word.h */,
+				0BBCFFD4157EC1AB0062B82F /* Word.m */,
+			);
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +424,13 @@
 				0B71392F157D2F360018D022 /* DictionarySearchViewController.m in Sources */,
 				0B713960157D400A0018D022 /* WordDefinitionViewController.m in Sources */,
 				0B713966157D42930018D022 /* SVProgressHUD.m in Sources */,
+				0B8FD9FA157E966300AE370B /* StudyDictionary.xcdatamodeld in Sources */,
+				0BBCFFD5157EC1AB0062B82F /* Word.m in Sources */,
+				0BBCFFD9157EC1AB0062B82F /* SearchBarContents.m in Sources */,
+				0BBCFFDD157EC1AB0062B82F /* List.m in Sources */,
+				0BBCFFE1157EC1AB0062B82F /* AllLists.m in Sources */,
+				0BBC0032157EF3E10062B82F /* ListViewController.m in Sources */,
+				0B8113AC15801D8800D79DCA /* StudyDictionaryHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +439,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B0A67A1157C275E00C79FC2 /* StudyDictionaryTests.m in Sources */,
+				0BBCFFD6157EC1AB0062B82F /* Word.m in Sources */,
+				0BBCFFDA157EC1AB0062B82F /* SearchBarContents.m in Sources */,
+				0BBCFFDE157EC1AB0062B82F /* List.m in Sources */,
+				0BBCFFE2157EC1AB0062B82F /* AllLists.m in Sources */,
+				0BBC0033157EF3E10062B82F /* ListViewController.m in Sources */,
+				0B8113AD15801D8800D79DCA /* StudyDictionaryHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +642,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0B8FD9F8157E966300AE370B /* StudyDictionary.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0B8FD9F9157E966300AE370B /* StudyDictionary.xcdatamodel */,
+			);
+			currentVersion = 0B8FD9F9157E966300AE370B /* StudyDictionary.xcdatamodel */;
+			path = StudyDictionary.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0B0A675A157C275D00C79FC2 /* Project object */;
 }
