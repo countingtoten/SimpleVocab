@@ -14,4 +14,22 @@
 
 @dynamic userOrderedLists;
 
+- (void)insertObject:(List *)value inUserOrderedListsAtIndex:(NSUInteger)idx {
+    NSMutableOrderedSet *tempSet = [NSMutableOrderedSet orderedSetWithOrderedSet:self.userOrderedLists];
+    [tempSet insertObject:value atIndex:idx];
+    self.userOrderedLists = tempSet;
+}
+
+- (void)addUserOrderedListsObject:(List *)value {
+    NSMutableOrderedSet *tempSet = [NSMutableOrderedSet orderedSetWithOrderedSet:self.userOrderedLists];
+    [tempSet addObject:value];
+    self.userOrderedLists = tempSet;
+}
+
+- (void)removeUserOrderedListsObject:(List *)value {
+    NSMutableOrderedSet *tempSet = [NSMutableOrderedSet orderedSetWithOrderedSet:self.userOrderedLists];
+    [tempSet removeObject:value];
+    self.userOrderedLists = tempSet;
+}
+
 @end
