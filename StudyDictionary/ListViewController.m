@@ -74,11 +74,9 @@
     
     static NSString *AddCellIdentifier = @"AddListCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:AddCellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:AddCellIdentifier];
-        cell.textLabel.text = @"Add New List";
-        cell.textLabel.textColor = [UIColor grayColor];
-    }
+
+    cell.textLabel.text = @"Add New List";
+    cell.textLabel.textColor = [UIColor grayColor];
     
     return cell;
 }
