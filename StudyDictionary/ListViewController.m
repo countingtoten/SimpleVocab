@@ -8,6 +8,7 @@
 
 #import "ListViewController.h"
 
+#import "EditableTableViewCell.h"
 #import "List.h"
 #import "StudyDictionaryAppDelegate.h"
 #import "StudyDictionaryConstants.h"
@@ -63,11 +64,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row < [self.lists.userOrderedLists count]) {
         static NSString *ListCellIdentifier = @"ListCell";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ListCellIdentifier];
+        EditableTableViewCell *cell = (EditableTableViewCell *)[tableView dequeueReusableCellWithIdentifier:ListCellIdentifier];
         
         List *list = [self.lists.userOrderedLists objectAtIndex:indexPath.row];
-        cell.textLabel.text = list.listName;
-  //      cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.textField.text = list.listName;
+        cell.textField.delegate = self;
         
         return cell;
     }
@@ -202,5 +203,18 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
 }
+
+#pragma mark -
+#pragma mark Editing text fields
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+
+}	
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {	
+	[textField resignFirstResponder];
+	return YES;	
+}
+
 
 @end

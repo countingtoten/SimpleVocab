@@ -10,7 +10,7 @@
 
 #import "AllLists.h"
 
-@interface ListViewController : UITableViewController {
+@interface ListViewController : UITableViewController <UITextFieldDelegate> {
     AllLists *lists;
 }
 
