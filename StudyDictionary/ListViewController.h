@@ -12,8 +12,10 @@
 
 @interface ListViewController : UITableViewController <UITextFieldDelegate> {
     AllLists *lists;
+    NSString *listOldName;
 }
 
 @property (strong, nonatomic) AllLists *lists;
+@property (strong, nonatomic) NSString *listOldName;
 
 @end

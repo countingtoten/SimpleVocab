@@ -19,7 +19,7 @@
 @end
 
 @implementation ListViewController
-@synthesize lists;
+@synthesize lists, listOldName;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -145,13 +145,14 @@
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         List *list = [NSEntityDescription insertNewObjectForEntityForName:kListEntityName inManagedObjectContext:moc];
         
-        list.listName = @"New String";
+        list.listName = @"";
         [self.lists addUserOrderedListsObject:list];
         
         UITableViewRowAnimation animationStyle = UITableViewRowAnimationFade;
     
-//        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.lists.userOrderedLists count] - 1 inSection:0];
         [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:animationStyle];
+        EditableTableViewCell *cell = (EditableTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+        [cell.textField becomeFirstResponder];
     }
     
     NSError *error = nil;
@@ -207,9 +208,52 @@
 #pragma mark -
 #pragma mark Editing text fields
 
-- (void)textFieldDidEndEditing:(UITextField *)textField {
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    self.listOldName = textField.text;
+}
 
-}	
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    NSString *listNewName = [textField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if ([listNewName length] == 0) {
+        listNewName = @"Unnamed Word List";
+    }
+    
+    if (![self.listOldName isEqualToString:listNewName]) {
+        NSOrderedSet *tempOrderedSet = self.lists.userOrderedLists;
+        
+        NSUInteger idx = [tempOrderedSet indexOfObjectPassingTest:^BOOL(id listObject, NSUInteger idx, BOOL *stop) {
+            List *list = (List *)listObject;
+            return [list.listName isEqualToString:self.listOldName];
+        }];
+        
+        if (idx != NSNotFound) {
+            BOOL hasSameName;
+            NSUInteger i = 1;
+            List *currentList = [self.lists.userOrderedLists objectAtIndex:idx];
+            
+            NSString *tempListName = [[NSString alloc] initWithString:listNewName];
+            do {
+                hasSameName = NO;
+                
+                idx = [tempOrderedSet indexOfObjectPassingTest:^BOOL(id listObject, NSUInteger idx, BOOL *stop) {
+                    List *list = (List *)listObject;
+                    return [list.listName isEqualToString:listNewName];
+                }];
+                
+                if (idx != NSNotFound) {
+                    listNewName = [tempListName stringByAppendingString:[NSString stringWithFormat:@" %d", i]];
+                    i++;
+                    hasSameName = YES;
+                }
+            } while (hasSameName);
+            
+            currentList.listName = listNewName;
+            textField.text = listNewName;
+        } 
+        // Error occurred do nothing
+    }
+    self.listOldName = nil;
+}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {	
 	[textField resignFirstResponder];
