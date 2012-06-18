@@ -58,7 +58,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"WordDefine"]) {
+    if ([segue.identifier isEqualToString:@"WordDefinitionFromSearchSegue"]) {
         WordDefinitionViewController *wordDefViewController = segue.destinationViewController;
         NSIndexPath *indexPath = (NSIndexPath *)sender;
         wordDefViewController.wordToDefine = [self.searchResults objectAtIndex:indexPath.row];
@@ -189,7 +189,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self updateWordLookupCount:[searchResults objectAtIndex:indexPath.row]];
-    [self performSegueWithIdentifier:@"WordDefine" sender:indexPath];
+    [self performSegueWithIdentifier:@"WordDefinitionFromSearchSegue" sender:indexPath];
 }
 
 #pragma mark Search Bar

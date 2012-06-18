@@ -10,6 +10,7 @@
 
 #import "EditableTableViewCell.h"
 #import "List.h"
+#import "ListContentsViewController.h"
 #import "StudyDictionaryAppDelegate.h"
 #import "StudyDictionaryConstants.h"
 #import "StudyDictionaryHelpers.h"
@@ -38,6 +39,14 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"ListContentsSegue"]) {
+        ListContentsViewController *listContViewController = segue.destinationViewController;
+        NSIndexPath *indexPath = (NSIndexPath *)sender;
+        listContViewController.list = [self.lists.userOrderedLists objectAtIndex:indexPath.row];
+    }
 }
 
 - (void)loadAllLists {
@@ -202,7 +211,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    [self performSegueWithIdentifier:@"ListContentsSegue" sender:indexPath];
 }
 
 #pragma mark -

@@ -69,7 +69,7 @@
                     <navigationItem key="navigationItem" title="Study Dictionary" id="ZLt-gZ-eRZ"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="Q8G-5M-jZw" id="lmd-JK-4mk"/>
-                        <segue destination="7fq-y4-4TT" kind="push" identifier="WordDefine" id="v2u-dC-YML"/>
+                        <segue destination="7fq-y4-4TT" kind="push" identifier="WordDefinitionFromSearchSegue" id="v2u-dC-YML"/>
                     </connections>
                 </viewController>
                 <searchDisplayController id="Q8G-5M-jZw">
@@ -109,7 +109,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1634" y="-138"/>
+            <point key="canvasLocation" x="2114" y="-138"/>
         </scene>
         <!--Navigation Controller - Word Lists-->
         <scene sceneID="ebo-0d-gmP">
@@ -176,9 +176,45 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Word Lists" id="mT0-v2-kHA"/>
+                    <connections>
+                        <segue destination="VHn-q4-UoI" kind="push" identifier="ListContentsSegue" id="jry-9G-hiJ"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1183" y="498"/>
+        </scene>
+        <!--List Contents View Controller-->
+        <scene sceneID="Ufo-gq-rvT">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ziQ-fo-FDc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="VHn-q4-UoI" customClass="ListContentsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JbX-Ig-YgY">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListContentsCell" id="bLS-OC-EGx">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VHn-q4-UoI" id="Fd6-Hp-bKR"/>
+                            <outlet property="delegate" destination="VHn-q4-UoI" id="rSA-KG-67b"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="2Lp-TG-rd4"/>
+                    <connections>
+                        <segue destination="7fq-y4-4TT" kind="push" identifier="WordDefinitionFromListContentsSegue" id="MYq-GN-VNe"/>
+                    </connections>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1685" y="498"/>
         </scene>
     </scenes>
     <resources>
@@ -195,6 +231,9 @@
                 <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
             </relationships>
         </class>
+        <class className="ListContentsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ListContentsViewController.h"/>
+        </class>
         <class className="ListViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ListViewController.h"/>
         </class>
@@ -210,4 +249,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="v2u-dC-YML"/>
+    </inferredMetricsTieBreakers>
 </document>
