@@ -8,8 +8,10 @@
 
 #import "WordDefinitionViewController.h"
 
+#import "ListModalViewController.h"
 #import "StudyDictionaryConstants.h"
 #import "SVProgressHUD.h"
+#import "Word.h"
 
 @interface NSArray (WNAdditions)
 - (NSArray *)wn_map:(id (^)(id obj))block;
@@ -27,7 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.title = self.wordToDefine;
+	self.title = self.wordToDefine.word;
     
     [self.wordnikClient addObserver: self];
     
@@ -45,15 +47,22 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"ListModalViewSegue"]) {
+        ListModalViewController *listModalViewController = segue.destinationViewController;
+        listModalViewController.word = wordToDefine;
+    }
+}
+
 - (void)updateWordDefinition {
-    if (self.wordToDefine != nil && [self.wordToDefine length] > 0) {
+    if (self.wordToDefine.word != nil && [self.wordToDefine.word length] > 0) {
         [self.defineRequest cancel];
         
         NSArray *elements = [NSArray arrayWithObjects:
                              [WNWordDefinitionRequest requestWithDictionary: [WNDictionary wordnetDictionary]],
                              [WNWordExampleRequest request],
                              nil];
-        WNWordRequest *req = [WNWordRequest requestWithWord:wordToDefine
+        WNWordRequest *req = [WNWordRequest requestWithWord:self.wordToDefine.word
                                        requestCanonicalForm:YES
                                  requestSpellingSuggestions:YES
                                             elementRequests:elements];
@@ -103,7 +112,7 @@
                                           otherButtonTitles: nil];
     [alert show];
     
-    [SVProgressHUD dismissWithError:[NSString stringWithFormat:@"Unable to find definition for %@", wordToDefine]];
+    [SVProgressHUD dismissWithError:[NSString stringWithFormat:@"Unable to find definition for %@", wordToDefine.word]];
 }
 
 // from WNClientObserver protocol

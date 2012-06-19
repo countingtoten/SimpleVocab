@@ -66,7 +66,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Study Dictionary" id="ZLt-gZ-eRZ"/>
+                    <navigationItem key="navigationItem" title="Study Dictionary" id="ZLt-gZ-eRZ">
+                        <barButtonItem key="backBarButtonItem" title="Search" id="SW2-Bk-TrZ"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="Q8G-5M-jZw" id="lmd-JK-4mk"/>
                         <segue destination="7fq-y4-4TT" kind="push" identifier="WordDefinitionFromSearchSegue" id="v2u-dC-YML"/>
@@ -103,13 +105,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tJj-2t-eeW"/>
+                    <navigationItem key="navigationItem" id="tJj-2t-eeW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="N6F-ty-J2d">
+                            <connections>
+                                <segue destination="cUa-pL-jjE" kind="push" identifier="ListModalViewSegue" id="Ah0-ld-E6I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="wordDefinition" destination="tRV-b4-Lfh" id="gfe-xq-7mJ"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="2114" y="-138"/>
+            <point key="canvasLocation" x="2250" y="-138"/>
         </scene>
         <!--Navigation Controller - Word Lists-->
         <scene sceneID="ebo-0d-gmP">
@@ -216,6 +224,56 @@
             </objects>
             <point key="canvasLocation" x="1685" y="498"/>
         </scene>
+        <!--List Modal View Controller - Word Lists-->
+        <scene sceneID="RIT-xI-fZT">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uK7-xT-HvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="cUa-pL-jjE" customClass="ListModalViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ew7-ka-mSd">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListCell" id="Qpw-EI-XYk" customClass="EditableTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New List" minimumFontSize="17" id="iZz-gb-UWa">
+                                            <rect key="frame" x="10" y="0.0" width="301" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="textField" destination="iZz-gb-UWa" id="kKu-eG-vTU"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="AddListCell" id="EzO-hQ-bUc">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cUa-pL-jjE" id="LVH-4D-hkZ"/>
+                            <outlet property="delegate" destination="cUa-pL-jjE" id="Zb0-Cb-fbM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Word Lists" id="sBP-lc-OSS"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="2785" y="-138"/>
+        </scene>
     </scenes>
     <resources>
         <image name="book.png" width="18" height="26"/>
@@ -234,7 +292,13 @@
         <class className="ListContentsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ListContentsViewController.h"/>
         </class>
-        <class className="ListViewController" superclassName="UITableViewController">
+        <class className="ListModalViewController" superclassName="ListTemplateViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ListModalViewController.h"/>
+        </class>
+        <class className="ListTemplateViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ListTemplateViewController.h"/>
+        </class>
+        <class className="ListViewController" superclassName="ListTemplateViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ListViewController.h"/>
         </class>
         <class className="WordDefinitionViewController" superclassName="UIViewController">

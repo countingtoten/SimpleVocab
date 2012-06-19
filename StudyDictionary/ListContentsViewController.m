@@ -8,6 +8,7 @@
 
 #import "ListContentsViewController.h"
 
+#import "List.h"
 #import "StudyDictionaryAppDelegate.h"
 #import "Word.h"
 #import "WordDefinitionViewController.h"
@@ -39,8 +40,7 @@
     if ([segue.identifier isEqualToString:@"WordDefinitionFromListContentsSegue"]) {
         WordDefinitionViewController *wordDefViewController = segue.destinationViewController;
         NSIndexPath *indexPath = (NSIndexPath *)sender;
-        Word *word = [self.wordsInListSorted objectAtIndex:indexPath.row];
-        wordDefViewController.wordToDefine = word.word;
+        wordDefViewController.wordToDefine = [self.wordsInListSorted objectAtIndex:indexPath.row];
     }
 }
 

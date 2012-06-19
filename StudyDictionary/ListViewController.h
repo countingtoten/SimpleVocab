@@ -8,14 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-#import "AllLists.h"
+#import "ListTemplateViewController.h"
 
-@interface ListViewController : UITableViewController <UITextFieldDelegate> {
-    AllLists *lists;
-    NSString *listOldName;
+@interface ListViewController : ListTemplateViewController {
+
 }
-
-@property (strong, nonatomic) AllLists *lists;
-@property (strong, nonatomic) NSString *listOldName;
 
 @end

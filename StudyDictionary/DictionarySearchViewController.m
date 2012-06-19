@@ -22,7 +22,7 @@
 - (void)loadSearchBarState;
 - (void)saveSearchBarState;
 - (void)searchForWordFromString:(NSString *)searchString;
-- (void)updateWordLookupCount:(NSString *)wordToLookup;
+- (Word *)updateWordLookupCount:(NSString *)wordToLookup;
 @end
 
 @implementation DictionarySearchViewController
@@ -61,7 +61,8 @@
     if ([segue.identifier isEqualToString:@"WordDefinitionFromSearchSegue"]) {
         WordDefinitionViewController *wordDefViewController = segue.destinationViewController;
         NSIndexPath *indexPath = (NSIndexPath *)sender;
-        wordDefViewController.wordToDefine = [self.searchResults objectAtIndex:indexPath.row];
+        Word *word = [self updateWordLookupCount:[searchResults objectAtIndex:indexPath.row]];
+        wordDefViewController.wordToDefine = word;
     }
 }
 
@@ -123,7 +124,7 @@
     }
 }
 
-- (void)updateWordLookupCount:(NSString *)wordToLookup {
+- (Word *)updateWordLookupCount:(NSString *)wordToLookup {
     StudyDictionaryAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *moc = [appDelegate managedObjectContext];
     
@@ -159,6 +160,8 @@
     } else {
         NSLog(@"And Error Happened");
     }
+    
+    return word;
 }
 
 #pragma mark - Table view data source
@@ -188,7 +191,6 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self updateWordLookupCount:[searchResults objectAtIndex:indexPath.row]];
     [self performSegueWithIdentifier:@"WordDefinitionFromSearchSegue" sender:indexPath];
 }
 

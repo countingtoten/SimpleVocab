@@ -23,6 +23,10 @@
 		0B0CFBF1158E8927000C029C /* ListContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0CFBF0158E8927000C029C /* ListContentsViewController.m */; };
 		0B0CFBF2158E8927000C029C /* ListContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0CFBF0158E8927000C029C /* ListContentsViewController.m */; };
 		0B344A1115892E68003C7722 /* EditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B344A1015892E68003C7722 /* EditableTableViewCell.m */; };
+		0B6AAC1E158EF0B30043FD80 /* ListTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AAC1D158EF0B30043FD80 /* ListTemplateViewController.m */; };
+		0B6AAC1F158EF0B30043FD80 /* ListTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AAC1D158EF0B30043FD80 /* ListTemplateViewController.m */; };
+		0B6AAC23158EF1080043FD80 /* ListModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AAC22158EF1080043FD80 /* ListModalViewController.m */; };
+		0B6AAC24158EF1080043FD80 /* ListModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AAC22158EF1080043FD80 /* ListModalViewController.m */; };
 		0B71392F157D2F360018D022 /* DictionarySearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B71392E157D2F360018D022 /* DictionarySearchViewController.m */; };
 		0B713932157D2F8E0018D022 /* Wordnik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B713931157D2F8E0018D022 /* Wordnik.framework */; };
 		0B713938157D304D0018D022 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B713937157D304D0018D022 /* CoreText.framework */; };
@@ -90,6 +94,10 @@
 		0B0CFBF0158E8927000C029C /* ListContentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListContentsViewController.m; sourceTree = "<group>"; };
 		0B344A0F15892E68003C7722 /* EditableTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableTableViewCell.h; sourceTree = "<group>"; };
 		0B344A1015892E68003C7722 /* EditableTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableTableViewCell.m; sourceTree = "<group>"; };
+		0B6AAC1C158EF0B30043FD80 /* ListTemplateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTemplateViewController.h; sourceTree = "<group>"; };
+		0B6AAC1D158EF0B30043FD80 /* ListTemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTemplateViewController.m; sourceTree = "<group>"; };
+		0B6AAC21158EF1080043FD80 /* ListModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListModalViewController.h; sourceTree = "<group>"; };
+		0B6AAC22158EF1080043FD80 /* ListModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListModalViewController.m; sourceTree = "<group>"; };
 		0B71392D157D2F360018D022 /* DictionarySearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionarySearchViewController.h; sourceTree = "<group>"; };
 		0B71392E157D2F360018D022 /* DictionarySearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionarySearchViewController.m; sourceTree = "<group>"; };
 		0B713931157D2F8E0018D022 /* Wordnik.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wordnik.framework; path = "External/wordkit/frameworks/objective-c/Wordnik WordKit 1.02/iOS Framework/Wordnik.framework"; sourceTree = "<group>"; };
@@ -205,8 +213,12 @@
 				0B0A677C157C275E00C79FC2 /* MainStoryboard_iPad.storyboard */,
 				0B71392D157D2F360018D022 /* DictionarySearchViewController.h */,
 				0B71392E157D2F360018D022 /* DictionarySearchViewController.m */,
+				0B6AAC1C158EF0B30043FD80 /* ListTemplateViewController.h */,
+				0B6AAC1D158EF0B30043FD80 /* ListTemplateViewController.m */,
 				0BBC0030157EF3E00062B82F /* ListViewController.h */,
 				0BBC0031157EF3E00062B82F /* ListViewController.m */,
+				0B6AAC21158EF1080043FD80 /* ListModalViewController.h */,
+				0B6AAC22158EF1080043FD80 /* ListModalViewController.m */,
 				0B0CFBEF158E8927000C029C /* ListContentsViewController.h */,
 				0B0CFBF0158E8927000C029C /* ListContentsViewController.m */,
 				0B71395E157D400A0018D022 /* WordDefinitionViewController.h */,
@@ -444,6 +456,8 @@
 				0B8113AC15801D8800D79DCA /* StudyDictionaryHelpers.m in Sources */,
 				0B344A1115892E68003C7722 /* EditableTableViewCell.m in Sources */,
 				0B0CFBF1158E8927000C029C /* ListContentsViewController.m in Sources */,
+				0B6AAC1E158EF0B30043FD80 /* ListTemplateViewController.m in Sources */,
+				0B6AAC23158EF1080043FD80 /* ListModalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +473,8 @@
 				0BBC0033157EF3E10062B82F /* ListViewController.m in Sources */,
 				0B8113AD15801D8800D79DCA /* StudyDictionaryHelpers.m in Sources */,
 				0B0CFBF2158E8927000C029C /* ListContentsViewController.m in Sources */,
+				0B6AAC1F158EF0B30043FD80 /* ListTemplateViewController.m in Sources */,
+				0B6AAC24158EF1080043FD80 /* ListModalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
