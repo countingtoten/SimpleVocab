@@ -49,6 +49,11 @@
 		0B8FD9FA157E966300AE370B /* StudyDictionary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B8FD9F8157E966300AE370B /* StudyDictionary.xcdatamodeld */; };
 		0B8FD9FD157E9EC900AE370B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8FD9FC157E9EC900AE370B /* CoreData.framework */; };
 		0B8FD9FF157E9EE900AE370B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8FD9FE157E9EE900AE370B /* libsqlite3.dylib */; };
+		0B90BDD515B62C9400BE7DF4 /* WordNetDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B90BDCD15B62C9400BE7DF4 /* WordNetDictionary.m */; };
+		0B90BDD615B62C9400BE7DF4 /* WordNetDictionary.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 0B90BDCE15B62C9400BE7DF4 /* WordNetDictionary.sqlite */; };
+		0B90BDD715B62C9400BE7DF4 /* WordNetDictionary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B90BDCF15B62C9400BE7DF4 /* WordNetDictionary.xcdatamodeld */; };
+		0B90BDD815B62C9400BE7DF4 /* WordNetSynset.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B90BDD215B62C9400BE7DF4 /* WordNetSynset.m */; };
+		0B90BDD915B62C9400BE7DF4 /* WordNetWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B90BDD415B62C9400BE7DF4 /* WordNetWord.m */; };
 		0BBC0032157EF3E10062B82F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBC0031157EF3E00062B82F /* ListViewController.m */; };
 		0BBC0033157EF3E10062B82F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBC0031157EF3E00062B82F /* ListViewController.m */; };
 		0BBCFFD5157EC1AB0062B82F /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFD4157EC1AB0062B82F /* Word.m */; };
@@ -124,6 +129,14 @@
 		0B8FD9F9157E966300AE370B /* StudyDictionary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudyDictionary.xcdatamodel; sourceTree = "<group>"; };
 		0B8FD9FC157E9EC900AE370B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0B8FD9FE157E9EE900AE370B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		0B90BDCC15B62C9400BE7DF4 /* WordNetDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordNetDictionary.h; path = StudyDictionary/WordNetDictionary.h; sourceTree = "<group>"; };
+		0B90BDCD15B62C9400BE7DF4 /* WordNetDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordNetDictionary.m; path = StudyDictionary/WordNetDictionary.m; sourceTree = "<group>"; };
+		0B90BDCE15B62C9400BE7DF4 /* WordNetDictionary.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = WordNetDictionary.sqlite; path = StudyDictionary/WordNetDictionary.sqlite; sourceTree = "<group>"; };
+		0B90BDD015B62C9400BE7DF4 /* WordNetDictionary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WordNetDictionary.xcdatamodel; sourceTree = "<group>"; };
+		0B90BDD115B62C9400BE7DF4 /* WordNetSynset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordNetSynset.h; path = StudyDictionary/WordNetSynset.h; sourceTree = "<group>"; };
+		0B90BDD215B62C9400BE7DF4 /* WordNetSynset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordNetSynset.m; path = StudyDictionary/WordNetSynset.m; sourceTree = "<group>"; };
+		0B90BDD315B62C9400BE7DF4 /* WordNetWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordNetWord.h; path = StudyDictionary/WordNetWord.h; sourceTree = "<group>"; };
+		0B90BDD415B62C9400BE7DF4 /* WordNetWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordNetWord.m; path = StudyDictionary/WordNetWord.m; sourceTree = "<group>"; };
 		0BBC0030157EF3E00062B82F /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		0BBC0031157EF3E00062B82F /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		0BBCFFD3157EC1AB0062B82F /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
@@ -225,6 +238,7 @@
 				0B71395F157D400A0018D022 /* WordDefinitionViewController.m */,
 				0B344A0F15892E68003C7722 /* EditableTableViewCell.h */,
 				0B344A1015892E68003C7722 /* EditableTableViewCell.m */,
+				0B4CCAAA15B4B806000CBD09 /* WordNetDictionary */,
 				0BBCFFCA157EBC590062B82F /* Core Data */,
 				0B0A676E157C275D00C79FC2 /* Supporting Files */,
 			);
@@ -260,6 +274,22 @@
 				0B0A679C157C275E00C79FC2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0B4CCAAA15B4B806000CBD09 /* WordNetDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				0B90BDCC15B62C9400BE7DF4 /* WordNetDictionary.h */,
+				0B90BDCD15B62C9400BE7DF4 /* WordNetDictionary.m */,
+				0B90BDCE15B62C9400BE7DF4 /* WordNetDictionary.sqlite */,
+				0B90BDCF15B62C9400BE7DF4 /* WordNetDictionary.xcdatamodeld */,
+				0B90BDD115B62C9400BE7DF4 /* WordNetSynset.h */,
+				0B90BDD215B62C9400BE7DF4 /* WordNetSynset.m */,
+				0B90BDD315B62C9400BE7DF4 /* WordNetWord.h */,
+				0B90BDD415B62C9400BE7DF4 /* WordNetWord.m */,
+			);
+			name = WordNetDictionary;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		0B713946157D37D20018D022 /* Images */ = {
@@ -408,6 +438,7 @@
 				0B71395C157D37F70018D022 /* notepad.png in Resources */,
 				0B71395D157D37F70018D022 /* notepad@2x.png in Resources */,
 				0B713965157D42930018D022 /* SVProgressHUD.bundle in Resources */,
+				0B90BDD615B62C9400BE7DF4 /* WordNetDictionary.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +489,10 @@
 				0B0CFBF1158E8927000C029C /* ListContentsViewController.m in Sources */,
 				0B6AAC1E158EF0B30043FD80 /* ListTemplateViewController.m in Sources */,
 				0B6AAC23158EF1080043FD80 /* ListModalViewController.m in Sources */,
+				0B90BDD515B62C9400BE7DF4 /* WordNetDictionary.m in Sources */,
+				0B90BDD715B62C9400BE7DF4 /* WordNetDictionary.xcdatamodeld in Sources */,
+				0B90BDD815B62C9400BE7DF4 /* WordNetSynset.m in Sources */,
+				0B90BDD915B62C9400BE7DF4 /* WordNetWord.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +716,17 @@
 			);
 			currentVersion = 0B8FD9F9157E966300AE370B /* StudyDictionary.xcdatamodel */;
 			path = StudyDictionary.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		0B90BDCF15B62C9400BE7DF4 /* WordNetDictionary.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0B90BDD015B62C9400BE7DF4 /* WordNetDictionary.xcdatamodel */,
+			);
+			currentVersion = 0B90BDD015B62C9400BE7DF4 /* WordNetDictionary.xcdatamodel */;
+			name = WordNetDictionary.xcdatamodeld;
+			path = StudyDictionary/WordNetDictionary.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

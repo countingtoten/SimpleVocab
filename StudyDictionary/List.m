@@ -7,9 +7,9 @@
 //
 
 #import "List.h"
+
 #import "AllLists.h"
 #import "Word.h"
-
 
 @implementation List
 

@@ -7,19 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Wordnik/Wordnik.h>
 
 @class Word;
 
-@interface WordDefinitionViewController : UIViewController <WNClientObserver> {
-    WNClient *wordnikClient;
-    WNRequestTicket *defineRequest;
-    
+@interface WordDefinitionViewController : UIViewController {
     Word *wordToDefine;
 }
-
-@property (strong, nonatomic) WNClient *wordnikClient;
-@property (strong, nonatomic) WNRequestTicket *defineRequest;
 
 @property (strong, nonatomic) Word *wordToDefine;
 @property (strong, nonatomic) IBOutlet UITextView *wordDefinition;
