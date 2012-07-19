@@ -7,18 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Wordnik/Wordnik.h>
 
-@interface DictionarySearchViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, WNClientObserver> {
-    WNClient *wordnikClient;
-    WNRequestTicket *searchRequest;
-    
+@class WordNetDictionary;
+
+@interface DictionarySearchViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate> {
     NSArray *searchResults;
+    WordNetDictionary *dictionary;
+
+    dispatch_queue_t queue;
 }
 
-@property (strong, nonatomic) WNClient *wordnikClient;
-@property (strong, nonatomic) WNRequestTicket *searchRequest;
-
 @property (strong, nonatomic) NSArray *searchResults;
+@property (strong, nonatomic) WordNetDictionary *dictionary;
 
 @end

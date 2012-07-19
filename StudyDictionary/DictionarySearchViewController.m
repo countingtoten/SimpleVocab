@@ -14,8 +14,10 @@
 #import "StudyDictionaryAppDelegate.h"
 #import "StudyDictionaryConstants.h"
 #import "StudyDictionaryHelpers.h"
+#import "SVProgressHUD.h"
 #import "Word.h"
 #import "WordDefinitionViewController.h"
+#import "WordNetDictionary.h"
 
 @interface DictionarySearchViewController ()
 - (void)applicationWillResignActive:(NSNotification *)notification;
@@ -26,27 +28,25 @@
 @end
 
 @implementation DictionarySearchViewController
-@synthesize wordnikClient = _wordnikClient;
-@synthesize searchRequest;
-@synthesize searchResults;
+@synthesize searchResults, dictionary;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-    [self.wordnikClient addObserver: self];
-    
-    [self loadSearchBarState];
-    
+
+    self.dictionary = [WordNetDictionary sharedInstance];
+    queue = dispatch_queue_create("com.weinertworks.queue", NULL);
+
     UIApplication *app = [UIApplication sharedApplication];
     [[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(applicationWillResignActive:)
 												 name:UIApplicationWillResignActiveNotification
 											   object:app];
+    
+    [self loadSearchBarState];
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
-    [self.searchRequest cancel];
 }
 
 - (void)applicationWillResignActive:(NSNotification *)notification {
@@ -91,7 +91,7 @@
             }
         }
     } else {
-        NSLog(@"Error");
+        NSLog(@"Error: Unable to load saved search bar");
     }
 }
 
@@ -120,7 +120,7 @@
         
         [moc save:&error];
     } else {
-        NSLog(@"Error");
+        NSLog(@"Error: Unable to load saved search bar");
     }
 }
 
@@ -158,7 +158,7 @@
         
         [moc save:&error];
     } else {
-        NSLog(@"And Error Happened");
+        NSLog(@"Error: Unable to update word history");
     }
     
     return word;
@@ -196,82 +196,22 @@
 
 #pragma mark Search Bar
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {    
-    [self searchForWordFromString:searchText];
+    [self searchForWordFromString:[searchText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
 }
 
 - (void)searchForWordFromString:(NSString *)searchString {
-    if (searchString != nil && [searchString length] > 0) {
-        [self.searchRequest cancel];
-        /* Submit an autocompletion request */
-        WNWordSearchRequest *req = [WNWordSearchRequest requestWithWordFragment:searchString
-                                                                           skip:0 
-                                                                          limit:10 
-                                                            includePartOfSpeech:nil
-                                                            excludePartOfSpeech:nil
-                                                                 minCorpusCount:0
-                                                                 maxCorpusCount:0
-                                                             minDictionaryCount:1
-                                                             maxDictionaryCount:0
-                                                                      minLength:0
-                                                                      maxLength:0
-                                                                resultCollation:WNAutocompleteWordCollationFrequencyDescending];
-        
-        self.searchRequest = [self.wordnikClient autocompletedWordsWithRequest:req];
-    }
-}
-
-#pragma mark Wordnik
-- (void) client: (WNClient *) client autocompleteWordRequestDidFailWithError: (NSError *) error requestTicket: (WNRequestTicket *) requestTicket {
-    self.searchRequest = nil;
-    
-    /* Report error */
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Lookup Failure" 
-                                                    message: [error localizedFailureReason]
-                                                   delegate: nil 
-                                          cancelButtonTitle: @"OK" 
-                                          otherButtonTitles: nil];
-    [alert show];
-}
-
-// from WNClientObserver protocol
-- (void) client: (WNClient *) client didReceiveAutocompleteWordResponse: (WNWordSearchResponse *) response requestTicket: (WNRequestTicket *) requestTicket {
-    if ([self.searchRequest isEqual:requestTicket]) {  
-        self.searchRequest = nil;
-        
-        /* Display results */
-        // NSLog([response.words componentsJoinedByString: @"\n"]);
-        NSOrderedSet *tempResults = [NSOrderedSet orderedSetWithArray:response.words];
-        
-        self.searchResults = [tempResults array];
-        [self.searchDisplayController.searchResultsTableView reloadData];
-    }
-}
-
-#pragma mark - Wordnik Client
-- (WNClient *)wordnikClient {
-    if (_wordnikClient != nil) {
-        return _wordnikClient;
-    }
-    
-    WNClientConfig *config = [WNClientConfig configWithAPIKey:WORDNIK_API_KEY];
-    _wordnikClient = [[WNClient alloc] initWithClientConfig: config];
-    
-    [_wordnikClient requestAPIUsageStatusWithCompletionBlock: ^(WNClientAPIUsageStatus *status, NSError *error) {
-        if (error != nil) {
-            NSLog(@"Usage request failed: %@", error);
-            return;
+    dispatch_async(queue, ^{
+        if (searchString != nil && [searchString length] > 0) {
+            self.searchResults = [dictionary searchForWord:searchString];
+        } else {
+            // If the text field changed to an empty string, the user cleared the search bar
+            self.searchResults = nil;
         }
         
-        NSMutableString *output = [NSMutableString string];
-        [output appendFormat: @"Expires at: %@\n", status.expirationDate];
-        [output appendFormat: @"Reset at: %@\n", status.resetDate];
-        [output appendFormat: @"Total calls permitted: %ld\n", (long) status.totalPermittedRequestCount];
-        [output appendFormat: @"Total calls remaining: %ld\n", (long) status.remainingPermittedRequestCount];
-        
-        NSLog(@"API Usage:\n%@", output);
-    }];
-    
-    return _wordnikClient;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.searchDisplayController.searchResultsTableView reloadData];
+        });
+    });
 }
 
 @end

@@ -239,7 +239,7 @@
 				0B344A0F15892E68003C7722 /* EditableTableViewCell.h */,
 				0B344A1015892E68003C7722 /* EditableTableViewCell.m */,
 				0B4CCAAA15B4B806000CBD09 /* WordNetDictionary */,
-				0BBCFFCA157EBC590062B82F /* Core Data */,
+				0BBCFFCA157EBC590062B82F /* Word History Core Data */,
 				0B0A676E157C275D00C79FC2 /* Supporting Files */,
 			);
 			path = StudyDictionary;
@@ -337,20 +337,20 @@
 			name = SVProgressHUD;
 			sourceTree = "<group>";
 		};
-		0BBCFFCA157EBC590062B82F /* Core Data */ = {
+		0BBCFFCA157EBC590062B82F /* Word History Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				0B8FD9F8157E966300AE370B /* StudyDictionary.xcdatamodeld */,
 				0BBCFFDF157EC1AB0062B82F /* AllLists.h */,
 				0BBCFFE0157EC1AB0062B82F /* AllLists.m */,
 				0BBCFFDB157EC1AB0062B82F /* List.h */,
 				0BBCFFDC157EC1AB0062B82F /* List.m */,
 				0BBCFFD7157EC1AB0062B82F /* SearchBarContents.h */,
 				0BBCFFD8157EC1AB0062B82F /* SearchBarContents.m */,
+				0B8FD9F8157E966300AE370B /* StudyDictionary.xcdatamodeld */,
 				0BBCFFD3157EC1AB0062B82F /* Word.h */,
 				0BBCFFD4157EC1AB0062B82F /* Word.m */,
 			);
-			name = "Core Data";
+			name = "Word History Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

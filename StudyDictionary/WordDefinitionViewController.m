@@ -10,7 +10,6 @@
 
 #import "ListModalViewController.h"
 #import "StudyDictionaryConstants.h"
-#import "SVProgressHUD.h"
 #import "Word.h"
 #import "WordNetDictionary.h"
 
@@ -50,8 +49,8 @@
 }
 
 - (void)updateWordDefinition {
-    WordNetDictionary *dict = [WordNetDictionary sharedInstance];
-    NSDictionary *defineResults = [dict defineWord:wordToDefine.word];
+    WordNetDictionary *dictionary = [WordNetDictionary sharedInstance];
+    NSDictionary *defineResults = [dictionary defineWord:wordToDefine.word];
     
     // Format the definitions results
     NSMutableString *definitionsFormated = [NSMutableString string];
