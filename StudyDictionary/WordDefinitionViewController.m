@@ -10,12 +10,9 @@
 
 #import "ListModalViewController.h"
 #import "StudyDictionaryConstants.h"
+#import "SVProgressHUD.h"
 #import "Word.h"
 #import "WordNetDictionary.h"
-
-@interface NSArray (WNAdditions)
-- (NSArray *)wn_map:(id (^)(id obj))block;
-@end
 
 @interface WordDefinitionViewController ()
 - (void)updateWordDefinition;
@@ -28,6 +25,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.title = self.wordToDefine.word;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
     [self updateWordDefinition];
 }
@@ -49,29 +50,38 @@
 }
 
 - (void)updateWordDefinition {
-    WordNetDictionary *dictionary = [WordNetDictionary sharedInstance];
-    NSDictionary *defineResults = [dictionary defineWord:wordToDefine.word];
-    
-    // Format the definitions results
-    NSMutableString *definitionsFormated = [NSMutableString string];
-    
-    if (defineResults != nil) {
+    dispatch_queue_t queue = dispatch_queue_create("com.weinertworks.queue", NULL);
+    dispatch_async(queue, ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [SVProgressHUD show];
+        });
+        WordNetDictionary *dictionary = [WordNetDictionary sharedInstance];
+        NSDictionary *defineResults = [dictionary defineWord:wordToDefine.word];
         
-        NSInteger i = 1;
-        for (NSString *key in defineResults) {
-            NSArray *definitions = [defineResults objectForKey:key];
+        // Format the definitions results
+        NSMutableString *definitionsFormated = [NSMutableString string];
+        
+        if (defineResults != nil) {
             
-            [definitionsFormated appendFormat:@"-%@\n", key];
-            for(NSString *def in definitions) {
-                [definitionsFormated appendFormat:@"%d. %@\n\n", i, def];
-                i++;
+            NSInteger i = 1;
+            for (NSString *key in defineResults) {
+                NSArray *definitions = [defineResults objectForKey:key];
+                
+                [definitionsFormated appendFormat:@"-%@\n", key];
+                for(NSString *def in definitions) {
+                    [definitionsFormated appendFormat:@"%d. %@\n\n", i, def];
+                    i++;
+                }
             }
+        } else {
+            definitionsFormated = [NSString stringWithFormat:@"Could not find definition for %@, sorry.", wordToDefine.word];
         }
         
-        self.wordDefinition.text = definitionsFormated;
-    } else {
-        self.wordDefinition.text = [NSString stringWithFormat:@"Could not find definition for %@, sorry.", wordToDefine.word];
-    }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.wordDefinition.text = definitionsFormated;
+            [SVProgressHUD dismiss];
+        });
+    });
 }
 
 @end
