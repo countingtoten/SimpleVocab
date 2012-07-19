@@ -28,7 +28,7 @@
 @end
 
 @implementation DictionarySearchViewController
-@synthesize searchResults, dictionary;
+@synthesize searchResults, dictionary, finalSearchText;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -195,23 +195,31 @@
 }
 
 #pragma mark Search Bar
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {    
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    self.finalSearchText = searchText;
     [self searchForWordFromString:[searchText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
 }
 
 - (void)searchForWordFromString:(NSString *)searchString {
     dispatch_async(queue, ^{
-        if (searchString != nil && [searchString length] > 0) {
-            self.searchResults = [dictionary searchForWord:searchString];
-        } else {
-            // If the text field changed to an empty string, the user cleared the search bar
-            self.searchResults = nil;
+        if ([searchString isEqualToString:self.finalSearchText]) {
+            if (searchString != nil && [searchString length] > 0) {
+                self.searchResults = [dictionary searchForWord:searchString];
+            } else {
+                // If the text field changed to an empty string, the user cleared the search bar
+                self.searchResults = nil;
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.searchDisplayController.searchResultsTableView reloadData];
+            });
         }
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.searchDisplayController.searchResultsTableView reloadData];
-        });
     });
+}
+
+// Apparently the cancel button does not trigger textDidChange when pressed
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    self.searchResults = nil;
 }
 
 @end

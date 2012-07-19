@@ -14,10 +14,13 @@
     NSArray *searchResults;
     WordNetDictionary *dictionary;
 
+    NSString *finalSearchText;
     dispatch_queue_t queue;
 }
 
 @property (strong, nonatomic) NSArray *searchResults;
 @property (strong, nonatomic) WordNetDictionary *dictionary;
+
+@property (strong, nonatomic) NSString *finalSearchText;
 
 @end
