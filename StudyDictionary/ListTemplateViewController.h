@@ -13,6 +13,8 @@
 @interface ListTemplateViewController : UITableViewController <UITextFieldDelegate> {
     AllLists *lists;
     NSString *listOldName;
+    
+    BOOL didViewJustLoad;
 }
 
 @property (strong, nonatomic) AllLists *lists;

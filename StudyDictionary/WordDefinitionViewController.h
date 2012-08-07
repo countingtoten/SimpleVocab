@@ -12,6 +12,7 @@
 
 @interface WordDefinitionViewController : UIViewController {
     Word *wordToDefine;
+    BOOL didViewJustLoad;
 }
 
 @property (strong, nonatomic) Word *wordToDefine;

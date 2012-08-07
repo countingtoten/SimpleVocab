@@ -25,16 +25,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.title = self.wordToDefine.word;
+    
+    [self updateWordDefinition];
+    didViewJustLoad = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self updateWordDefinition];
+    if (!didViewJustLoad && [self.wordDefinition.text length] > 0) {
+        [self updateWordDefinition];
+    }
+    
+    didViewJustLoad = NO;
 }
 
 - (void)viewDidUnload {
     [self setWordDefinition:nil];
+    [SVProgressHUD dismiss];
     [super viewDidUnload];
 }
 
@@ -62,15 +70,16 @@
         NSMutableString *definitionsFormated = [NSMutableString string];
         
         if (defineResults != nil) {
-            
+            NSArray *partsOfSpeech = [NSArray arrayWithObjects:@"noun", @"verb", @"adjective", @"adverb", nil];
             NSInteger i = 1;
-            for (NSString *key in defineResults) {
+            for (NSString *key in partsOfSpeech) {
                 NSArray *definitions = [defineResults objectForKey:key];
-                
-                [definitionsFormated appendFormat:@"-%@\n", key];
-                for(NSString *def in definitions) {
-                    [definitionsFormated appendFormat:@"%d. %@\n\n", i, def];
-                    i++;
+                if (definitions != nil) {
+                    [definitionsFormated appendFormat:@"-%@\n", key];
+                    for(NSString *def in definitions) {
+                        [definitionsFormated appendFormat:@"%d. %@\n\n", i, def];
+                        i++;
+                    }
                 }
             }
         } else {
