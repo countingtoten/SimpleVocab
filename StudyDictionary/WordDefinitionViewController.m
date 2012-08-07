@@ -42,7 +42,6 @@
 
 - (void)viewDidUnload {
     [self setWordDefinition:nil];
-    [SVProgressHUD dismiss];
     [super viewDidUnload];
 }
 
