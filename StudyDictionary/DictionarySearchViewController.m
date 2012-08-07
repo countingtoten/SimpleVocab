@@ -196,15 +196,17 @@
 
 #pragma mark Search Bar
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    self.finalSearchText = searchText;
-    [self searchForWordFromString:[searchText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
+    [self searchForWordFromString:searchText];
 }
 
 - (void)searchForWordFromString:(NSString *)searchString {
+    NSString *searchStringTrimmed = [searchString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    self.finalSearchText = searchStringTrimmed;
     dispatch_async(queue, ^{
-        if ([searchString isEqualToString:self.finalSearchText]) {
-            if (searchString != nil && [searchString length] > 0) {
-                self.searchResults = [dictionary searchForWord:searchString];
+        if ([searchStringTrimmed isEqualToString:self.finalSearchText]) {
+            if (searchStringTrimmed != nil && [searchStringTrimmed length] > 0) {
+                self.searchResults = [dictionary searchForWord:searchStringTrimmed];
             } else {
                 // If the text field changed to an empty string, the user cleared the search bar
                 self.searchResults = nil;
