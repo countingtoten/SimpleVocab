@@ -25,6 +25,16 @@
     
     self.title = list.listName;
     [self loadWordsFromList];
+    didViewJustLoad = YES;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if (!didViewJustLoad) {
+        [self loadWordsFromList];
+    }
+    
+    didViewJustLoad = NO;
 }
 
 - (void)viewDidUnload {

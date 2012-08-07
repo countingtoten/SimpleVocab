@@ -13,6 +13,8 @@
 @interface ListContentsViewController : UITableViewController {
     List *list;
     NSMutableArray *wordsInListSorted;
+    
+    BOOL didViewJustLoad;
 }
 
 @property (strong, nonatomic) List *list;
