@@ -27,17 +27,7 @@
 	self.title = self.wordToDefine.word;
     
     [self updateWordDefinition];
-    didViewJustLoad = YES;
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    if (!didViewJustLoad && [self.wordDefinition.text length] > 0) {
-        [self updateWordDefinition];
-    }
-    
-    didViewJustLoad = NO;
+    [SVProgressHUD show];
 }
 
 - (void)viewDidUnload {
@@ -59,9 +49,6 @@
 - (void)updateWordDefinition {
     dispatch_queue_t queue = dispatch_queue_create("com.weinertworks.queue", NULL);
     dispatch_async(queue, ^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [SVProgressHUD show];
-        });
         WordNetDictionary *dictionary = [WordNetDictionary sharedInstance];
         NSDictionary *defineResults = [dictionary defineWord:wordToDefine.word];
         
