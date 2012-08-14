@@ -111,14 +111,12 @@ typedef enum {
     
     FMResultSet *linkResults = [self.db executeQuery:[NSString stringWithFormat:@"SELECT synsetkey FROM link WHERE wordkey = %@;", [NSString stringWithFormat:@"%d",wordid]]];
     
-    NSLog(@"Creating synsetidInOrder array");
     NSMutableArray *synsetidInOrder = [NSMutableArray array];
     while ([linkResults next]) {
         [synsetidInOrder addObject:[linkResults stringForColumn:@"synsetkey"]];
     }
     
     NSMutableDictionary *definitionsDictionary = [NSMutableDictionary dictionary];
-    NSLog(@"synsetid in synsetidInOrder array");
     for (NSString *synsetid in synsetidInOrder) {
         FMResultSet *definitionResults = [self.db executeQuery:[NSString stringWithFormat:@"SELECT definition, partofspeech FROM synset WHERE synsetid = %@;", synsetid]];
                
@@ -189,7 +187,7 @@ typedef enum {
     
     __db = [FMDatabase databaseWithPath:[[NSBundle mainBundle] pathForResource:@"WordNetDictionary" ofType:@"sqlite"]];
     [__db open];
-    __db.traceExecution = YES;
+    //__db.traceExecution = YES;
     
     return __db;
 }
