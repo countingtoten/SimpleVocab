@@ -11,6 +11,7 @@
 #import "AllLists.h"
 #import "ListContentsViewController.h"
 #import "StudyDictionaryAppDelegate.h"
+#import "StudyDictionaryConstants.h"
 
 @interface ListViewController ()
 
@@ -27,7 +28,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"ListContentsSegue"]) {
+    if ([segue.identifier isEqualToString:kListToListContentsSegue]) {
         ListContentsViewController *listContViewController = segue.destinationViewController;
         NSIndexPath *indexPath = (NSIndexPath *)sender;
         listContViewController.list = [self.lists.userOrderedLists objectAtIndex:indexPath.row];
@@ -68,7 +69,7 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"ListContentsSegue" sender:indexPath];
+    [self performSegueWithIdentifier:kListToListContentsSegue sender:indexPath];
 }
 
 @end

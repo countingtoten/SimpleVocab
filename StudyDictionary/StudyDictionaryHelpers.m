@@ -22,7 +22,7 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:kListEntityName inManagedObjectContext:moc];
     [request setEntity:entity];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(listName = %@)", kListDefaultName];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(listName = %@)", kDefaultListText];
     [request setPredicate:predicate];
     
     NSError *error = nil;
@@ -34,7 +34,7 @@
             list = [listObjects objectAtIndex:0];
         } else {
             list = [NSEntityDescription insertNewObjectForEntityForName:kListEntityName inManagedObjectContext:moc];
-            list.listName = kListDefaultName;
+            list.listName = kDefaultListText;
             
             AllLists *allLists = [StudyDictionaryHelpers getOrCreateAllLists];
             list.allLists = allLists;

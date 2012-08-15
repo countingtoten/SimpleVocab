@@ -8,6 +8,8 @@
 
 #import "FlashCardView.h"
 
+#import "StudyDictionaryConstants.h"
+
 @implementation FlashCardView
 @synthesize cardFrontText, cardBackText;
 
@@ -20,14 +22,16 @@
         
         self.cardFrontText = [[UILabel alloc] initWithFrame:frame];
         self.cardFrontText.textAlignment = UITextAlignmentCenter;
-        self.cardFrontText.font = [UIFont systemFontOfSize:20];
+        self.cardFrontText.lineBreakMode = UILineBreakModeWordWrap;
+        self.cardFrontText.numberOfLines = 0;
+        self.cardFrontText.font = [UIFont systemFontOfSize:kFlashCardFrontFontSize];
         [self addSubview:cardFrontText];
         
         // The TextView touches the right edge
         CGRect newFrame = CGRectMake(frame.origin.x + 10, frame.origin.y + 10, frame.size.width - 20, frame.size.height - 20);
         self.cardBackText = [[UITextView alloc] initWithFrame:newFrame];
         self.cardBackText.editable = NO;
-        self.cardBackText.font = [UIFont systemFontOfSize:20];
+        self.cardBackText.font = [UIFont systemFontOfSize:kDefaultFontSize];
         [self addSubview:cardBackText];
     }
     return self;

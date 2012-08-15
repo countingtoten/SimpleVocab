@@ -75,7 +75,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row < [self.lists.userOrderedLists count]) {
-        static NSString *ListCellIdentifier = @"ListCell";
+        static NSString *ListCellIdentifier = kListCellIdentifier;
         EditableTableViewCell *cell = (EditableTableViewCell *)[tableView dequeueReusableCellWithIdentifier:ListCellIdentifier];
         
         List *list = [self.lists.userOrderedLists objectAtIndex:indexPath.row];
@@ -85,10 +85,10 @@
         return cell;
     }
     
-    static NSString *AddCellIdentifier = @"AddListCell";
+    static NSString *AddCellIdentifier = kAddListCellIdentifier;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:AddCellIdentifier];
     
-    cell.textLabel.text = @"Add New List";
+    cell.textLabel.text = kAddListText;
     cell.textLabel.textColor = [UIColor grayColor];
     
     return cell;
@@ -101,7 +101,7 @@
     NSUInteger row = indexPath.row;
     if (row < [self.lists.userOrderedLists count]) {
         List *list = [self.lists.userOrderedLists objectAtIndex:row];
-        if ([list.listName isEqualToString:kListDefaultName]) {
+        if ([list.listName isEqualToString:kDefaultListText]) {
             return NO;
         }
     }
@@ -195,7 +195,7 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     NSString *listNewName = [textField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if ([listNewName length] == 0) {
-        listNewName = @"Unnamed Word List";
+        listNewName = kBlankListText;
     }
     
     if (![self.listOldName isEqualToString:listNewName]) {

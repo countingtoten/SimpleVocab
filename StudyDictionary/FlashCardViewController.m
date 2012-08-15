@@ -10,6 +10,7 @@
 
 #import "FlashCardView.h"
 #import "List.h"
+#import "StudyDictionaryConstants.h"
 #import "SVProgressHUD.h"
 #import "Word.h"
 #import "WordNetDictionary.h"
@@ -27,7 +28,7 @@
     [super viewDidLoad];
     
     if ([wordsInList count] == 0) {
-        [self performSegueWithIdentifier:@"FlashCardsSelect" sender: self];
+        [self performSegueWithIdentifier:kFlashToFlashSelectSegue sender: self];
     }
 }
 
@@ -60,7 +61,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"FlashCardsSelect"]) {
+    if ([segue.identifier isEqualToString:kFlashToFlashSelectSegue]) {
         UINavigationController *navigationController = segue.destinationViewController;
         FlashCardSelectViewController *listModalViewController = [[navigationController viewControllers] objectAtIndex:0];
         listModalViewController.delegate = self;
@@ -93,7 +94,7 @@
         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view cache:YES];
         [SVProgressHUD show];
         
-        dispatch_queue_t queue = dispatch_queue_create("com.weinertworks.queue", NULL);
+        dispatch_queue_t queue = dispatch_queue_create(kDefaultQueueIdentifier, NULL);
         dispatch_async(queue, ^{
             WordNetDictionary *dictionary = [WordNetDictionary sharedInstance];
             NSDictionary *defineResults = [dictionary defineWord:currentWord.word];
@@ -102,7 +103,7 @@
             NSMutableString *definitionsFormated = [NSMutableString string];
             
             if (defineResults != nil) {
-                NSArray *partsOfSpeech = [NSArray arrayWithObjects:@"noun", @"verb", @"adjective", @"adverb", nil];
+                NSArray *partsOfSpeech = kPartsOfSpeechArrayInOrderOfImportance;
                 NSInteger i = 1;
                 for (NSString *key in partsOfSpeech) {
                     NSArray *definitions = [defineResults objectForKey:key];

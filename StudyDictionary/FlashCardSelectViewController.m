@@ -12,6 +12,7 @@
 #import "EditableTableViewCell.h"
 #import "List.h"
 #import "StudyDictionaryAppDelegate.h"
+#import "StudyDictionaryConstants.h"
 #import "Word.h"
 
 @interface FlashCardSelectViewController ()
@@ -47,7 +48,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *ListCellIdentifier = @"FlashCardCell";
+    static NSString *ListCellIdentifier = kFlashCardSelectCellIdentifier;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ListCellIdentifier];
     
     List *list = [self.lists.userOrderedLists objectAtIndex:indexPath.row];

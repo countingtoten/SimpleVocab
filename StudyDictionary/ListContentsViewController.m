@@ -10,6 +10,7 @@
 
 #import "List.h"
 #import "StudyDictionaryAppDelegate.h"
+#import "StudyDictionaryConstants.h"
 #import "Word.h"
 #import "WordDefinitionViewController.h"
 
@@ -47,7 +48,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"WordDefinitionFromListContentsSegue"]) {
+    if ([segue.identifier isEqualToString:kDefinitionToListContentsSegue]) {
         WordDefinitionViewController *wordDefViewController = segue.destinationViewController;
         NSIndexPath *indexPath = (NSIndexPath *)sender;
         wordDefViewController.wordToDefine = [self.wordsInListSorted objectAtIndex:indexPath.row];
@@ -76,7 +77,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"ListContentsCell";
+    static NSString *CellIdentifier = kListContentsCellIdentifier;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     Word *word = [self.wordsInListSorted objectAtIndex:indexPath.row];
@@ -111,7 +112,7 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"WordDefinitionFromListContentsSegue" sender:indexPath];
+    [self performSegueWithIdentifier:kDefinitionToListContentsSegue sender:indexPath];
 }
 
 @end

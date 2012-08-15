@@ -8,6 +8,41 @@
 
 #define WORDNIK_API_KEY @"bd96bdcc1a0e2abe410050b634807facc67143ae8e00d7267"
 
+#define kDefaultQueueIdentifier "com.weinertworks.queue"
+
+#define kPartsOfSpeechArrayInOrderOfImportance ([NSArray arrayWithObjects:@"noun", @"verb", @"adjective", @"adverb", nil])
+
+#define kDefaultFontSize        20
+#define kFlashCardFrontFontSize  40
+
+// Developer Information
+#define kDeveloperWebsite   @"http://www.apple.com"
+#define kDeveloperEmail     @"test@example.com"
+#define kDeveloperTwitter   @"@test"
+
+// Default Cell Texts
+#define kAddListText        @"Add New List"
+#define kDefaultListText    @"Recent Words"
+#define kBlankListText      @"Unnamed Word List"
+
+// Segues
+#define kSearchToDefinitionSegue        @"WordDefinitionFromSearchSegue"
+#define kListToListContentsSegue        @"ListContentsSegue"
+#define kDefinitionToListContentsSegue  @"WordDefinitionFromListContentsSegue"
+#define kDefinitionToListModalSegue     @"ListModalViewSegue"
+#define kFlashToFlashSelectSegue        @"FlashCardsSelect"
+
+// Cell Identifiers
+#define kSearchResultsCellIdentifier    @"SearchResultsCell"
+#define kListCellIdentifier             @"ListCell"
+#define kAddListCellIdentifier          @"AddListCell"
+#define kListContentsCellIdentifier     @"ListContentsCell"
+#define kFlashCardSelectCellIdentifier  @"FlashCardCell"
+#define kWebSiteCellIdentifier          @"ContactWebsiteCell"
+#define kEmailCellIdentifier            @"ContactEmailCell"
+#define kTwitterCellIdentifier          @"ContactTwitterCell"
+
+// Core Data
 // SearchBarContents
 #define kSearchBarEntityName    @"SearchBarContents"
 #define kSearchStringKey        @"savedSearchString"
@@ -21,7 +56,6 @@
 // List
 #define kListEntityName @"List"
 #define kListKey        @"listName"
-#define kListDefaultName    @"Recent Words"
 
 // AllLists
 #define kAllListsEntityName @"AllLists"

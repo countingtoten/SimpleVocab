@@ -34,7 +34,7 @@
     [super viewDidLoad];
     
     self.dictionary = [WordNetDictionary sharedInstance];
-    queue = dispatch_queue_create("com.weinertworks.queue", NULL);
+    queue = dispatch_queue_create(kDefaultQueueIdentifier, NULL);
 
     UIApplication *app = [UIApplication sharedApplication];
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -58,7 +58,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"WordDefinitionFromSearchSegue"]) {
+    if ([segue.identifier isEqualToString:kSearchToDefinitionSegue]) {
         WordDefinitionViewController *wordDefViewController = segue.destinationViewController;
         NSIndexPath *indexPath = (NSIndexPath *)sender;
         Word *word = [self updateWordLookupCount:[searchResults objectAtIndex:indexPath.row]];
@@ -175,12 +175,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"SearchResultsCell";
+    static NSString *CellIdentifier = kSearchResultsCellIdentifier;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.textLabel.font = [UIFont systemFontOfSize:kDefaultFontSize];
     }
     
     cell.textLabel.text = [searchResults objectAtIndex:indexPath.row];
@@ -191,7 +192,7 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"WordDefinitionFromSearchSegue" sender:indexPath];
+    [self performSegueWithIdentifier:kSearchToDefinitionSegue sender:indexPath];
 }
 
 #pragma mark Search Bar

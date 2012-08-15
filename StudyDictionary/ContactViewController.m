@@ -8,9 +8,7 @@
 
 #import "ContactViewController.h"
 
-#define kWebSiteCellIdentifier  @"ContactWebsiteCell"
-#define kEmailCellIdentifier    @"ContactEmailCell"
-#define kTwitterCellIdentifier  @"ContactTwitterCell"
+#import "StudyDictionaryConstants.h"
 
 @interface ContactViewController ()
 - (void)displayMailComposer;
@@ -21,18 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -44,7 +34,7 @@
 	mailPicker.mailComposeDelegate = self;
 	
 	// Set up recipients
-	NSArray *toRecipients = [NSArray arrayWithObject:@"test@example.com"];
+	NSArray *toRecipients = [NSArray arrayWithObject:kDeveloperEmail];
 	
 	[mailPicker setToRecipients:toRecipients];
 	
@@ -54,15 +44,15 @@
 - (void)displayTweetComposer {
     TWTweetComposeViewController *tweetViewController = [[TWTweetComposeViewController alloc] init];
     
-    [tweetViewController setInitialText:@"@test "];
+    [tweetViewController setInitialText:[NSString stringWithFormat:@"%@ ", kDeveloperTwitter]];
     
     [tweetViewController setCompletionHandler:^(TWTweetComposeViewControllerResult result) {
         switch (result) {
             case TWTweetComposeViewControllerResultCancelled:
-                // output = @"Tweet cancelled.";
+                
                 break;
             case TWTweetComposeViewControllerResultDone:
-                // output = @"Tweet done.";
+                
                 break;
             default:
                 break;
@@ -80,7 +70,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if ([cell.reuseIdentifier isEqualToString:kWebSiteCellIdentifier]) {
-        NSURL *url = [NSURL URLWithString:@"http://www.test.com"];
+        NSURL *url = [NSURL URLWithString:kDeveloperWebsite];
         [[UIApplication sharedApplication] openURL:url];
     } else if ([cell.reuseIdentifier isEqualToString:kEmailCellIdentifier]) {
         [self displayMailComposer];
@@ -96,19 +86,19 @@
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
 	switch (result) {
 		case MFMailComposeResultCancelled:
-			//message.text = @"Result: canceled";
+			
 			break;
 		case MFMailComposeResultSaved:
-			//message.text = @"Result: saved";
+			
 			break;
 		case MFMailComposeResultSent:
-			//message.text = @"Result: sent";
+			
 			break;
 		case MFMailComposeResultFailed:
-			//message.text = @"Result: failed";
+			
 			break;
 		default:
-			//message.text = @"Result: not sent";
+			
 			break;
 	}
 	[self dismissModalViewControllerAnimated:YES];

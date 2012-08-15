@@ -40,14 +40,14 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"ListModalViewSegue"]) {
+    if ([segue.identifier isEqualToString:kDefinitionToListModalSegue]) {
         ListModalViewController *listModalViewController = segue.destinationViewController;
         listModalViewController.word = wordToDefine;
     }
 }
 
 - (void)updateWordDefinition {
-    dispatch_queue_t queue = dispatch_queue_create("com.weinertworks.queue", NULL);
+    dispatch_queue_t queue = dispatch_queue_create(kDefaultQueueIdentifier, NULL);
     dispatch_async(queue, ^{
         WordNetDictionary *dictionary = [WordNetDictionary sharedInstance];
         NSDictionary *defineResults = [dictionary defineWord:wordToDefine.word];
@@ -56,7 +56,7 @@
         NSMutableString *definitionsFormated = [NSMutableString string];
         
         if (defineResults != nil) {
-            NSArray *partsOfSpeech = [NSArray arrayWithObjects:@"noun", @"verb", @"adjective", @"adverb", nil];
+            NSArray *partsOfSpeech = kPartsOfSpeechArrayInOrderOfImportance;
             NSInteger i = 1;
             for (NSString *key in partsOfSpeech) {
                 NSArray *definitions = [defineResults objectForKey:key];

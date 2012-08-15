@@ -12,6 +12,7 @@
 #import "EditableTableViewCell.h"
 #import "List.h"
 #import "StudyDictionaryAppDelegate.h"
+#import "StudyDictionaryConstants.h"
 #import "Word.h"
 
 @interface ListModalViewController ()
@@ -35,7 +36,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row < [self.lists.userOrderedLists count]) {
-        static NSString *ListCellIdentifier = @"ListCell";
+        static NSString *ListCellIdentifier = kListCellIdentifier;
         EditableTableViewCell *cell = (EditableTableViewCell *)[tableView dequeueReusableCellWithIdentifier:ListCellIdentifier];
         
         List *list = [self.lists.userOrderedLists objectAtIndex:indexPath.row];
@@ -51,10 +52,10 @@
         return cell;
     }
     
-    static NSString *AddCellIdentifier = @"AddListCell";
+    static NSString *AddCellIdentifier = kAddListCellIdentifier;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:AddCellIdentifier];
     
-    cell.textLabel.text = @"Add New List";
+    cell.textLabel.text = kAddListText;
     cell.textLabel.textColor = [UIColor grayColor];
     
     return cell;
