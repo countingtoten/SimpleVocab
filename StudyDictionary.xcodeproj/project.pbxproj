@@ -50,10 +50,14 @@
 		0B713960157D400A0018D022 /* WordDefinitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B71395F157D400A0018D022 /* WordDefinitionViewController.m */; };
 		0B713965157D42930018D022 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B713962157D42930018D022 /* SVProgressHUD.bundle */; };
 		0B713966157D42930018D022 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B713964157D42930018D022 /* SVProgressHUD.m */; };
+		0B76C0F215D36D3500957C8F /* FlashCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B76C0F115D36D3500957C8F /* FlashCardView.m */; };
 		0B8113AC15801D8800D79DCA /* StudyDictionaryHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8113AB15801D8800D79DCA /* StudyDictionaryHelpers.m */; };
 		0B8113AD15801D8800D79DCA /* StudyDictionaryHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8113AB15801D8800D79DCA /* StudyDictionaryHelpers.m */; };
 		0B8FD9FA157E966300AE370B /* StudyDictionary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B8FD9F8157E966300AE370B /* StudyDictionary.xcdatamodeld */; };
 		0B8FD9FD157E9EC900AE370B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8FD9FC157E9EC900AE370B /* CoreData.framework */; };
+		0BA4869915D1BE12003E554D /* lined-paper.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA4869715D1BE12003E554D /* lined-paper.png */; };
+		0BA4869A15D1BE12003E554D /* lined-paper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA4869815D1BE12003E554D /* lined-paper@2x.png */; };
+		0BB50A9915D1FA3800417EDD /* FlashCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB50A9815D1FA3800417EDD /* FlashCardViewController.m */; };
 		0BBC0032157EF3E10062B82F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBC0031157EF3E00062B82F /* ListViewController.m */; };
 		0BBC0033157EF3E10062B82F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBC0031157EF3E00062B82F /* ListViewController.m */; };
 		0BBCFFD5157EC1AB0062B82F /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFD4157EC1AB0062B82F /* Word.m */; };
@@ -64,6 +68,8 @@
 		0BBCFFDE157EC1AB0062B82F /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFDC157EC1AB0062B82F /* List.m */; };
 		0BBCFFE1157EC1AB0062B82F /* AllLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFE0157EC1AB0062B82F /* AllLists.m */; };
 		0BBCFFE2157EC1AB0062B82F /* AllLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFE0157EC1AB0062B82F /* AllLists.m */; };
+		0BBD3E3315D286DB00B58B67 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BBD3E3215D286DB00B58B67 /* QuartzCore.framework */; };
+		0BC722EA15D250A800F3AF49 /* FlashCardSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC722E915D250A800F3AF49 /* FlashCardSelectViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,11 +154,17 @@
 		0B713962157D42930018D022 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = ../External/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
 		0B713963157D42930018D022 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		0B713964157D42930018D022 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		0B76C0F015D36D3500957C8F /* FlashCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashCardView.h; sourceTree = "<group>"; };
+		0B76C0F115D36D3500957C8F /* FlashCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashCardView.m; sourceTree = "<group>"; };
 		0B8113AA15801D8800D79DCA /* StudyDictionaryHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyDictionaryHelpers.h; sourceTree = "<group>"; };
 		0B8113AB15801D8800D79DCA /* StudyDictionaryHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyDictionaryHelpers.m; sourceTree = "<group>"; };
 		0B8FD9F9157E966300AE370B /* StudyDictionary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudyDictionary.xcdatamodel; sourceTree = "<group>"; };
 		0B8FD9FC157E9EC900AE370B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0B8FD9FE157E9EE900AE370B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		0BA4869715D1BE12003E554D /* lined-paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lined-paper.png"; path = "Images/Misc/lined-paper.png"; sourceTree = "<group>"; };
+		0BA4869815D1BE12003E554D /* lined-paper@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lined-paper@2x.png"; path = "Images/Misc/lined-paper@2x.png"; sourceTree = "<group>"; };
+		0BB50A9715D1FA3800417EDD /* FlashCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashCardViewController.h; sourceTree = "<group>"; };
+		0BB50A9815D1FA3800417EDD /* FlashCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashCardViewController.m; sourceTree = "<group>"; };
 		0BBC0030157EF3E00062B82F /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		0BBC0031157EF3E00062B82F /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		0BBCFFD3157EC1AB0062B82F /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
@@ -163,6 +175,9 @@
 		0BBCFFDC157EC1AB0062B82F /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
 		0BBCFFDF157EC1AB0062B82F /* AllLists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllLists.h; sourceTree = "<group>"; };
 		0BBCFFE0157EC1AB0062B82F /* AllLists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllLists.m; sourceTree = "<group>"; };
+		0BBD3E3215D286DB00B58B67 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0BC722E815D250A700F3AF49 /* FlashCardSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashCardSelectViewController.h; sourceTree = "<group>"; };
+		0BC722E915D250A800F3AF49 /* FlashCardSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashCardSelectViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,14 +185,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B129D7915D0D1FE00DEE694 /* libSQLite.a in Frameworks */,
 				0B8FD9FD157E9EC900AE370B /* CoreData.framework in Frameworks */,
-				0B71393A157D305A0018D022 /* SystemConfiguration.framework in Frameworks */,
-				0B713938157D304D0018D022 /* CoreText.framework in Frameworks */,
-				0B713932157D2F8E0018D022 /* Wordnik.framework in Frameworks */,
-				0B0A6768157C275D00C79FC2 /* UIKit.framework in Frameworks */,
-				0B0A676A157C275D00C79FC2 /* Foundation.framework in Frameworks */,
 				0B0A676C157C275D00C79FC2 /* CoreGraphics.framework in Frameworks */,
+				0B713938157D304D0018D022 /* CoreText.framework in Frameworks */,
+				0B0A676A157C275D00C79FC2 /* Foundation.framework in Frameworks */,
+				0B129D7915D0D1FE00DEE694 /* libSQLite.a in Frameworks */,
+				0BBD3E3315D286DB00B58B67 /* QuartzCore.framework in Frameworks */,
+				0B71393A157D305A0018D022 /* SystemConfiguration.framework in Frameworks */,
+				0B0A6768157C275D00C79FC2 /* UIKit.framework in Frameworks */,
+				0B713932157D2F8E0018D022 /* Wordnik.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +238,7 @@
 				0B713937157D304D0018D022 /* CoreText.framework */,
 				0B0A6769157C275D00C79FC2 /* Foundation.framework */,
 				0B8FD9FE157E9EE900AE370B /* libsqlite3.dylib */,
+				0BBD3E3215D286DB00B58B67 /* QuartzCore.framework */,
 				0B0A6793157C275E00C79FC2 /* SenTestingKit.framework */,
 				0B713939157D305A0018D022 /* SystemConfiguration.framework */,
 				0B0A6767157C275D00C79FC2 /* UIKit.framework */,
@@ -242,6 +259,8 @@
 				0B0A677C157C275E00C79FC2 /* MainStoryboard_iPad.storyboard */,
 				0B71392D157D2F360018D022 /* DictionarySearchViewController.h */,
 				0B71392E157D2F360018D022 /* DictionarySearchViewController.m */,
+				0B344A0F15892E68003C7722 /* EditableTableViewCell.h */,
+				0B344A1015892E68003C7722 /* EditableTableViewCell.m */,
 				0B6AAC1C158EF0B30043FD80 /* ListTemplateViewController.h */,
 				0B6AAC1D158EF0B30043FD80 /* ListTemplateViewController.m */,
 				0BBC0030157EF3E00062B82F /* ListViewController.h */,
@@ -252,8 +271,12 @@
 				0B0CFBF0158E8927000C029C /* ListContentsViewController.m */,
 				0B71395E157D400A0018D022 /* WordDefinitionViewController.h */,
 				0B71395F157D400A0018D022 /* WordDefinitionViewController.m */,
-				0B344A0F15892E68003C7722 /* EditableTableViewCell.h */,
-				0B344A1015892E68003C7722 /* EditableTableViewCell.m */,
+				0BB50A9715D1FA3800417EDD /* FlashCardViewController.h */,
+				0BB50A9815D1FA3800417EDD /* FlashCardViewController.m */,
+				0B76C0F015D36D3500957C8F /* FlashCardView.h */,
+				0B76C0F115D36D3500957C8F /* FlashCardView.m */,
+				0BC722E815D250A700F3AF49 /* FlashCardSelectViewController.h */,
+				0BC722E915D250A800F3AF49 /* FlashCardSelectViewController.m */,
 				0B129D6415D0D1B400DEE694 /* FMDB */,
 				0B713961157D42930018D022 /* SVProgressHUD */,
 				0B4CCAAA15B4B806000CBD09 /* WordNetDictionary */,
@@ -329,6 +352,8 @@
 		0B713946157D37D20018D022 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0BC722E715D2461000F3AF49 /* NavigationBar */,
+				0BA4869615D1BDE0003E554D /* Misc */,
 				0B713967157D429A0018D022 /* SVProgressHUD */,
 				0B713947157D37F70018D022 /* TabBar */,
 			);
@@ -371,6 +396,15 @@
 			name = SVProgressHUD;
 			sourceTree = "<group>";
 		};
+		0BA4869615D1BDE0003E554D /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				0BA4869715D1BE12003E554D /* lined-paper.png */,
+				0BA4869815D1BE12003E554D /* lined-paper@2x.png */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
 		0BBCFFCA157EBC590062B82F /* Word History Core Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +419,13 @@
 				0BBCFFD4157EC1AB0062B82F /* Word.m */,
 			);
 			name = "Word History Core Data";
+			sourceTree = "<group>";
+		};
+		0BC722E715D2461000F3AF49 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NavigationBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,6 +531,8 @@
 				0B71395D157D37F70018D022 /* notepad@2x.png in Resources */,
 				0B713965157D42930018D022 /* SVProgressHUD.bundle in Resources */,
 				0B129D6315D0D19700DEE694 /* WordNetDictionary.sqlite in Resources */,
+				0BA4869915D1BE12003E554D /* lined-paper.png in Resources */,
+				0BA4869A15D1BE12003E554D /* lined-paper@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +587,9 @@
 				0B129D6B15D0D1C900DEE694 /* FMDatabase.m in Sources */,
 				0B129D6C15D0D1C900DEE694 /* FMDatabaseAdditions.m in Sources */,
 				0B129D6D15D0D1C900DEE694 /* FMResultSet.m in Sources */,
+				0BB50A9915D1FA3800417EDD /* FlashCardViewController.m in Sources */,
+				0BC722EA15D250A800F3AF49 /* FlashCardSelectViewController.m in Sources */,
+				0B76C0F215D36D3500957C8F /* FlashCardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

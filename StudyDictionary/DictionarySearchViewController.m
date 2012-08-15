@@ -32,7 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     self.dictionary = [WordNetDictionary sharedInstance];
     queue = dispatch_queue_create("com.weinertworks.queue", NULL);
 
