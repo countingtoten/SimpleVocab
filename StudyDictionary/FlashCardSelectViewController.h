@@ -1,6 +1,6 @@
 //
 //  FlashCardSelectViewController.h
-//  StudyDictionary
+//  SimpleVocab
 //
 //  Created by James Weinert on 8/8/12.
 //  Copyright (c) 2012 Weinert Works. All rights reserved.

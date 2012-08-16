@@ -1,6 +1,6 @@
 //
 //  WordDefinitionViewController.m
-//  StudyDictionary
+//  SimpleVocab
 //
 //  Created by James Weinert on 6/4/12.
 //  Copyright (c) 2012 Weinert Works. All rights reserved.
@@ -9,7 +9,7 @@
 #import "WordDefinitionViewController.h"
 
 #import "ListModalViewController.h"
-#import "StudyDictionaryConstants.h"
+#import "SimpleVocabConstants.h"
 #import "SVProgressHUD.h"
 #import "Word.h"
 #import "WordNetDictionary.h"

@@ -1,20 +1,20 @@
 //
-//  StudyDictionaryHelpers.m
-//  StudyDictionary
+//  SimpleVocabHelpers.m
+//  SimpleVocab
 //
 //  Created by James Weinert on 6/6/12.
 //  Copyright (c) 2012 Weinert Works. All rights reserved.
 //
 
-#import "StudyDictionaryHelpers.h"
+#import "SimpleVocabHelpers.h"
 
-#import "StudyDictionaryAppDelegate.h"
-#import "StudyDictionaryConstants.h"
+#import "SimpleVocabAppDelegate.h"
+#import "SimpleVocabConstants.h"
 
-@implementation StudyDictionaryHelpers
+@implementation SimpleVocabHelpers
 
 + (List *)getOrCreateDefaultList {
-    StudyDictionaryAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    SimpleVocabAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *moc = [appDelegate managedObjectContext];
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -36,7 +36,7 @@
             list = [NSEntityDescription insertNewObjectForEntityForName:kListEntityName inManagedObjectContext:moc];
             list.listName = kDefaultListText;
             
-            AllLists *allLists = [StudyDictionaryHelpers getOrCreateAllLists];
+            AllLists *allLists = [SimpleVocabHelpers getOrCreateAllLists];
             list.allLists = allLists;
             
             [moc save:&error];
@@ -49,7 +49,7 @@
 }
 
 + (AllLists *)getOrCreateAllLists {
-    StudyDictionaryAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    SimpleVocabAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *moc = [appDelegate managedObjectContext];
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];

@@ -1,6 +1,6 @@
 //
 //  FlashCardSelectViewController.m
-//  StudyDictionary
+//  SimpleVocab
 //
 //  Created by James Weinert on 8/8/12.
 //  Copyright (c) 2012 Weinert Works. All rights reserved.
@@ -11,9 +11,9 @@
 #import "AllLists.h"
 #import "EditableTableViewCell.h"
 #import "List.h"
-#import "StudyDictionaryAppDelegate.h"
-#import "StudyDictionaryConstants.h"
-#import "StudyDictionaryHelpers.h"
+#import "SimpleVocabAppDelegate.h"
+#import "SimpleVocabConstants.h"
+#import "SimpleVocabHelpers.h"
 #import "Word.h"
 
 @interface FlashCardSelectViewController ()
@@ -43,7 +43,7 @@
 }
 
 - (void)loadAllLists {
-    AllLists *lists = [StudyDictionaryHelpers getOrCreateAllLists];
+    AllLists *lists = [SimpleVocabHelpers getOrCreateAllLists];
     
     // Filter results
     for (List *list in lists.userOrderedLists) {

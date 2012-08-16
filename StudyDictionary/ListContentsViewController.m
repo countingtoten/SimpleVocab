@@ -1,6 +1,6 @@
 //
 //  ListContentsViewController.m
-//  StudyDictionary
+//  SimpleVocab
 //
 //  Created by James Weinert on 6/17/12.
 //  Copyright (c) 2012 Weinert Works. All rights reserved.
@@ -9,8 +9,8 @@
 #import "ListContentsViewController.h"
 
 #import "List.h"
-#import "StudyDictionaryAppDelegate.h"
-#import "StudyDictionaryConstants.h"
+#import "SimpleVocabAppDelegate.h"
+#import "SimpleVocabConstants.h"
 #import "Word.h"
 #import "WordDefinitionViewController.h"
 
@@ -92,7 +92,7 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        StudyDictionaryAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        SimpleVocabAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
         NSManagedObjectContext *moc = [appDelegate managedObjectContext];
         
         Word *word = [self.wordsInListSorted objectAtIndex:indexPath.row];

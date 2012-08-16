@@ -1,6 +1,6 @@
 //
-//  StudyDictionaryHelpers.h
-//  StudyDictionary
+//  SimpleVocabHelpers.h
+//  SimpleVocab
 //
 //  Created by James Weinert on 6/6/12.
 //  Copyright (c) 2012 Weinert Works. All rights reserved.
@@ -11,7 +11,7 @@
 #import "AllLists.h"
 #import "List.h"
 
-@interface StudyDictionaryHelpers : NSObject
+@interface SimpleVocabHelpers : NSObject
 
 + (List *)getOrCreateDefaultList;
 + (AllLists *)getOrCreateAllLists;

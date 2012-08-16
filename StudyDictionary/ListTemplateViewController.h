@@ -1,6 +1,6 @@
 //
 //  ListTemplateViewController.h
-//  StudyDictionary
+//  SimpleVocab
 //
 //  Created by James Weinert on 6/18/12.
 //  Copyright (c) 2012 Weinert Works. All rights reserved.

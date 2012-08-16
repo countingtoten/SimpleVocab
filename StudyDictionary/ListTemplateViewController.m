@@ -1,6 +1,6 @@
 //
 //  ListTemplateViewController.m
-//  StudyDictionary
+//  SimpleVocab
 //
 //  Created by James Weinert on 6/18/12.
 //  Copyright (c) 2012 Weinert Works. All rights reserved.
@@ -12,9 +12,9 @@
 #import "EditableTableViewCell.h"
 #import "List.h"
 #import "ListContentsViewController.h"
-#import "StudyDictionaryAppDelegate.h"
-#import "StudyDictionaryConstants.h"
-#import "StudyDictionaryHelpers.h"
+#import "SimpleVocabAppDelegate.h"
+#import "SimpleVocabConstants.h"
+#import "SimpleVocabHelpers.h"
 
 @interface ListTemplateViewController ()
 - (void)loadAllLists;
@@ -54,7 +54,7 @@
 
 - (void)loadAllLists {
     NSLog(@"Load All Lists");
-    self.lists = [StudyDictionaryHelpers getOrCreateAllLists];    
+    self.lists = [SimpleVocabHelpers getOrCreateAllLists];    
 	
 	[self.tableView reloadData];
 }
@@ -118,7 +118,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    StudyDictionaryAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    SimpleVocabAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *moc = [appDelegate managedObjectContext];
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {

@@ -1,6 +1,6 @@
 //
 //  ContactViewController.m
-//  StudyDictionary
+//  SimpleVocab
 //
 //  Created by James Weinert on 8/15/12.
 //  Copyright (c) 2012 Weinert Works. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "ContactViewController.h"
 
-#import "StudyDictionaryConstants.h"
+#import "SimpleVocabConstants.h"
 
 @interface ContactViewController ()
 - (void)displayMailComposer;

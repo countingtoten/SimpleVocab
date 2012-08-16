@@ -1,6 +1,6 @@
 //
 //  DictionarySearchViewController.m
-//  StudyDictionary
+//  SimpleVocab
 //
 //  Created by James Weinert on 6/4/12.
 //  Copyright (c) 2012 Weinert Works. All rights reserved.
@@ -11,9 +11,9 @@
 #import "AllLists.h"
 #import "List.h"
 #import "SearchBarContents.h"
-#import "StudyDictionaryAppDelegate.h"
-#import "StudyDictionaryConstants.h"
-#import "StudyDictionaryHelpers.h"
+#import "SimpleVocabAppDelegate.h"
+#import "SimpleVocabConstants.h"
+#import "SimpleVocabHelpers.h"
 #import "SVProgressHUD.h"
 #import "Word.h"
 #import "WordDefinitionViewController.h"
@@ -68,7 +68,7 @@
 
 #pragma mark - Core Data Records
 - (void)loadSearchBarState {
-    StudyDictionaryAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    SimpleVocabAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *moc = [appDelegate managedObjectContext];
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -96,7 +96,7 @@
 }
 
 - (void)saveSearchBarState {
-    StudyDictionaryAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    SimpleVocabAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *moc = [appDelegate managedObjectContext];
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -125,7 +125,7 @@
 }
 
 - (Word *)updateWordLookupCount:(NSString *)wordToLookup {
-    StudyDictionaryAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    SimpleVocabAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *moc = [appDelegate managedObjectContext];
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -148,7 +148,7 @@
             word.word = wordToLookup;
             
             // Since we are creating a Word entity entry in the database add it to the default list
-            List *defaultList = [StudyDictionaryHelpers getOrCreateDefaultList];
+            List *defaultList = [SimpleVocabHelpers getOrCreateDefaultList];
             [word addBelongsToListObject:defaultList];
         }
         

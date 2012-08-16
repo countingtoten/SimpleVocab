@@ -1,14 +1,14 @@
 //
-//  StudyDictionaryTests.m
-//  StudyDictionaryTests
+//  SimpleVocabTests.m
+//  SimpleVocabTests
 //
 //  Created by James Weinert on 6/3/12.
 //  Copyright (c) 2012 Weinert Works. All rights reserved.
 //
 
-#import "StudyDictionaryTests.h"
+#import "SimpleVocabTests.h"
 
-@implementation StudyDictionaryTests
+@implementation SimpleVocabTests
 
 - (void)setUp
 {
@@ -26,7 +26,7 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in StudyDictionaryTests");
+    STFail(@"Unit tests are not implemented yet in SimpleVocabTests");
 }
 
 @end

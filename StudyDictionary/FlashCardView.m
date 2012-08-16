@@ -1,6 +1,6 @@
 //
 //  FlashCardView.m
-//  StudyDictionary
+//  SimpleVocab
 //
 //  Created by James Weinert on 8/8/12.
 //  Copyright (c) 2012 Weinert Works. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "FlashCardView.h"
 
-#import "StudyDictionaryConstants.h"
+#import "SimpleVocabConstants.h"
 
 @implementation FlashCardView
 @synthesize cardFrontText, cardBackText;

@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'StudyDictionary' target in the 'StudyDictionary' project
+// Prefix header for all source files of the 'SimpleVocab' target in the 'SimpleVocab' project
 //
 
 #import <Availability.h>

@@ -1,6 +1,6 @@
 //
 //  ListModalViewController.m
-//  StudyDictionary
+//  SimpleVocab
 //
 //  Created by James Weinert on 6/18/12.
 //  Copyright (c) 2012 Weinert Works. All rights reserved.
@@ -11,8 +11,8 @@
 #import "AllLists.h"
 #import "EditableTableViewCell.h"
 #import "List.h"
-#import "StudyDictionaryAppDelegate.h"
-#import "StudyDictionaryConstants.h"
+#import "SimpleVocabAppDelegate.h"
+#import "SimpleVocabConstants.h"
 #import "Word.h"
 
 @interface ListModalViewController ()
@@ -82,7 +82,7 @@
     [self.tableView endUpdates];
     
     if (!self.editing) {
-        StudyDictionaryAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        SimpleVocabAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
         NSManagedObjectContext *moc = [appDelegate managedObjectContext];
         
         NSError *error = nil;
@@ -107,7 +107,7 @@
         [self.word addBelongsToListObject:list];
     }
     
-    StudyDictionaryAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    SimpleVocabAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *moc = [appDelegate managedObjectContext];
     
     NSError *error = nil;

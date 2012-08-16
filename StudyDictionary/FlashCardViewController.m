@@ -1,6 +1,6 @@
 //
 //  FlashCardViewController.m
-//  StudyDictionary
+//  SimpleVocab
 //
 //  Created by James Weinert on 8/7/12.
 //  Copyright (c) 2012 Weinert Works. All rights reserved.
@@ -10,8 +10,8 @@
 
 #import "FlashCardView.h"
 #import "List.h"
-#import "StudyDictionaryAppDelegate.h"
-#import "StudyDictionaryConstants.h"
+#import "SimpleVocabAppDelegate.h"
+#import "SimpleVocabConstants.h"
 #import "SVProgressHUD.h"
 #import "Word.h"
 #import "WordNetDictionary.h"
@@ -147,7 +147,7 @@
 #pragma mark - FlashCardSelectViewControllerDelegate Methods
 
 - (void)flashCardSelectViewController:(FlashCardSelectViewController *)controller selectedListName:(NSString *)listName; {
-    StudyDictionaryAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    SimpleVocabAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *moc = [appDelegate managedObjectContext];
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];

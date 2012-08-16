@@ -12,16 +12,15 @@
 		0B0A676C157C275D00C79FC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0A676B157C275D00C79FC2 /* CoreGraphics.framework */; };
 		0B0A6772157C275D00C79FC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A6770157C275D00C79FC2 /* InfoPlist.strings */; };
 		0B0A6774157C275D00C79FC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A6773157C275D00C79FC2 /* main.m */; };
-		0B0A6778157C275D00C79FC2 /* StudyDictionaryAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A6777157C275D00C79FC2 /* StudyDictionaryAppDelegate.m */; };
+		0B0A6778157C275D00C79FC2 /* SimpleVocabAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A6777157C275D00C79FC2 /* SimpleVocabAppDelegate.m */; };
 		0B0A677B157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A6779157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard */; };
 		0B0A677E157C275E00C79FC2 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A677C157C275E00C79FC2 /* MainStoryboard_iPad.storyboard */; };
 		0B0A6794157C275E00C79FC2 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0A6793157C275E00C79FC2 /* SenTestingKit.framework */; };
 		0B0A6795157C275E00C79FC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0A6767157C275D00C79FC2 /* UIKit.framework */; };
 		0B0A6796157C275E00C79FC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0A6769157C275D00C79FC2 /* Foundation.framework */; };
 		0B0A679E157C275E00C79FC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A679C157C275E00C79FC2 /* InfoPlist.strings */; };
-		0B0A67A1157C275E00C79FC2 /* StudyDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A67A0157C275E00C79FC2 /* StudyDictionaryTests.m */; };
+		0B0A67A1157C275E00C79FC2 /* SimpleVocabTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A67A0157C275E00C79FC2 /* SimpleVocabTests.m */; };
 		0B0CFBF1158E8927000C029C /* ListContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0CFBF0158E8927000C029C /* ListContentsViewController.m */; };
-		0B0CFBF2158E8927000C029C /* ListContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0CFBF0158E8927000C029C /* ListContentsViewController.m */; };
 		0B129D6215D0D19700DEE694 /* WordNetDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B129D6015D0D19700DEE694 /* WordNetDictionary.m */; };
 		0B129D6315D0D19700DEE694 /* WordNetDictionary.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 0B129D6115D0D19700DEE694 /* WordNetDictionary.sqlite */; };
 		0B129D6B15D0D1C900DEE694 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B129D6615D0D1C900DEE694 /* FMDatabase.m */; };
@@ -35,9 +34,7 @@
 		0B53C79615DB8CAD009DA3DF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B53C79515DB8CAD009DA3DF /* MessageUI.framework */; };
 		0B53C79C15DB91B5009DA3DF /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B53C79B15DB91B5009DA3DF /* Twitter.framework */; };
 		0B6AAC1E158EF0B30043FD80 /* ListTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AAC1D158EF0B30043FD80 /* ListTemplateViewController.m */; };
-		0B6AAC1F158EF0B30043FD80 /* ListTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AAC1D158EF0B30043FD80 /* ListTemplateViewController.m */; };
 		0B6AAC23158EF1080043FD80 /* ListModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AAC22158EF1080043FD80 /* ListModalViewController.m */; };
-		0B6AAC24158EF1080043FD80 /* ListModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AAC22158EF1080043FD80 /* ListModalViewController.m */; };
 		0B71392F157D2F360018D022 /* DictionarySearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B71392E157D2F360018D022 /* DictionarySearchViewController.m */; };
 		0B713932157D2F8E0018D022 /* Wordnik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B713931157D2F8E0018D022 /* Wordnik.framework */; };
 		0B713938157D304D0018D022 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B713937157D304D0018D022 /* CoreText.framework */; };
@@ -57,20 +54,14 @@
 		0B713966157D42930018D022 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B713964157D42930018D022 /* SVProgressHUD.m */; };
 		0B76C0F215D36D3500957C8F /* FlashCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B76C0F115D36D3500957C8F /* FlashCardView.m */; };
 		0B8113AC15801D8800D79DCA /* StudyDictionaryHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8113AB15801D8800D79DCA /* StudyDictionaryHelpers.m */; };
-		0B8113AD15801D8800D79DCA /* StudyDictionaryHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8113AB15801D8800D79DCA /* StudyDictionaryHelpers.m */; };
 		0B8FD9FA157E966300AE370B /* StudyDictionary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B8FD9F8157E966300AE370B /* StudyDictionary.xcdatamodeld */; };
 		0B8FD9FD157E9EC900AE370B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8FD9FC157E9EC900AE370B /* CoreData.framework */; };
 		0BB50A9915D1FA3800417EDD /* FlashCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB50A9815D1FA3800417EDD /* FlashCardViewController.m */; };
 		0BBC0032157EF3E10062B82F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBC0031157EF3E00062B82F /* ListViewController.m */; };
-		0BBC0033157EF3E10062B82F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBC0031157EF3E00062B82F /* ListViewController.m */; };
 		0BBCFFD5157EC1AB0062B82F /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFD4157EC1AB0062B82F /* Word.m */; };
-		0BBCFFD6157EC1AB0062B82F /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFD4157EC1AB0062B82F /* Word.m */; };
 		0BBCFFD9157EC1AB0062B82F /* SearchBarContents.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFD8157EC1AB0062B82F /* SearchBarContents.m */; };
-		0BBCFFDA157EC1AB0062B82F /* SearchBarContents.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFD8157EC1AB0062B82F /* SearchBarContents.m */; };
 		0BBCFFDD157EC1AB0062B82F /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFDC157EC1AB0062B82F /* List.m */; };
-		0BBCFFDE157EC1AB0062B82F /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFDC157EC1AB0062B82F /* List.m */; };
 		0BBCFFE1157EC1AB0062B82F /* AllLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFE0157EC1AB0062B82F /* AllLists.m */; };
-		0BBCFFE2157EC1AB0062B82F /* AllLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFE0157EC1AB0062B82F /* AllLists.m */; };
 		0BBD3E3315D286DB00B58B67 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BBD3E3215D286DB00B58B67 /* QuartzCore.framework */; };
 		0BC722EA15D250A800F3AF49 /* FlashCardSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC722E915D250A800F3AF49 /* FlashCardSelectViewController.m */; };
 /* End PBXBuildFile section */
@@ -100,24 +91,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B0A6763157C275D00C79FC2 /* StudyDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B0A6763157C275D00C79FC2 /* SimpleVocab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleVocab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B0A6767157C275D00C79FC2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0B0A6769157C275D00C79FC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0B0A676B157C275D00C79FC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0B0A676F157C275D00C79FC2 /* StudyDictionary-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StudyDictionary-Info.plist"; sourceTree = "<group>"; };
+		0B0A676F157C275D00C79FC2 /* SimpleVocab-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleVocab-Info.plist"; sourceTree = "<group>"; };
 		0B0A6771157C275D00C79FC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0B0A6773157C275D00C79FC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0B0A6775157C275D00C79FC2 /* StudyDictionary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StudyDictionary-Prefix.pch"; sourceTree = "<group>"; };
-		0B0A6776157C275D00C79FC2 /* StudyDictionaryAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyDictionaryAppDelegate.h; sourceTree = "<group>"; };
-		0B0A6777157C275D00C79FC2 /* StudyDictionaryAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyDictionaryAppDelegate.m; sourceTree = "<group>"; };
+		0B0A6775157C275D00C79FC2 /* SimpleVocab-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleVocab-Prefix.pch"; sourceTree = "<group>"; };
+		0B0A6776157C275D00C79FC2 /* SimpleVocabAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleVocabAppDelegate.h; sourceTree = "<group>"; };
+		0B0A6777157C275D00C79FC2 /* SimpleVocabAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleVocabAppDelegate.m; sourceTree = "<group>"; };
 		0B0A677A157C275D00C79FC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		0B0A677D157C275E00C79FC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		0B0A6792157C275E00C79FC2 /* StudyDictionaryTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyDictionaryTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B0A6792157C275E00C79FC2 /* SimpleVocabTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleVocabTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B0A6793157C275E00C79FC2 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		0B0A679B157C275E00C79FC2 /* StudyDictionaryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StudyDictionaryTests-Info.plist"; sourceTree = "<group>"; };
+		0B0A679B157C275E00C79FC2 /* SimpleVocabTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleVocabTests-Info.plist"; sourceTree = "<group>"; };
 		0B0A679D157C275E00C79FC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0B0A679F157C275E00C79FC2 /* StudyDictionaryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyDictionaryTests.h; sourceTree = "<group>"; };
-		0B0A67A0157C275E00C79FC2 /* StudyDictionaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyDictionaryTests.m; sourceTree = "<group>"; };
+		0B0A679F157C275E00C79FC2 /* SimpleVocabTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleVocabTests.h; sourceTree = "<group>"; };
+		0B0A67A0157C275E00C79FC2 /* SimpleVocabTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleVocabTests.m; sourceTree = "<group>"; };
 		0B0CFBEF158E8927000C029C /* ListContentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListContentsViewController.h; sourceTree = "<group>"; };
 		0B0CFBF0158E8927000C029C /* ListContentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListContentsViewController.m; sourceTree = "<group>"; };
 		0B129D5F15D0D19700DEE694 /* WordNetDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordNetDictionary.h; path = External/WordNetDictionary/WordNetDictionary.h; sourceTree = "<group>"; };
@@ -147,7 +138,7 @@
 		0B713931157D2F8E0018D022 /* Wordnik.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wordnik.framework; path = "External/wordkit/frameworks/objective-c/Wordnik WordKit 1.02/iOS Framework/Wordnik.framework"; sourceTree = "<group>"; };
 		0B713937157D304D0018D022 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		0B713939157D305A0018D022 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		0B713941157D32700018D022 /* StudyDictionaryConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudyDictionaryConstants.h; sourceTree = "<group>"; };
+		0B713941157D32700018D022 /* SimpleVocabConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleVocabConstants.h; sourceTree = "<group>"; };
 		0B713949157D37F70018D022 /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book.png; sourceTree = "<group>"; };
 		0B71394A157D37F70018D022 /* book@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book@2x.png"; sourceTree = "<group>"; };
 		0B71394B157D37F70018D022 /* flashcards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flashcards.png; sourceTree = "<group>"; };
@@ -165,7 +156,7 @@
 		0B713964157D42930018D022 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		0B76C0F015D36D3500957C8F /* FlashCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashCardView.h; sourceTree = "<group>"; };
 		0B76C0F115D36D3500957C8F /* FlashCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashCardView.m; sourceTree = "<group>"; };
-		0B8113AA15801D8800D79DCA /* StudyDictionaryHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyDictionaryHelpers.h; sourceTree = "<group>"; };
+		0B8113AA15801D8800D79DCA /* SimpleVocabHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleVocabHelpers.h; sourceTree = "<group>"; };
 		0B8113AB15801D8800D79DCA /* StudyDictionaryHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyDictionaryHelpers.m; sourceTree = "<group>"; };
 		0B8FD9F9157E966300AE370B /* StudyDictionary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudyDictionary.xcdatamodel; sourceTree = "<group>"; };
 		0B8FD9FC157E9EC900AE370B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -223,8 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				0B129D6E15D0D1D400DEE694 /* SQLite.xcodeproj */,
-				0B0A676D157C275D00C79FC2 /* StudyDictionary */,
-				0B0A6799157C275E00C79FC2 /* StudyDictionaryTests */,
+				0B0A676D157C275D00C79FC2 /* SimpleVocab */,
+				0B0A6799157C275E00C79FC2 /* SimpleVocabTests */,
 				0B0A6766157C275D00C79FC2 /* Frameworks */,
 				0B0A6764157C275D00C79FC2 /* Products */,
 			);
@@ -233,8 +224,8 @@
 		0B0A6764157C275D00C79FC2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B0A6763157C275D00C79FC2 /* StudyDictionary.app */,
-				0B0A6792157C275E00C79FC2 /* StudyDictionaryTests.octest */,
+				0B0A6763157C275D00C79FC2 /* SimpleVocab.app */,
+				0B0A6792157C275E00C79FC2 /* SimpleVocabTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -258,13 +249,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0B0A676D157C275D00C79FC2 /* StudyDictionary */ = {
+		0B0A676D157C275D00C79FC2 /* SimpleVocab */ = {
 			isa = PBXGroup;
 			children = (
-				0B0A6776157C275D00C79FC2 /* StudyDictionaryAppDelegate.h */,
-				0B0A6777157C275D00C79FC2 /* StudyDictionaryAppDelegate.m */,
-				0B713941157D32700018D022 /* StudyDictionaryConstants.h */,
-				0B8113AA15801D8800D79DCA /* StudyDictionaryHelpers.h */,
+				0B0A6776157C275D00C79FC2 /* SimpleVocabAppDelegate.h */,
+				0B0A6777157C275D00C79FC2 /* SimpleVocabAppDelegate.m */,
+				0B713941157D32700018D022 /* SimpleVocabConstants.h */,
+				0B8113AA15801D8800D79DCA /* SimpleVocabHelpers.h */,
 				0B8113AB15801D8800D79DCA /* StudyDictionaryHelpers.m */,
 				0B0A6779157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard */,
 				0B0A677C157C275E00C79FC2 /* MainStoryboard_iPad.storyboard */,
@@ -296,6 +287,7 @@
 				0BBCFFCA157EBC590062B82F /* Word History Core Data */,
 				0B0A676E157C275D00C79FC2 /* Supporting Files */,
 			);
+			name = SimpleVocab;
 			path = StudyDictionary;
 			sourceTree = "<group>";
 		};
@@ -303,28 +295,29 @@
 			isa = PBXGroup;
 			children = (
 				0B713946157D37D20018D022 /* Images */,
-				0B0A676F157C275D00C79FC2 /* StudyDictionary-Info.plist */,
+				0B0A676F157C275D00C79FC2 /* SimpleVocab-Info.plist */,
 				0B0A6770157C275D00C79FC2 /* InfoPlist.strings */,
 				0B0A6773157C275D00C79FC2 /* main.m */,
-				0B0A6775157C275D00C79FC2 /* StudyDictionary-Prefix.pch */,
+				0B0A6775157C275D00C79FC2 /* SimpleVocab-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0B0A6799157C275E00C79FC2 /* StudyDictionaryTests */ = {
+		0B0A6799157C275E00C79FC2 /* SimpleVocabTests */ = {
 			isa = PBXGroup;
 			children = (
-				0B0A679F157C275E00C79FC2 /* StudyDictionaryTests.h */,
-				0B0A67A0157C275E00C79FC2 /* StudyDictionaryTests.m */,
+				0B0A679F157C275E00C79FC2 /* SimpleVocabTests.h */,
+				0B0A67A0157C275E00C79FC2 /* SimpleVocabTests.m */,
 				0B0A679A157C275E00C79FC2 /* Supporting Files */,
 			);
+			name = SimpleVocabTests;
 			path = StudyDictionaryTests;
 			sourceTree = "<group>";
 		};
 		0B0A679A157C275E00C79FC2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0B0A679B157C275E00C79FC2 /* StudyDictionaryTests-Info.plist */,
+				0B0A679B157C275E00C79FC2 /* SimpleVocabTests-Info.plist */,
 				0B0A679C157C275E00C79FC2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -444,9 +437,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0B0A6762157C275D00C79FC2 /* StudyDictionary */ = {
+		0B0A6762157C275D00C79FC2 /* SimpleVocab */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0B0A67A4157C275E00C79FC2 /* Build configuration list for PBXNativeTarget "StudyDictionary" */;
+			buildConfigurationList = 0B0A67A4157C275E00C79FC2 /* Build configuration list for PBXNativeTarget "SimpleVocab" */;
 			buildPhases = (
 				0B0A675F157C275D00C79FC2 /* Sources */,
 				0B0A6760157C275D00C79FC2 /* Frameworks */,
@@ -457,14 +450,14 @@
 			dependencies = (
 				0B129D7815D0D1F400DEE694 /* PBXTargetDependency */,
 			);
-			name = StudyDictionary;
+			name = SimpleVocab;
 			productName = StudyDictionary;
-			productReference = 0B0A6763157C275D00C79FC2 /* StudyDictionary.app */;
+			productReference = 0B0A6763157C275D00C79FC2 /* SimpleVocab.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0B0A6791157C275E00C79FC2 /* StudyDictionaryTests */ = {
+		0B0A6791157C275E00C79FC2 /* SimpleVocabTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0B0A67A7157C275E00C79FC2 /* Build configuration list for PBXNativeTarget "StudyDictionaryTests" */;
+			buildConfigurationList = 0B0A67A7157C275E00C79FC2 /* Build configuration list for PBXNativeTarget "SimpleVocabTests" */;
 			buildPhases = (
 				0B0A678D157C275E00C79FC2 /* Sources */,
 				0B0A678E157C275E00C79FC2 /* Frameworks */,
@@ -476,9 +469,9 @@
 			dependencies = (
 				0B0A6798157C275E00C79FC2 /* PBXTargetDependency */,
 			);
-			name = StudyDictionaryTests;
+			name = SimpleVocabTests;
 			productName = StudyDictionaryTests;
-			productReference = 0B0A6792157C275E00C79FC2 /* StudyDictionaryTests.octest */;
+			productReference = 0B0A6792157C275E00C79FC2 /* SimpleVocabTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -490,7 +483,7 @@
 				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Weinert Works";
 			};
-			buildConfigurationList = 0B0A675D157C275D00C79FC2 /* Build configuration list for PBXProject "StudyDictionary" */;
+			buildConfigurationList = 0B0A675D157C275D00C79FC2 /* Build configuration list for PBXProject "SimpleVocab" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -508,8 +501,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				0B0A6762157C275D00C79FC2 /* StudyDictionary */,
-				0B0A6791157C275E00C79FC2 /* StudyDictionaryTests */,
+				0B0A6762157C275D00C79FC2 /* SimpleVocab */,
+				0B0A6791157C275E00C79FC2 /* SimpleVocabTests */,
 			);
 		};
 /* End PBXProject section */
@@ -581,7 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B0A6774157C275D00C79FC2 /* main.m in Sources */,
-				0B0A6778157C275D00C79FC2 /* StudyDictionaryAppDelegate.m in Sources */,
+				0B0A6778157C275D00C79FC2 /* SimpleVocabAppDelegate.m in Sources */,
 				0B71392F157D2F360018D022 /* DictionarySearchViewController.m in Sources */,
 				0B713960157D400A0018D022 /* WordDefinitionViewController.m in Sources */,
 				0B713966157D42930018D022 /* SVProgressHUD.m in Sources */,
@@ -611,16 +604,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B0A67A1157C275E00C79FC2 /* StudyDictionaryTests.m in Sources */,
-				0BBCFFD6157EC1AB0062B82F /* Word.m in Sources */,
-				0BBCFFDA157EC1AB0062B82F /* SearchBarContents.m in Sources */,
-				0BBCFFDE157EC1AB0062B82F /* List.m in Sources */,
-				0BBCFFE2157EC1AB0062B82F /* AllLists.m in Sources */,
-				0BBC0033157EF3E10062B82F /* ListViewController.m in Sources */,
-				0B8113AD15801D8800D79DCA /* StudyDictionaryHelpers.m in Sources */,
-				0B0CFBF2158E8927000C029C /* ListContentsViewController.m in Sources */,
-				0B6AAC1F158EF0B30043FD80 /* ListTemplateViewController.m in Sources */,
-				0B6AAC24158EF1080043FD80 /* ListModalViewController.m in Sources */,
+				0B0A67A1157C275E00C79FC2 /* SimpleVocabTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,7 +613,7 @@
 /* Begin PBXTargetDependency section */
 		0B0A6798157C275E00C79FC2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0B0A6762157C275D00C79FC2 /* StudyDictionary */;
+			target = 0B0A6762157C275D00C79FC2 /* SimpleVocab */;
 			targetProxy = 0B0A6797157C275E00C79FC2 /* PBXContainerItemProxy */;
 		};
 		0B129D7815D0D1F400DEE694 /* PBXTargetDependency */ = {
@@ -734,11 +718,11 @@
 					"\"$(SRCROOT)/External/wordkit/frameworks/objective-c/Wordnik WordKit 1.02/iOS Framework\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StudyDictionary/StudyDictionary-Prefix.pch";
-				INFOPLIST_FILE = "StudyDictionary/StudyDictionary-Info.plist";
+				GCC_PREFIX_HEADER = "StudyDictionary/SimpleVocab-Prefix.pch";
+				INFOPLIST_FILE = "StudyDictionary/SimpleVocab-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SimpleVocab;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -752,11 +736,11 @@
 					"\"$(SRCROOT)/External/wordkit/frameworks/objective-c/Wordnik WordKit 1.02/iOS Framework\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StudyDictionary/StudyDictionary-Prefix.pch";
-				INFOPLIST_FILE = "StudyDictionary/StudyDictionary-Info.plist";
+				GCC_PREFIX_HEADER = "StudyDictionary/SimpleVocab-Prefix.pch";
+				INFOPLIST_FILE = "StudyDictionary/SimpleVocab-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SimpleVocab;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -765,15 +749,15 @@
 		0B0A67A8157C275E00C79FC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StudyDictionary.app/StudyDictionary";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimpleVocab.app/SimpleVocab";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StudyDictionary/StudyDictionary-Prefix.pch";
-				INFOPLIST_FILE = "StudyDictionaryTests/StudyDictionaryTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "StudyDictionary/SimpleVocab-Prefix.pch";
+				INFOPLIST_FILE = "StudyDictionaryTests/SimpleVocabTests-Info.plist";
+				PRODUCT_NAME = SimpleVocabTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -782,15 +766,15 @@
 		0B0A67A9157C275E00C79FC2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StudyDictionary.app/StudyDictionary";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimpleVocab.app/SimpleVocab";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StudyDictionary/StudyDictionary-Prefix.pch";
-				INFOPLIST_FILE = "StudyDictionaryTests/StudyDictionaryTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "StudyDictionary/SimpleVocab-Prefix.pch";
+				INFOPLIST_FILE = "StudyDictionaryTests/SimpleVocabTests-Info.plist";
+				PRODUCT_NAME = SimpleVocabTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -799,7 +783,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0B0A675D157C275D00C79FC2 /* Build configuration list for PBXProject "StudyDictionary" */ = {
+		0B0A675D157C275D00C79FC2 /* Build configuration list for PBXProject "SimpleVocab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B0A67A2157C275E00C79FC2 /* Debug */,
@@ -808,7 +792,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0B0A67A4157C275E00C79FC2 /* Build configuration list for PBXNativeTarget "StudyDictionary" */ = {
+		0B0A67A4157C275E00C79FC2 /* Build configuration list for PBXNativeTarget "SimpleVocab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B0A67A5157C275E00C79FC2 /* Debug */,
@@ -817,7 +801,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0B0A67A7157C275E00C79FC2 /* Build configuration list for PBXNativeTarget "StudyDictionaryTests" */ = {
+		0B0A67A7157C275E00C79FC2 /* Build configuration list for PBXNativeTarget "SimpleVocabTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B0A67A8157C275E00C79FC2 /* Debug */,

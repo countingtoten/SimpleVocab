@@ -1,6 +1,6 @@
 //
 //  EditableTableViewCell.m
-//  StudyDictionary
+//  SimpleVocab
 //
 //  Created by James Weinert on 6/13/12.
 //  Copyright (c) 2012 Weinert Works. All rights reserved.

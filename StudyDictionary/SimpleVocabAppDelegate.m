@@ -1,16 +1,16 @@
 //
-//  StudyDictionaryAppDelegate.m
-//  StudyDictionary
+//  SimpleVocabAppDelegate.m
+//  SimpleVocab
 //
 //  Created by James Weinert on 6/3/12.
 //  Copyright (c) 2012 Weinert Works. All rights reserved.
 //
 
-#import "StudyDictionaryAppDelegate.h"
+#import "SimpleVocabAppDelegate.h"
 
-#import "StudyDictionaryHelpers.h"
+#import "SimpleVocabHelpers.h"
 
-@implementation StudyDictionaryAppDelegate
+@implementation SimpleVocabAppDelegate
 
 @synthesize window = _window;
 @synthesize managedObjectContext = _managedObjectContext;
@@ -19,7 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Create default list if it doesn't exist
-    [StudyDictionaryHelpers getOrCreateDefaultList];
+    [SimpleVocabHelpers getOrCreateDefaultList];
     
     return YES;
 }
