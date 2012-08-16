@@ -53,6 +53,7 @@
 }
 
 - (void)loadAllLists {
+    NSLog(@"Load All Lists");
     self.lists = [StudyDictionaryHelpers getOrCreateAllLists];    
 	
 	[self.tableView reloadData];

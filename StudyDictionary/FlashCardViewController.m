@@ -10,6 +10,7 @@
 
 #import "FlashCardView.h"
 #import "List.h"
+#import "StudyDictionaryAppDelegate.h"
 #import "StudyDictionaryConstants.h"
 #import "SVProgressHUD.h"
 #import "Word.h"
@@ -20,7 +21,7 @@
 @end
 
 @implementation FlashCardViewController
-@synthesize list, currentWord, wordsInList;
+@synthesize currentWord, wordsInList, wholeList;
 @synthesize cardFront, cardBack;
 @synthesize tapRecognizer;
 
@@ -97,7 +98,7 @@
         dispatch_queue_t queue = dispatch_queue_create(kDefaultQueueIdentifier, NULL);
         dispatch_async(queue, ^{
             WordNetDictionary *dictionary = [WordNetDictionary sharedInstance];
-            NSDictionary *defineResults = [dictionary defineWord:currentWord.word];
+            NSDictionary *defineResults = [dictionary defineWord:currentWord];
             
             // Format the definitions results
             NSMutableString *definitionsFormated = [NSMutableString string];
@@ -116,7 +117,7 @@
                     }
                 }
             } else {
-                definitionsFormated = [NSString stringWithFormat:@"Could not find definition for %@, sorry.", currentWord.word];
+                definitionsFormated = [NSString stringWithFormat:@"Could not find definition for %@, sorry.", currentWord];
             }
             
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -131,7 +132,7 @@
 }
 
 - (void)fillWordList {
-    self.wordsInList = [NSMutableArray arrayWithArray:[list.listContents allObjects]];
+    self.wordsInList = [NSMutableArray arrayWithArray:self.wholeList];
 }
 
 - (void)updateTextOnFrontCard {
@@ -142,30 +143,64 @@
     
     NSLog(@"Before count %d", [self.wordsInList count]);
     NSUInteger randomIndex = arc4random() % [self.wordsInList count];
-    Word *word = [self.wordsInList objectAtIndex:randomIndex];
+    NSString *word = [self.wordsInList objectAtIndex:randomIndex];
     [self.wordsInList removeObjectAtIndex:randomIndex];
-    [self.cardFront addTextToCardFront:word.word];
-    NSLog(@"Word removed %@", word.word);
+    [self.cardFront addTextToCardFront:word];
+    NSLog(@"Word removed %@", word);
     NSLog(@"After count %d", [self.wordsInList count]);
     self.currentWord = word;
 }
 
 #pragma mark - FlashCardSelectViewControllerDelegate Methods
 
-- (void)flashCardSelectViewController:(FlashCardSelectViewController *)controller selectedList:(List *)listForCards {
-    self.list = listForCards;
+- (void)flashCardSelectViewController:(FlashCardSelectViewController *)controller selectedListName:(NSString *)listName; {
+    StudyDictionaryAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *moc = [appDelegate managedObjectContext];
     
-    [self fillWordList];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
     
-    [self.cardBack removeFromSuperview];
-    if (self.cardFront == nil) {
-        self.cardFront = [[FlashCardView alloc] initWithFrame:self.view.frame];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:kListEntityName inManagedObjectContext:moc];
+    [request setEntity:entity];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(listName = %@)", listName];
+    [request setPredicate:predicate];
+    
+    NSError *error = nil;
+    NSArray *listObjects = [moc executeFetchRequest:request error:&error];
+    
+    List *listObject = nil;
+    if (listObjects != nil) {
+        if ([listObjects count] > 0) {
+            listObject = [listObjects objectAtIndex:0];
+        } else {
+            // The list name doesn't exist
+            // but self.wholeList will equal nil
+            // and we won't have to worry about this
+        }
     } else {
-        [self.cardFront removeFromSuperview];
+        NSLog(@"And Error Happened");
     }
     
-    [self updateTextOnFrontCard];
-    [self.view insertSubview:self.cardFront atIndex:0];
+    NSMutableArray *wordList = [NSMutableArray array];
+    for (Word *word in listObject.listContents) {
+        [wordList addObject:word.word];
+    }
+    
+    self.wholeList = [NSArray arrayWithArray:wordList];
+    
+    if ([self.wholeList count] > 0) {        
+        [self fillWordList];
+        
+        [self.cardBack removeFromSuperview];
+        if (self.cardFront == nil) {
+            self.cardFront = [[FlashCardView alloc] initWithFrame:self.view.frame];
+        } else {
+            [self.cardFront removeFromSuperview];
+        }
+        
+        [self updateTextOnFrontCard];
+        [self.view insertSubview:self.cardFront atIndex:0];
+    }
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

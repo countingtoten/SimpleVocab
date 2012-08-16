@@ -11,18 +11,16 @@
 #import "FlashCardSelectViewController.h"
 
 @class FlashCardView;
-@class List;
-@class Word;
 
 @interface FlashCardViewController : UIViewController <UIGestureRecognizerDelegate, FlashCardSelectViewControllerDelegate> {
-    List *list;
-    Word *currentWord;
+    NSString *currentWord;
     NSMutableArray *wordsInList;
+    NSArray *wholeList;
 }
 
-@property (strong, nonatomic) List *list;
-@property (strong, nonatomic) Word *currentWord;
+@property (strong, nonatomic) NSString *currentWord;
 @property (strong, nonatomic) NSMutableArray *wordsInList;
+@property (strong, nonatomic) NSArray *wholeList;
 
 @property (strong, nonatomic) FlashCardView *cardFront;
 @property (strong, nonatomic) FlashCardView *cardBack;

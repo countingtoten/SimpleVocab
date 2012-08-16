@@ -6,16 +6,19 @@
 //  Copyright (c) 2012 Weinert Works. All rights reserved.
 //
 
-#import "ListTemplateViewController.h"
+#import <UIKit/UIKit.h>
 
 @class FlashCardSelectViewController;
-@class List;
 
 @protocol FlashCardSelectViewControllerDelegate <NSObject>
-- (void)flashCardSelectViewController:(FlashCardSelectViewController *)controller selectedList:(List *)listForCards;
+- (void)flashCardSelectViewController:(FlashCardSelectViewController *)controller selectedListName:(NSString *)listName;
 @end
 
-@interface FlashCardSelectViewController : ListTemplateViewController
+@interface FlashCardSelectViewController : UITableViewController {
+    NSMutableArray *listsWithWords;
+}
+
+@property (strong, nonatomic) NSMutableArray *listsWithWords;
 
 @property (weak, nonatomic) id <FlashCardSelectViewControllerDelegate> delegate;
 
