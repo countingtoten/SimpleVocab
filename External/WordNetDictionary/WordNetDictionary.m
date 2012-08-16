@@ -180,6 +180,17 @@ typedef enum {
     return definitionsDictionary;
 }
 
+- (NSArray *)randomWords:(int )limit {
+    NSMutableArray *dbResults = [NSMutableArray array];
+    FMResultSet *fineResults = [self.db executeQuery:[NSString stringWithFormat:@"SELECT lemma FROM word ORDER BY RANDOM() LIMIT %d;", limit]];
+    
+    while ([fineResults next]) {
+        [dbResults addObject:[fineResults stringForColumn:@"lemma"]];
+    }
+    NSLog(@"Random Words count %d", [dbResults count]);
+    return dbResults;
+}
+
 - (FMDatabase *)db {
     if (__db != nil) {
         return __db;

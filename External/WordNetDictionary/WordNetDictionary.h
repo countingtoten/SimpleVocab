@@ -20,4 +20,6 @@
 // @"noun", @"verb", @"adjective", or @"adverb"
 - (NSDictionary *)defineWord:(NSString *)wordToDefine;
 
+- (NSArray *)randomWords:(int )limit;
+
 @end
