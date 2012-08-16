@@ -187,7 +187,7 @@ typedef enum {
     while ([fineResults next]) {
         [dbResults addObject:[fineResults stringForColumn:@"lemma"]];
     }
-    NSLog(@"Random Words count %d", [dbResults count]);
+    
     return dbResults;
 }
 

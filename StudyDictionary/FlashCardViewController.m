@@ -35,11 +35,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    NSLog(@"%f", self.view.bounds.origin.x);
-    NSLog(@"%f", self.view.bounds.origin.y);
-    NSLog(@"%f", self.view.bounds.size.width);
-    NSLog(@"%f", self.view.bounds.size.height);
+
 }
 
 - (void)viewDidUnload {
@@ -141,13 +137,10 @@
         [self fillWordList];
     }
     
-    NSLog(@"Before count %d", [self.wordsInList count]);
     NSUInteger randomIndex = arc4random() % [self.wordsInList count];
     NSString *word = [self.wordsInList objectAtIndex:randomIndex];
     [self.wordsInList removeObjectAtIndex:randomIndex];
     [self.cardFront addTextToCardFront:word];
-    NSLog(@"Word removed %@", word);
-    NSLog(@"After count %d", [self.wordsInList count]);
     self.currentWord = word;
 }
 
