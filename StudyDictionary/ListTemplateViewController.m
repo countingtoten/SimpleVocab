@@ -53,7 +53,6 @@
 }
 
 - (void)loadAllLists {
-    NSLog(@"Load All Lists");
     self.lists = [SimpleVocabHelpers getOrCreateAllLists];    
 	
 	[self.tableView reloadData];
