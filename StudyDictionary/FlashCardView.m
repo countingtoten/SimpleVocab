@@ -21,8 +21,8 @@
         self.layer.masksToBounds = YES;
         
         self.cardFrontText = [[UILabel alloc] initWithFrame:frame];
-        self.cardFrontText.textAlignment = UITextAlignmentCenter;
-        self.cardFrontText.lineBreakMode = UILineBreakModeWordWrap;
+        self.cardFrontText.textAlignment = NSTextAlignmentCenter;
+        self.cardFrontText.lineBreakMode = NSLineBreakByWordWrapping;
         self.cardFrontText.numberOfLines = 0;
         self.cardFrontText.font = [UIFont systemFontOfSize:kFlashCardFrontFontSize];
         [self addSubview:cardFrontText];

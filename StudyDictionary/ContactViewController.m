@@ -38,31 +38,16 @@
 	
 	[mailPicker setToRecipients:toRecipients];
 	
-    [self presentModalViewController:mailPicker animated:YES];
+    [self presentViewController:mailPicker animated:YES completion:nil];
 }
 
 - (void)displayTweetComposer {
-    TWTweetComposeViewController *tweetViewController = [[TWTweetComposeViewController alloc] init];
+    SLComposeViewController *tweetViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
     
     [tweetViewController setInitialText:[NSString stringWithFormat:@"%@ ", kDeveloperTwitter]];
     
-    [tweetViewController setCompletionHandler:^(TWTweetComposeViewControllerResult result) {
-        switch (result) {
-            case TWTweetComposeViewControllerResultCancelled:
-                
-                break;
-            case TWTweetComposeViewControllerResultDone:
-                
-                break;
-            default:
-                break;
-        }
-        
-        [self dismissModalViewControllerAnimated:YES];
-    }];
-    
     // Present the tweet composition view controller modally.
-    [self presentModalViewController:tweetViewController animated:YES];
+    [self presentViewController:tweetViewController animated:YES completion:nil];
 }
 
 #pragma mark - Table view delegate
@@ -101,7 +86,7 @@
 			
 			break;
 	}
-	[self dismissModalViewControllerAnimated:YES];
+	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
