@@ -16,9 +16,11 @@
 #define kFlashCardFrontFontSize  40
 
 // Developer Information
-#define kDeveloperWebsite   @"http://www.apple.com"
-#define kDeveloperEmail     @"test@example.com"
+#define kDeveloperWebsite   @"http://www.simplevocablists.com"
+#define kDeveloperEmail     @"support@simplevocablists.com"
 #define kDeveloperTwitter   @"@test"
+
+// Error Messages
 
 // Default Cell Texts
 #define kAddListText        @"Add New List"
@@ -43,6 +45,11 @@
 #define kTwitterCellIdentifier          @"ContactTwitterCell"
 
 // Core Data
+// App Settings
+#define kAppSettingsEntityName      @"Settings"
+#define kAddWordToList              @"showAddWordToList"
+#define kEditWordList               @"showEditWordList"
+
 // SearchBarContents
 #define kSearchBarEntityName    @"SearchBarContents"
 #define kSearchStringKey        @"savedSearchString"

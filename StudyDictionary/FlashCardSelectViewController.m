@@ -11,9 +11,8 @@
 #import "AllLists.h"
 #import "EditableTableViewCell.h"
 #import "List.h"
-#import "SimpleVocabAppDelegate.h"
+#import "SimpleVocabData.h"
 #import "SimpleVocabConstants.h"
-#import "SimpleVocabHelpers.h"
 #import "Word.h"
 
 @interface FlashCardSelectViewController ()
@@ -43,7 +42,7 @@
 }
 
 - (void)loadAllLists {
-    AllLists *lists = [SimpleVocabHelpers getOrCreateAllLists];
+    AllLists *lists = [[SimpleVocabData sharedInstance] getOrCreateAllLists];
     
     // Filter results
     for (List *list in lists.userOrderedLists) {

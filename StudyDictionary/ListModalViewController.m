@@ -11,7 +11,7 @@
 #import "AllLists.h"
 #import "EditableTableViewCell.h"
 #import "List.h"
-#import "SimpleVocabAppDelegate.h"
+#import "SimpleVocabData.h"
 #import "SimpleVocabConstants.h"
 #import "Word.h"
 
@@ -82,8 +82,7 @@
     [self.tableView endUpdates];
     
     if (!self.editing) {
-        SimpleVocabAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-        NSManagedObjectContext *moc = [appDelegate managedObjectContext];
+        NSManagedObjectContext *moc = [[SimpleVocabData sharedInstance] managedObjectContext];
         
         NSError *error = nil;
         if (![moc save:&error]) {
@@ -107,8 +106,7 @@
         [self.word addBelongsToListObject:list];
     }
     
-    SimpleVocabAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *moc = [appDelegate managedObjectContext];
+    NSManagedObjectContext *moc = [[SimpleVocabData sharedInstance] managedObjectContext];
     
     NSError *error = nil;
     if (![moc save:&error]) {

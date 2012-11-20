@@ -11,9 +11,8 @@
 #import "AllLists.h"
 #import "List.h"
 #import "SearchBarContents.h"
-#import "SimpleVocabAppDelegate.h"
+#import "SimpleVocabData.h"
 #import "SimpleVocabConstants.h"
-#import "SimpleVocabHelpers.h"
 #import "SVProgressHUD.h"
 #import "Word.h"
 #import "WordDefinitionViewController.h"
@@ -68,8 +67,7 @@
 
 #pragma mark - Core Data Records
 - (void)loadSearchBarState {
-    SimpleVocabAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *moc = [appDelegate managedObjectContext];
+    NSManagedObjectContext *moc = [[SimpleVocabData sharedInstance] managedObjectContext];
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:kSearchBarEntityName inManagedObjectContext:moc];
@@ -96,8 +94,7 @@
 }
 
 - (void)saveSearchBarState {
-    SimpleVocabAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *moc = [appDelegate managedObjectContext];
+    NSManagedObjectContext *moc = [[SimpleVocabData sharedInstance] managedObjectContext];
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:kSearchBarEntityName inManagedObjectContext:moc];
@@ -125,8 +122,7 @@
 }
 
 - (Word *)updateWordLookupCount:(NSString *)wordToLookup {
-    SimpleVocabAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *moc = [appDelegate managedObjectContext];
+    NSManagedObjectContext *moc = [[SimpleVocabData sharedInstance] managedObjectContext];
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     
@@ -148,7 +144,7 @@
             word.word = wordToLookup;
             
             // Since we are creating a Word entity entry in the database add it to the default list
-            List *defaultList = [SimpleVocabHelpers getOrCreateDefaultList];
+            List *defaultList = [[SimpleVocabData sharedInstance] getOrCreateDefaultList];
             [word addBelongsToListObject:defaultList];
         }
         

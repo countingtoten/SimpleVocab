@@ -53,9 +53,9 @@
 		0B713965157D42930018D022 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B713962157D42930018D022 /* SVProgressHUD.bundle */; };
 		0B713966157D42930018D022 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B713964157D42930018D022 /* SVProgressHUD.m */; };
 		0B76C0F215D36D3500957C8F /* FlashCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B76C0F115D36D3500957C8F /* FlashCardView.m */; };
-		0B8113AC15801D8800D79DCA /* StudyDictionaryHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8113AB15801D8800D79DCA /* StudyDictionaryHelpers.m */; };
-		0B8FD9FA157E966300AE370B /* StudyDictionary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B8FD9F8157E966300AE370B /* StudyDictionary.xcdatamodeld */; };
 		0B8FD9FD157E9EC900AE370B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8FD9FC157E9EC900AE370B /* CoreData.framework */; };
+		0BABEA9C16335C8700D0B237 /* SimpleVocabData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BABEA9B16335C8700D0B237 /* SimpleVocabData.m */; };
+		0BADF914162BAD4400C5D89E /* SimpleVocab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BADF912162BAD4400C5D89E /* SimpleVocab.xcdatamodeld */; };
 		0BB50A9915D1FA3800417EDD /* FlashCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB50A9815D1FA3800417EDD /* FlashCardViewController.m */; };
 		0BBC0032157EF3E10062B82F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBC0031157EF3E00062B82F /* ListViewController.m */; };
 		0BBCFFD5157EC1AB0062B82F /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFD4157EC1AB0062B82F /* Word.m */; };
@@ -156,11 +156,11 @@
 		0B713964157D42930018D022 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		0B76C0F015D36D3500957C8F /* FlashCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashCardView.h; sourceTree = "<group>"; };
 		0B76C0F115D36D3500957C8F /* FlashCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashCardView.m; sourceTree = "<group>"; };
-		0B8113AA15801D8800D79DCA /* SimpleVocabHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleVocabHelpers.h; sourceTree = "<group>"; };
-		0B8113AB15801D8800D79DCA /* StudyDictionaryHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyDictionaryHelpers.m; sourceTree = "<group>"; };
-		0B8FD9F9157E966300AE370B /* StudyDictionary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudyDictionary.xcdatamodel; sourceTree = "<group>"; };
 		0B8FD9FC157E9EC900AE370B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0B8FD9FE157E9EE900AE370B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		0BABEA9A16335C8700D0B237 /* SimpleVocabData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleVocabData.h; sourceTree = "<group>"; };
+		0BABEA9B16335C8700D0B237 /* SimpleVocabData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleVocabData.m; sourceTree = "<group>"; };
+		0BADF913162BAD4400C5D89E /* SimpleVocab.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleVocab.xcdatamodel; sourceTree = "<group>"; };
 		0BB50A9715D1FA3800417EDD /* FlashCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashCardViewController.h; sourceTree = "<group>"; };
 		0BB50A9815D1FA3800417EDD /* FlashCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashCardViewController.m; sourceTree = "<group>"; };
 		0BBC0030157EF3E00062B82F /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
@@ -253,8 +253,6 @@
 				0B0A6776157C275D00C79FC2 /* SimpleVocabAppDelegate.h */,
 				0B0A6777157C275D00C79FC2 /* SimpleVocabAppDelegate.m */,
 				0B713941157D32700018D022 /* SimpleVocabConstants.h */,
-				0B8113AA15801D8800D79DCA /* SimpleVocabHelpers.h */,
-				0B8113AB15801D8800D79DCA /* StudyDictionaryHelpers.m */,
 				0B0A6779157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard */,
 				0B0A677C157C275E00C79FC2 /* MainStoryboard_iPad.storyboard */,
 				0B71392D157D2F360018D022 /* DictionarySearchViewController.h */,
@@ -413,13 +411,15 @@
 		0BBCFFCA157EBC590062B82F /* Word History Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				0BABEA9A16335C8700D0B237 /* SimpleVocabData.h */,
+				0BABEA9B16335C8700D0B237 /* SimpleVocabData.m */,
 				0BBCFFDF157EC1AB0062B82F /* AllLists.h */,
 				0BBCFFE0157EC1AB0062B82F /* AllLists.m */,
 				0BBCFFDB157EC1AB0062B82F /* List.h */,
 				0BBCFFDC157EC1AB0062B82F /* List.m */,
 				0BBCFFD7157EC1AB0062B82F /* SearchBarContents.h */,
 				0BBCFFD8157EC1AB0062B82F /* SearchBarContents.m */,
-				0B8FD9F8157E966300AE370B /* StudyDictionary.xcdatamodeld */,
+				0BADF912162BAD4400C5D89E /* SimpleVocab.xcdatamodeld */,
 				0BBCFFD3157EC1AB0062B82F /* Word.h */,
 				0BBCFFD4157EC1AB0062B82F /* Word.m */,
 			);
@@ -578,13 +578,11 @@
 				0B71392F157D2F360018D022 /* DictionarySearchViewController.m in Sources */,
 				0B713960157D400A0018D022 /* WordDefinitionViewController.m in Sources */,
 				0B713966157D42930018D022 /* SVProgressHUD.m in Sources */,
-				0B8FD9FA157E966300AE370B /* StudyDictionary.xcdatamodeld in Sources */,
 				0BBCFFD5157EC1AB0062B82F /* Word.m in Sources */,
 				0BBCFFD9157EC1AB0062B82F /* SearchBarContents.m in Sources */,
 				0BBCFFDD157EC1AB0062B82F /* List.m in Sources */,
 				0BBCFFE1157EC1AB0062B82F /* AllLists.m in Sources */,
 				0BBC0032157EF3E10062B82F /* ListViewController.m in Sources */,
-				0B8113AC15801D8800D79DCA /* StudyDictionaryHelpers.m in Sources */,
 				0B344A1115892E68003C7722 /* EditableTableViewCell.m in Sources */,
 				0B0CFBF1158E8927000C029C /* ListContentsViewController.m in Sources */,
 				0B6AAC1E158EF0B30043FD80 /* ListTemplateViewController.m in Sources */,
@@ -597,6 +595,8 @@
 				0BC722EA15D250A800F3AF49 /* FlashCardSelectViewController.m in Sources */,
 				0B76C0F215D36D3500957C8F /* FlashCardView.m in Sources */,
 				0B53C78C15DB7B0F009DA3DF /* ContactViewController.m in Sources */,
+				0BADF914162BAD4400C5D89E /* SimpleVocab.xcdatamodeld in Sources */,
+				0BABEA9C16335C8700D0B237 /* SimpleVocabData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,8 +680,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				PROVISIONING_PROFILE = "EE53318B-282A-46AE-BCFA-F75BB6875144";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PROVISIONING_PROFILE = "F40D1908-6CEF-4B68-8E83-DE9B8AC46B35";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -701,9 +701,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "EE53318B-282A-46AE-BCFA-F75BB6875144";
+				PROVISIONING_PROFILE = "F40D1908-6CEF-4B68-8E83-DE9B8AC46B35";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -813,13 +813,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		0B8FD9F8157E966300AE370B /* StudyDictionary.xcdatamodeld */ = {
+		0BADF912162BAD4400C5D89E /* SimpleVocab.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				0B8FD9F9157E966300AE370B /* StudyDictionary.xcdatamodel */,
+				0BADF913162BAD4400C5D89E /* SimpleVocab.xcdatamodel */,
 			);
-			currentVersion = 0B8FD9F9157E966300AE370B /* StudyDictionary.xcdatamodel */;
-			path = StudyDictionary.xcdatamodeld;
+			currentVersion = 0BADF913162BAD4400C5D89E /* SimpleVocab.xcdatamodel */;
+			path = SimpleVocab.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

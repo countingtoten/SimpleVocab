@@ -12,9 +12,8 @@
 #import "EditableTableViewCell.h"
 #import "List.h"
 #import "ListContentsViewController.h"
-#import "SimpleVocabAppDelegate.h"
+#import "SimpleVocabData.h"
 #import "SimpleVocabConstants.h"
-#import "SimpleVocabHelpers.h"
 
 @interface ListTemplateViewController ()
 - (void)loadAllLists;
@@ -53,7 +52,7 @@
 }
 
 - (void)loadAllLists {
-    self.lists = [SimpleVocabHelpers getOrCreateAllLists];    
+    self.lists = [[SimpleVocabData sharedInstance] getOrCreateAllLists];
 	
 	[self.tableView reloadData];
 }
@@ -117,8 +116,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    SimpleVocabAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *moc = [appDelegate managedObjectContext];
+    NSManagedObjectContext *moc = [[SimpleVocabData sharedInstance] managedObjectContext];
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         List *list = [self.lists.userOrderedLists objectAtIndex:indexPath.row];

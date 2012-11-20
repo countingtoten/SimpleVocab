@@ -10,7 +10,7 @@
 
 #import "AllLists.h"
 #import "ListContentsViewController.h"
-#import "SimpleVocabAppDelegate.h"
+#import "SimpleVocabData.h"
 #import "SimpleVocabConstants.h"
 
 @interface ListViewController ()
@@ -56,8 +56,7 @@
     [self.tableView endUpdates];
     
     if (!self.editing) {
-        SimpleVocabAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-        NSManagedObjectContext *moc = [appDelegate managedObjectContext];
+        NSManagedObjectContext *moc = [[SimpleVocabData sharedInstance] managedObjectContext];
         
         NSError *error = nil;
         if (![moc save:&error]) {

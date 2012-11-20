@@ -9,7 +9,7 @@
 #import "ListContentsViewController.h"
 
 #import "List.h"
-#import "SimpleVocabAppDelegate.h"
+#import "SimpleVocabData.h"
 #import "SimpleVocabConstants.h"
 #import "Word.h"
 #import "WordDefinitionViewController.h"
@@ -92,8 +92,7 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        SimpleVocabAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-        NSManagedObjectContext *moc = [appDelegate managedObjectContext];
+        NSManagedObjectContext *moc = [[SimpleVocabData sharedInstance] managedObjectContext];
         
         Word *word = [self.wordsInListSorted objectAtIndex:indexPath.row];
         
