@@ -10,12 +10,17 @@
 
 #import "AllLists.h"
 #import "List.h"
+#import "SearchBarContents.h"
+#import "Settings.h"
 #import "SimpleVocabConstants.h"
 
 @implementation SimpleVocabData
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
+@synthesize searchBarContents = _searchBarContents;
+@synthesize appSettings = _appSettings;
 
 + (SimpleVocabData *)sharedInstance {
     static dispatch_once_t onceToken;
@@ -111,6 +116,104 @@
     return _persistentStoreCoordinator;
 }
 
+#pragma mark - Application Settings
+
+- (SearchBarContents *)searchBarContents {
+    SearchBarContents *searchBar;
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:kSearchBarEntityName inManagedObjectContext:self.managedObjectContext];
+    
+    [request setEntity:entity];
+    
+    NSError *error = nil;
+    NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
+    
+    if (array != nil) {
+        if ([array count] > 0) {
+            searchBar = [array objectAtIndex:0];
+        }
+    } else {
+        NSLog(@"Error: Unable to load saved search bar");
+    }
+    
+    return searchBar;
+}
+
+- (void)setSearchBarContents:(SearchBarContents *)searchBarContents {
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:kSearchBarEntityName inManagedObjectContext:self.managedObjectContext];
+    
+    [request setEntity:entity];
+    
+    NSError *error = nil;
+    NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
+    
+    if (array != nil) {
+        SearchBarContents *searchBar = nil;
+        if ([array count] > 0) {
+            searchBar = [array objectAtIndex:0];
+        } else {
+            searchBar = [NSEntityDescription insertNewObjectForEntityForName:kSearchBarEntityName inManagedObjectContext:self.managedObjectContext];
+        }
+        
+        searchBar.savedSearchString = searchBarContents.savedSearchString;
+        searchBar.searchWasActive = searchBarContents.searchWasActive;
+        
+        [self.managedObjectContext save:&error];
+    } else {
+        NSLog(@"Error: Unable to load saved search bar");
+    }
+}
+
+- (Settings *)appSettings {
+    Settings *settings;
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:kAppSettingsEntityName inManagedObjectContext:self.managedObjectContext];
+    
+    [request setEntity:entity];
+    
+    NSError *error = nil;
+    NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
+    
+    if (array != nil) {
+        if ([array count] > 0) {
+            settings = [array objectAtIndex:0];
+        }
+    } else {
+        NSLog(@"Error: Unable to load saved search bar");
+    }
+    
+    return settings;
+}
+
+- (void)setAppSettings:(Settings *)appSettings {
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:kAppSettingsEntityName inManagedObjectContext:self.managedObjectContext];
+    
+    [request setEntity:entity];
+    
+    NSError *error = nil;
+    NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
+    
+    if (array != nil) {
+        Settings *settings = nil;
+        if ([array count] > 0) {
+            settings = [array objectAtIndex:0];
+        } else {
+            settings = [NSEntityDescription insertNewObjectForEntityForName:kAppSettingsEntityName inManagedObjectContext:self.managedObjectContext];
+        }
+        
+        settings.showAddWordToList = appSettings.showAddWordToList;
+        settings.showEditWordList = appSettings.showEditWordList;
+        
+        [self.managedObjectContext save:&error];
+    } else {
+        NSLog(@"Error: Unable to load saved search bar");
+    }
+}
+
 #pragma mark - Application's Documents directory
 
 // Returns the URL to the application's Documents directory.
@@ -176,8 +279,12 @@
     return allLists;
 }
 
-- (BOOL)wordListsArePopulated {
-    return NO;
+- (BOOL)shouldShowAddWordToList {
+    return YES;
+}
+
+- (BOOL)shouldShowEditWordList {
+    return YES;
 }
 
 @end

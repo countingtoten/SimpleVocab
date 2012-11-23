@@ -8,14 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-#import "AllLists.h"
-#import "List.h"
+@class AllLists;
+@class List;
+@class SearchBarContents;
+@class Settings;
 
 @interface SimpleVocabData : NSObject
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+@property (strong, nonatomic) SearchBarContents *searchBarContents;
+@property (strong, nonatomic) Settings *appSettings;
 
 + (SimpleVocabData *)sharedInstance;
 
@@ -24,6 +29,5 @@
 
 - (List *)getOrCreateDefaultList;
 - (AllLists *)getOrCreateAllLists;
-- (BOOL)wordListsArePopulated;
 
 @end
