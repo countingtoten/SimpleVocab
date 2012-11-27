@@ -32,7 +32,7 @@
 		0B344A1115892E68003C7722 /* EditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B344A1015892E68003C7722 /* EditableTableViewCell.m */; };
 		0B53C78815DB79D5009DA3DF /* contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B53C78615DB79D5009DA3DF /* contact.png */; };
 		0B53C78915DB79D5009DA3DF /* contact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B53C78715DB79D5009DA3DF /* contact@2x.png */; };
-		0B53C78C15DB7B0F009DA3DF /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B53C78B15DB7B0F009DA3DF /* ContactViewController.m */; };
+		0B53C78C15DB7B0F009DA3DF /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B53C78B15DB7B0F009DA3DF /* AboutViewController.m */; };
 		0B53C79615DB8CAD009DA3DF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B53C79515DB8CAD009DA3DF /* MessageUI.framework */; };
 		0B6AAC1E158EF0B30043FD80 /* ListTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AAC1D158EF0B30043FD80 /* ListTemplateViewController.m */; };
 		0B6AAC23158EF1080043FD80 /* ListModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AAC22158EF1080043FD80 /* ListModalViewController.m */; };
@@ -127,8 +127,8 @@
 		0B344A1015892E68003C7722 /* EditableTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableTableViewCell.m; sourceTree = "<group>"; };
 		0B53C78615DB79D5009DA3DF /* contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact.png; sourceTree = "<group>"; };
 		0B53C78715DB79D5009DA3DF /* contact@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact@2x.png"; sourceTree = "<group>"; };
-		0B53C78A15DB7B0F009DA3DF /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
-		0B53C78B15DB7B0F009DA3DF /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
+		0B53C78A15DB7B0F009DA3DF /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		0B53C78B15DB7B0F009DA3DF /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		0B53C79515DB8CAD009DA3DF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		0B6AAC1C158EF0B30043FD80 /* ListTemplateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTemplateViewController.h; sourceTree = "<group>"; };
 		0B6AAC1D158EF0B30043FD80 /* ListTemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTemplateViewController.m; sourceTree = "<group>"; };
@@ -275,8 +275,8 @@
 				0B76C0F115D36D3500957C8F /* FlashCardView.m */,
 				0BC722E815D250A700F3AF49 /* FlashCardSelectViewController.h */,
 				0BC722E915D250A800F3AF49 /* FlashCardSelectViewController.m */,
-				0B53C78A15DB7B0F009DA3DF /* ContactViewController.h */,
-				0B53C78B15DB7B0F009DA3DF /* ContactViewController.m */,
+				0B53C78A15DB7B0F009DA3DF /* AboutViewController.h */,
+				0B53C78B15DB7B0F009DA3DF /* AboutViewController.m */,
 				0B129D6415D0D1B400DEE694 /* FMDB */,
 				0B713961157D42930018D022 /* SVProgressHUD */,
 				0B4CCAAA15B4B806000CBD09 /* WordNetDictionary */,
@@ -594,7 +594,7 @@
 				0BB50A9915D1FA3800417EDD /* FlashCardViewController.m in Sources */,
 				0BC722EA15D250A800F3AF49 /* FlashCardSelectViewController.m in Sources */,
 				0B76C0F215D36D3500957C8F /* FlashCardView.m in Sources */,
-				0B53C78C15DB7B0F009DA3DF /* ContactViewController.m in Sources */,
+				0B53C78C15DB7B0F009DA3DF /* AboutViewController.m in Sources */,
 				0BADF914162BAD4400C5D89E /* SimpleVocab.xcdatamodeld in Sources */,
 				0BABEA9C16335C8700D0B237 /* SimpleVocabData.m in Sources */,
 			);

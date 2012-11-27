@@ -1,21 +1,21 @@
 //
-//  ContactViewController.m
+//  AboutViewController.m
 //  SimpleVocab
 //
 //  Created by James Weinert on 8/15/12.
 //  Copyright (c) 2012 Weinert Works. All rights reserved.
 //
 
-#import "ContactViewController.h"
+#import "AboutViewController.h"
 
 #import "SimpleVocabConstants.h"
 
-@interface ContactViewController ()
+@interface AboutViewController ()
 - (void)displayMailComposer;
 - (void)displayTweetComposer;
 @end
 
-@implementation ContactViewController
+@implementation AboutViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
