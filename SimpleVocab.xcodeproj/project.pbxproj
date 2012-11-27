@@ -34,6 +34,7 @@
 		0B53C78915DB79D5009DA3DF /* contact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B53C78715DB79D5009DA3DF /* contact@2x.png */; };
 		0B53C78C15DB7B0F009DA3DF /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B53C78B15DB7B0F009DA3DF /* AboutViewController.m */; };
 		0B53C79615DB8CAD009DA3DF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B53C79515DB8CAD009DA3DF /* MessageUI.framework */; };
+		0B54406B165F0C29001E7D05 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B54406A165F0C29001E7D05 /* Settings.m */; };
 		0B6AAC1E158EF0B30043FD80 /* ListTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AAC1D158EF0B30043FD80 /* ListTemplateViewController.m */; };
 		0B6AAC23158EF1080043FD80 /* ListModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AAC22158EF1080043FD80 /* ListModalViewController.m */; };
 		0B71392F157D2F360018D022 /* DictionarySearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B71392E157D2F360018D022 /* DictionarySearchViewController.m */; };
@@ -130,6 +131,8 @@
 		0B53C78A15DB7B0F009DA3DF /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		0B53C78B15DB7B0F009DA3DF /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		0B53C79515DB8CAD009DA3DF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		0B544069165F0C29001E7D05 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		0B54406A165F0C29001E7D05 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		0B6AAC1C158EF0B30043FD80 /* ListTemplateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTemplateViewController.h; sourceTree = "<group>"; };
 		0B6AAC1D158EF0B30043FD80 /* ListTemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTemplateViewController.m; sourceTree = "<group>"; };
 		0B6AAC21158EF1080043FD80 /* ListModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListModalViewController.h; sourceTree = "<group>"; };
@@ -419,6 +422,8 @@
 				0BBCFFDC157EC1AB0062B82F /* List.m */,
 				0BBCFFD7157EC1AB0062B82F /* SearchBarContents.h */,
 				0BBCFFD8157EC1AB0062B82F /* SearchBarContents.m */,
+				0B544069165F0C29001E7D05 /* Settings.h */,
+				0B54406A165F0C29001E7D05 /* Settings.m */,
 				0BADF912162BAD4400C5D89E /* SimpleVocab.xcdatamodeld */,
 				0BBCFFD3157EC1AB0062B82F /* Word.h */,
 				0BBCFFD4157EC1AB0062B82F /* Word.m */,
@@ -597,6 +602,7 @@
 				0B53C78C15DB7B0F009DA3DF /* AboutViewController.m in Sources */,
 				0BADF914162BAD4400C5D89E /* SimpleVocab.xcdatamodeld in Sources */,
 				0BABEA9C16335C8700D0B237 /* SimpleVocabData.m in Sources */,
+				0B54406B165F0C29001E7D05 /* Settings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

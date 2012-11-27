@@ -67,58 +67,25 @@
 
 #pragma mark - Core Data Records
 - (void)loadSearchBarState {
-    NSManagedObjectContext *moc = [[SimpleVocabData sharedInstance] managedObjectContext];
+    SimpleVocabData *simpleVocabData = [SimpleVocabData sharedInstance];
+    SearchBarContents *searchBar = simpleVocabData.searchBarContents;
     
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:kSearchBarEntityName inManagedObjectContext:moc];
-    
-    [request setEntity:entity];
-    
-    NSError *error = nil;
-    NSArray *array = [moc executeFetchRequest:request error:&error];
-    
-    if (array != nil) {
-        if ([array count] > 0) {
-            SearchBarContents *searchBar = [array objectAtIndex:0];
-            
-            if (searchBar.savedSearchString && ![searchBar.savedSearchString isEqualToString:@""]) {
-                [self.searchDisplayController setActive:[searchBar.searchWasActive boolValue]];
-                [self.searchDisplayController.searchBar setText:searchBar.savedSearchString];
-                
-                [self searchForWordFromString:searchBar.savedSearchString];
-            }
-        }
-    } else {
-        NSLog(@"Error: Unable to load saved search bar");
+    if (searchBar.savedSearchString && ![searchBar.savedSearchString isEqualToString:@""]) {
+        [self.searchDisplayController setActive:[searchBar.searchWasActive boolValue]];
+        [self.searchDisplayController.searchBar setText:searchBar.savedSearchString];
+        
+        [self searchForWordFromString:searchBar.savedSearchString];
     }
 }
 
 - (void)saveSearchBarState {
-    NSManagedObjectContext *moc = [[SimpleVocabData sharedInstance] managedObjectContext];
+    SimpleVocabData *simpleVocabData = [SimpleVocabData sharedInstance];
+    SearchBarContents *searchBar = simpleVocabData.searchBarContents;
     
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:kSearchBarEntityName inManagedObjectContext:moc];
+    searchBar.savedSearchString = self.searchDisplayController.searchBar.text;
+    searchBar.searchWasActive = [NSNumber numberWithBool:[[self searchDisplayController] isActive]];
     
-    [request setEntity:entity];
-    
-    NSError *error = nil;
-    NSArray *array = [moc executeFetchRequest:request error:&error];
-    
-    if (array != nil) {
-        SearchBarContents *searchBar = nil;
-        if ([array count] > 0) {
-            searchBar = [array objectAtIndex:0];
-        } else {
-            searchBar = [NSEntityDescription insertNewObjectForEntityForName:kSearchBarEntityName inManagedObjectContext:moc];
-        }
-        
-        searchBar.savedSearchString = self.searchDisplayController.searchBar.text;
-        searchBar.searchWasActive = [NSNumber numberWithBool:[[self searchDisplayController] isActive]];
-        
-        [moc save:&error];
-    } else {
-        NSLog(@"Error: Unable to load saved search bar");
-    }
+    simpleVocabData.searchBarContents = searchBar;
 }
 
 - (Word *)updateWordLookupCount:(NSString *)wordToLookup {
