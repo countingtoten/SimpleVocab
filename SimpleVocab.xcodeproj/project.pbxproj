@@ -22,8 +22,6 @@
 		0B0A679E157C275E00C79FC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A679C157C275E00C79FC2 /* InfoPlist.strings */; };
 		0B0A67A1157C275E00C79FC2 /* SimpleVocabTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A67A0157C275E00C79FC2 /* SimpleVocabTests.m */; };
 		0B0CFBF1158E8927000C029C /* ListContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0CFBF0158E8927000C029C /* ListContentsViewController.m */; };
-		0B129D6215D0D19700DEE694 /* WordNetDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B129D6015D0D19700DEE694 /* WordNetDictionary.m */; };
-		0B129D6315D0D19700DEE694 /* WordNetDictionary.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 0B129D6115D0D19700DEE694 /* WordNetDictionary.sqlite */; };
 		0B129D6B15D0D1C900DEE694 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B129D6615D0D1C900DEE694 /* FMDatabase.m */; };
 		0B129D6C15D0D1C900DEE694 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B129D6815D0D1C900DEE694 /* FMDatabaseAdditions.m */; };
 		0B129D6D15D0D1C900DEE694 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B129D6A15D0D1C900DEE694 /* FMResultSet.m */; };
@@ -37,6 +35,8 @@
 		0B54406B165F0C29001E7D05 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B54406A165F0C29001E7D05 /* Settings.m */; };
 		0B6AAC1E158EF0B30043FD80 /* ListTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AAC1D158EF0B30043FD80 /* ListTemplateViewController.m */; };
 		0B6AAC23158EF1080043FD80 /* ListModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AAC22158EF1080043FD80 /* ListModalViewController.m */; };
+		0B6C920C167FF9FB00689DEF /* WordNetDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C920A167FF9FB00689DEF /* WordNetDictionary.m */; };
+		0B6C920D167FF9FB00689DEF /* WordNetDictionary.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 0B6C920B167FF9FB00689DEF /* WordNetDictionary.sqlite */; };
 		0B71392F157D2F360018D022 /* DictionarySearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B71392E157D2F360018D022 /* DictionarySearchViewController.m */; };
 		0B713938157D304D0018D022 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B713937157D304D0018D022 /* CoreText.framework */; };
 		0B71393A157D305A0018D022 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B713939157D305A0018D022 /* SystemConfiguration.framework */; };
@@ -113,9 +113,6 @@
 		0B0A67A0157C275E00C79FC2 /* SimpleVocabTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleVocabTests.m; sourceTree = "<group>"; };
 		0B0CFBEF158E8927000C029C /* ListContentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListContentsViewController.h; sourceTree = "<group>"; };
 		0B0CFBF0158E8927000C029C /* ListContentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListContentsViewController.m; sourceTree = "<group>"; };
-		0B129D5F15D0D19700DEE694 /* WordNetDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordNetDictionary.h; path = External/WordNetDictionary/WordNetDictionary.h; sourceTree = "<group>"; };
-		0B129D6015D0D19700DEE694 /* WordNetDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordNetDictionary.m; path = External/WordNetDictionary/WordNetDictionary.m; sourceTree = "<group>"; };
-		0B129D6115D0D19700DEE694 /* WordNetDictionary.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = WordNetDictionary.sqlite; path = External/WordNetDictionary/WordNetDictionary.sqlite; sourceTree = "<group>"; };
 		0B129D6515D0D1C900DEE694 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = External/FMDB/src/FMDatabase.h; sourceTree = SOURCE_ROOT; };
 		0B129D6615D0D1C900DEE694 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = External/FMDB/src/FMDatabase.m; sourceTree = SOURCE_ROOT; };
 		0B129D6715D0D1C900DEE694 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = External/FMDB/src/FMDatabaseAdditions.h; sourceTree = SOURCE_ROOT; };
@@ -137,6 +134,9 @@
 		0B6AAC1D158EF0B30043FD80 /* ListTemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTemplateViewController.m; sourceTree = "<group>"; };
 		0B6AAC21158EF1080043FD80 /* ListModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListModalViewController.h; sourceTree = "<group>"; };
 		0B6AAC22158EF1080043FD80 /* ListModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListModalViewController.m; sourceTree = "<group>"; };
+		0B6C9209167FF9FB00689DEF /* WordNetDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordNetDictionary.h; path = External/WordNetDictionary/WordNetDictionary/WordNetDictionary.h; sourceTree = SOURCE_ROOT; };
+		0B6C920A167FF9FB00689DEF /* WordNetDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordNetDictionary.m; path = External/WordNetDictionary/WordNetDictionary/WordNetDictionary.m; sourceTree = SOURCE_ROOT; };
+		0B6C920B167FF9FB00689DEF /* WordNetDictionary.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = WordNetDictionary.sqlite; path = External/WordNetDictionary/WordNetDictionary/WordNetDictionary.sqlite; sourceTree = SOURCE_ROOT; };
 		0B71392D157D2F360018D022 /* DictionarySearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionarySearchViewController.h; sourceTree = "<group>"; };
 		0B71392E157D2F360018D022 /* DictionarySearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionarySearchViewController.m; sourceTree = "<group>"; };
 		0B713937157D304D0018D022 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -282,7 +282,7 @@
 				0B53C78B15DB7B0F009DA3DF /* AboutViewController.m */,
 				0B129D6415D0D1B400DEE694 /* FMDB */,
 				0B713961157D42930018D022 /* SVProgressHUD */,
-				0B4CCAAA15B4B806000CBD09 /* WordNetDictionary */,
+				0B0BAD5416734CD1005FA2B0 /* Word Net Dictionary */,
 				0BBCFFCA157EBC590062B82F /* Word History Core Data */,
 				0B0A676E157C275D00C79FC2 /* Supporting Files */,
 			);
@@ -322,6 +322,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0B0BAD5416734CD1005FA2B0 /* Word Net Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				0B6C9209167FF9FB00689DEF /* WordNetDictionary.h */,
+				0B6C920A167FF9FB00689DEF /* WordNetDictionary.m */,
+				0B6C920B167FF9FB00689DEF /* WordNetDictionary.sqlite */,
+			);
+			name = "Word Net Dictionary";
+			path = ../External/SVProgressHUD/SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		0B129D6415D0D1B400DEE694 /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,17 +352,6 @@
 				0B129D7615D0D1D400DEE694 /* libSQLite.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		0B4CCAAA15B4B806000CBD09 /* WordNetDictionary */ = {
-			isa = PBXGroup;
-			children = (
-				0B129D5F15D0D19700DEE694 /* WordNetDictionary.h */,
-				0B129D6015D0D19700DEE694 /* WordNetDictionary.m */,
-				0B129D6115D0D19700DEE694 /* WordNetDictionary.sqlite */,
-			);
-			name = WordNetDictionary;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		0B713946157D37D20018D022 /* Images */ = {
@@ -540,10 +540,10 @@
 				0B71395C157D37F70018D022 /* notepad.png in Resources */,
 				0B71395D157D37F70018D022 /* notepad@2x.png in Resources */,
 				0B713965157D42930018D022 /* SVProgressHUD.bundle in Resources */,
-				0B129D6315D0D19700DEE694 /* WordNetDictionary.sqlite in Resources */,
 				0B53C78815DB79D5009DA3DF /* contact.png in Resources */,
 				0B53C78915DB79D5009DA3DF /* contact@2x.png in Resources */,
 				0B03DD0D1613F99900B7519F /* Default-568h@2x.png in Resources */,
+				0B6C920D167FF9FB00689DEF /* WordNetDictionary.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,7 +592,6 @@
 				0B0CFBF1158E8927000C029C /* ListContentsViewController.m in Sources */,
 				0B6AAC1E158EF0B30043FD80 /* ListTemplateViewController.m in Sources */,
 				0B6AAC23158EF1080043FD80 /* ListModalViewController.m in Sources */,
-				0B129D6215D0D19700DEE694 /* WordNetDictionary.m in Sources */,
 				0B129D6B15D0D1C900DEE694 /* FMDatabase.m in Sources */,
 				0B129D6C15D0D1C900DEE694 /* FMDatabaseAdditions.m in Sources */,
 				0B129D6D15D0D1C900DEE694 /* FMResultSet.m in Sources */,
@@ -603,6 +602,7 @@
 				0BADF914162BAD4400C5D89E /* SimpleVocab.xcdatamodeld in Sources */,
 				0BABEA9C16335C8700D0B237 /* SimpleVocabData.m in Sources */,
 				0B54406B165F0C29001E7D05 /* Settings.m in Sources */,
+				0B6C920C167FF9FB00689DEF /* WordNetDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,10 +719,7 @@
 		0B0A67A5157C275E00C79FC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/External/wordkit/frameworks/objective-c/Wordnik WordKit 1.02/iOS Framework\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StudyDictionary/SimpleVocab-Prefix.pch";
 				INFOPLIST_FILE = "StudyDictionary/SimpleVocab-Info.plist";
@@ -737,10 +734,7 @@
 		0B0A67A6157C275E00C79FC2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/External/wordkit/frameworks/objective-c/Wordnik WordKit 1.02/iOS Framework\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StudyDictionary/SimpleVocab-Prefix.pch";
 				INFOPLIST_FILE = "StudyDictionary/SimpleVocab-Info.plist";

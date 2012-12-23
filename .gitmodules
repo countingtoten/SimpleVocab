@@ -1,6 +1,3 @@
-[submodule "External/wordkit"]
-	path = External/wordkit
-	url = https://github.com/wordnik/wordkit.git
 [submodule "External/SVProgressHUD"]
 	path = External/SVProgressHUD
 	url = https://github.com/samvermette/SVProgressHUD.git
@@ -10,3 +7,6 @@
 [submodule "External/FMDB"]
 	path = External/FMDB
 	url = https://github.com/ccgus/fmdb.git
+[submodule "External/WordNetDictionary"]
+	path = External/WordNetDictionary
+	url = https://github.com/countingtoten/WordNetDictionary.git

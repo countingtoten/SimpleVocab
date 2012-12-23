@@ -279,12 +279,4 @@
     return allLists;
 }
 
-- (BOOL)shouldShowAddWordToList {
-    return YES;
-}
-
-- (BOOL)shouldShowEditWordList {
-    return YES;
-}
-
 @end

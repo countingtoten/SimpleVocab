@@ -12,7 +12,6 @@
 #import "List.h"
 #import "SimpleVocabData.h"
 #import "SimpleVocabConstants.h"
-#import "SVProgressHUD.h"
 #import "Word.h"
 #import "WordNetDictionary.h"
 
@@ -89,7 +88,6 @@
             self.cardBack = [[FlashCardView alloc] initWithFrame:self.view.frame];
         }
         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view cache:YES];
-        [SVProgressHUD show];
         
         dispatch_queue_t queue = dispatch_queue_create(kDefaultQueueIdentifier, NULL);
         dispatch_async(queue, ^{
@@ -120,7 +118,6 @@
                 [self.cardBack addTextToCardBack:definitionsFormated];
                 [self.cardFront removeFromSuperview];
                 [self.view insertSubview:self.cardBack atIndex:0];
-                [SVProgressHUD dismiss];
             });
         });
     }

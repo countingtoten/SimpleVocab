@@ -27,7 +27,6 @@
 	self.title = self.wordToDefine.word;
     
     [self updateWordDefinition];
-    [SVProgressHUD show];
 }
 
 - (void)viewDidUnload {
@@ -47,6 +46,7 @@
 }
 
 - (void)updateWordDefinition {
+    [SVProgressHUD show];
     dispatch_queue_t queue = dispatch_queue_create(kDefaultQueueIdentifier, NULL);
     dispatch_async(queue, ^{
         WordNetDictionary *dictionary = [WordNetDictionary sharedInstance];
