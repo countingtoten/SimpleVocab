@@ -29,11 +29,6 @@
     [self updateWordDefinition];
 }
 
-- (void)viewDidUnload {
-    [self setWordDefinition:nil];
-    [super viewDidUnload];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
@@ -46,7 +41,6 @@
 }
 
 - (void)updateWordDefinition {
-    [SVProgressHUD show];
     dispatch_queue_t queue = dispatch_queue_create(kDefaultQueueIdentifier, NULL);
     dispatch_async(queue, ^{
         WordNetDictionary *dictionary = [WordNetDictionary sharedInstance];
@@ -74,7 +68,6 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
             self.wordDefinition.text = definitionsFormated;
-            [SVProgressHUD dismiss];
         });
     });
 }
