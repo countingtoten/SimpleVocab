@@ -54,7 +54,6 @@
 		0B713960157D400A0018D022 /* WordDefinitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B71395F157D400A0018D022 /* WordDefinitionViewController.m */; };
 		0B713965157D42930018D022 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B713962157D42930018D022 /* SVProgressHUD.bundle */; };
 		0B713966157D42930018D022 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B713964157D42930018D022 /* SVProgressHUD.m */; };
-		0B76C0F215D36D3500957C8F /* FlashCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B76C0F115D36D3500957C8F /* FlashCardView.m */; };
 		0B8FD9FD157E9EC900AE370B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8FD9FC157E9EC900AE370B /* CoreData.framework */; };
 		0BABEA9C16335C8700D0B237 /* SimpleVocabData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BABEA9B16335C8700D0B237 /* SimpleVocabData.m */; };
 		0BADF914162BAD4400C5D89E /* SimpleVocab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BADF912162BAD4400C5D89E /* SimpleVocab.xcdatamodeld */; };
@@ -159,8 +158,6 @@
 		0B713962157D42930018D022 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = ../External/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
 		0B713963157D42930018D022 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		0B713964157D42930018D022 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
-		0B76C0F015D36D3500957C8F /* FlashCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashCardView.h; sourceTree = "<group>"; };
-		0B76C0F115D36D3500957C8F /* FlashCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashCardView.m; sourceTree = "<group>"; };
 		0B8FD9FC157E9EC900AE370B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		0B8FD9FE157E9EE900AE370B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		0BABEA9A16335C8700D0B237 /* SimpleVocabData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleVocabData.h; sourceTree = "<group>"; };
@@ -278,8 +275,6 @@
 				0B71395F157D400A0018D022 /* WordDefinitionViewController.m */,
 				0BB50A9715D1FA3800417EDD /* FlashCardViewController.h */,
 				0BB50A9815D1FA3800417EDD /* FlashCardViewController.m */,
-				0B76C0F015D36D3500957C8F /* FlashCardView.h */,
-				0B76C0F115D36D3500957C8F /* FlashCardView.m */,
 				0BC722E815D250A700F3AF49 /* FlashCardSelectViewController.h */,
 				0BC722E915D250A800F3AF49 /* FlashCardSelectViewController.m */,
 				0B53C78A15DB7B0F009DA3DF /* AboutViewController.h */,
@@ -489,7 +484,7 @@
 		0B0A675A157C275D00C79FC2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Weinert Works";
 			};
 			buildConfigurationList = 0B0A675D157C275D00C79FC2 /* Build configuration list for PBXProject "SimpleVocab" */;
@@ -615,7 +610,6 @@
 				0B129D6D15D0D1C900DEE694 /* FMResultSet.m in Sources */,
 				0BB50A9915D1FA3800417EDD /* FlashCardViewController.m in Sources */,
 				0BC722EA15D250A800F3AF49 /* FlashCardSelectViewController.m in Sources */,
-				0B76C0F215D36D3500957C8F /* FlashCardView.m in Sources */,
 				0B53C78C15DB7B0F009DA3DF /* AboutViewController.m in Sources */,
 				0BADF914162BAD4400C5D89E /* SimpleVocab.xcdatamodeld in Sources */,
 				0BABEA9C16335C8700D0B237 /* SimpleVocabData.m in Sources */,
@@ -689,6 +683,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: James Weinert (VU4X4H4J4C)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -718,6 +716,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: James Weinert (VU4X4H4J4C)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;

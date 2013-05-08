@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonSystemItemCancel target:self action:@selector(cancelFlashCardSelect)];
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStyleDone target:self action:@selector(cancelFlashCardSelect)];
     
     self.navigationItem.rightBarButtonItem = cancelButton;
     self.listsWithWords = [NSMutableArray array];

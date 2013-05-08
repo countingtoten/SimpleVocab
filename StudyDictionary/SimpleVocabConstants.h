@@ -14,13 +14,16 @@
 
 #define kDefaultFontSize        20
 #define kFlashCardFrontFontSize  40
+#define kFlashCardCornerRadius  25
+#define kFlashCardBackTextBorder  10
+
+// Hint Text
+#define kAddWordToListText  @"Add a word to the list"
 
 // Developer Information
 #define kDeveloperWebsite   @"http://www.simplevocablists.com"
 #define kDeveloperEmail     @"support@simplevocablists.com"
 #define kDeveloperTwitter   @"@test"
-
-// Error Messages
 
 // Default Cell Texts
 #define kAddListText        @"Add New List"
@@ -66,3 +69,6 @@
 
 // AllLists
 #define kAllListsEntityName @"AllLists"
+
+// Error Messages
+

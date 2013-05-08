@@ -163,6 +163,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cardBack" destination="PgV-ye-Kot" id="GOV-Ll-AKF"/>
+                        <outlet property="cardFront" destination="lFB-wk-ZYD" id="8U3-mn-BWQ"/>
                         <outlet property="tapRecognizer" destination="Rpc-79-58T" id="DBu-Lf-EFQ"/>
                     </connections>
                 </viewController>
@@ -173,6 +175,21 @@
                         <outlet property="delegate" destination="Fx9-I6-WSM" id="W6v-dQ-wrX"/>
                     </connections>
                 </tapGestureRecognizer>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="PgV-ye-Kot">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lFB-wk-ZYD">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </objects>
             <point key="canvasLocation" x="1183" y="1140"/>
         </scene>
@@ -328,7 +345,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New List" minimumFontSize="17" id="47g-Wx-Y0I">
-                                            <rect key="frame" x="10.5" y="0.0" width="300" height="43"/>
+                                            <rect key="frame" x="11" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
@@ -414,7 +431,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New List" minimumFontSize="17" id="iZz-gb-UWa">
-                                            <rect key="frame" x="10.5" y="0.0" width="300" height="43"/>
+                                            <rect key="frame" x="11" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
@@ -536,6 +553,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FlashCardViewController.h"/>
             <relationships>
                 <relationship kind="action" name="handleTapFrom:" candidateClass="UITapGestureRecognizer"/>
+                <relationship kind="outlet" name="cardBack" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="cardFront" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="tapRecognizer" candidateClass="UITapGestureRecognizer"/>
             </relationships>
         </class>

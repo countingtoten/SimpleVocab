@@ -22,14 +22,14 @@
 @property (strong, nonatomic) NSMutableArray *wordsInList;
 @property (strong, nonatomic) NSArray *wholeList;
 
-@property (strong, nonatomic) FlashCardView *cardFront;
-@property (strong, nonatomic) FlashCardView *cardBack;
+@property (strong, nonatomic) IBOutlet UILabel *cardFront;
+@property (strong, nonatomic) IBOutlet UITextView *cardBack;
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapRecognizer;
 
 - (IBAction)handleTapFrom:(UITapGestureRecognizer *)recognizer;
 
 - (void)flipViews;
 - (void)fillWordList;
-- (void)updateTextOnFrontCard;
+- (void)updateTextOnCard;
 
 @end
