@@ -8,6 +8,7 @@
 
 #import "FlashCardViewController.h"
 
+#import <Crashlytics/Crashlytics.h>
 #import <QuartzCore/QuartzCore.h>
 
 #import "List.h"
@@ -77,6 +78,10 @@
         FlashCardSelectViewController *listModalViewController = [[navigationController viewControllers] objectAtIndex:0];
         listModalViewController.delegate = self;
     }
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    return [self.wholeList count] > 0;
 }
 
 - (IBAction)handleTapFrom:(UITapGestureRecognizer *)recognizer {
@@ -182,7 +187,7 @@
             // and we won't have to worry about this
         }
     } else {
-        NSLog(@"And Error Happened");
+        CLS_LOG(kErrorFlashCardLoad, error, [error userInfo]);
     }
     
     NSMutableArray *wordList = [NSMutableArray array];

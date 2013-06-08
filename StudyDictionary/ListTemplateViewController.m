@@ -8,6 +8,8 @@
 
 #import "ListTemplateViewController.h"
 
+#import <Crashlytics/Crashlytics.h>
+
 #import "AllLists.h"
 #import "EditableTableViewCell.h"
 #import "List.h"
@@ -120,7 +122,7 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         List *list = [self.lists.userOrderedLists objectAtIndex:indexPath.row];
-        [self.lists removeUserOrderedListsObject:list];
+        //[self.lists removeUserOrderedListsObject:list];
         [moc deleteObject:list];
         
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
@@ -128,7 +130,7 @@
         List *list = [NSEntityDescription insertNewObjectForEntityForName:kListEntityName inManagedObjectContext:moc];
         
         list.listName = @"";
-        [self.lists addUserOrderedListsObject:list];
+        list.allLists = [[SimpleVocabData sharedInstance] getOrCreateAllLists];
         
         UITableViewRowAnimation animationStyle = UITableViewRowAnimationFade;
         
@@ -139,7 +141,7 @@
     
     NSError *error = nil;
     if (![moc save:&error]) {
-        NSLog(@"Error");
+        CLS_LOG(kErrorCommitEditTemplate, error, [error userInfo]);
     }
 }
 

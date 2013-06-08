@@ -8,6 +8,8 @@
 
 #import "ListModalViewController.h"
 
+#import <Crashlytics/Crashlytics.h>
+
 #import "AllLists.h"
 #import "EditableTableViewCell.h"
 #import "List.h"
@@ -86,7 +88,7 @@
         
         NSError *error = nil;
         if (![moc save:&error]) {
-            NSLog(@"Error");
+            CLS_LOG(kErrorCommitEditModal, error, [error userInfo]);
         }
     }
 }
@@ -110,7 +112,7 @@
     
     NSError *error = nil;
     if (![moc save:&error]) {
-        NSLog(@"Error");
+        CLS_LOG(kErrorCommitAdd, error, [error userInfo]);
     }
 
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];

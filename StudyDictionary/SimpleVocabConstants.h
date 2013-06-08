@@ -70,5 +70,25 @@
 // AllLists
 #define kAllListsEntityName @"AllLists"
 
-// Error Messages
+// Status Messages
+#define kStatusCopiedCoreDataFile   @"Status 1: Vocab List database copied to documents directory"
 
+// Error Messages
+#define kErrorCoreDataLoad              @"Error 1: unable to load data %@ %@"
+#define kErrorCoreDataSave              @"Error 2: unable to save Vocab List %@ %@"
+#define kErrorPersistentStore           @"Error 3: unable to open Vocab List data %@ %@"
+#define kErrorSearchBarContentsLoad     @"Error 4: unable to load serach history"
+#define kErrorSearchBarContentsSave     @"Error 5: unable to save serach history"
+#define kErrorSettingsLoad              @"Error 6: unable to load app settings"
+#define kErrorSettingsSave              @"Error 7: unable to save app settings"
+
+#define kErrorFlashCardLoad             @"Error 8: unable to read flash card %@ %@"
+
+#define kErrorCommitAdd                 @"Error 9: unable to add list %@ %@"
+#define kErrorCommitDelete              @"Error 10: unable to delete list %@ %@"
+#define kErrorCommitEditTemplate        @"Error 11: unable to edit list in template %@ %@"
+#define kErrorCommitEditView            @"Error 12: unable to edit list in view %@ %@"
+#define kErrorCommitEditModal           @"Error 13: unable to edit list modal view %@ %@"
+#define kErrorCommitEditContents        @"Error 14: unable to edit list contents view %@ %@"
+
+#define kErrorWordCountSave             @"Error 15: unable to save word count %@ %@"

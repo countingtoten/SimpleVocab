@@ -8,6 +8,8 @@
 
 #import "DictionarySearchViewController.h"
 
+#import <Crashlytics/Crashlytics.h>
+
 #import "AllLists.h"
 #import "List.h"
 #import "SearchBarContents.h"
@@ -121,7 +123,7 @@
         
         [moc save:&error];
     } else {
-        NSLog(@"Error: Unable to update word history");
+        CLS_LOG(kErrorWordCountSave, error, [error userInfo]);
     }
     
     return word;
