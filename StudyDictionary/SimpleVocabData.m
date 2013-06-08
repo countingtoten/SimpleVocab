@@ -8,6 +8,8 @@
 
 #import "SimpleVocabData.h"
 
+#import <Crashlytics/Crashlytics.h>
+
 #import "AllLists.h"
 #import "List.h"
 #import "SearchBarContents.h"
@@ -38,10 +40,7 @@
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
+            CLS_LOG(kErrorCoreDataSave, error, [error userInfo]);
         }
     }
 }
@@ -84,33 +83,19 @@
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"SimpleVocab.sqlite"];
     
     NSError *error = nil;
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]) {
+        NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"SimpleVocab" ofType:@"sqlite"]];
+        
+        if (![[NSFileManager defaultManager] copyItemAtURL:preloadURL toURL:storeURL error:&error]) {
+            CLS_LOG(kStatusCopiedCoreDataFile);
+        }
+    }
+    
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
-        /*
-         Replace this implementation with code to handle the error appropriately.
-         
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-         
-         Typical reasons for an error here include:
-         * The persistent store is not accessible;
-         * The schema for the persistent store is incompatible with current managed object model.
-         Check the error message to determine what the actual problem was.
-         
-         
-         If the persistent store is not accessible, there is typically something wrong with the file path. Often, a file URL is pointing into the application's resources directory instead of a writeable directory.
-         
-         If you encounter schema incompatibility errors during development, you can reduce their frequency by:
-         * Simply deleting the existing store:
-         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil]
-         
-         * Performing automatic lightweight migration by passing the following dictionary as the options parameter:
-         [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption, [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
-         
-         Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
-         
-         */
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+
+        CLS_LOG(kErrorPersistentStore, error, [error userInfo]);
     }
     
     return _persistentStoreCoordinator;
@@ -134,7 +119,7 @@
             searchBar = [array objectAtIndex:0];
         }
     } else {
-        NSLog(@"Error: Unable to load saved search bar");
+        CLS_LOG(kErrorSearchBarContentsLoad);
     }
     
     return searchBar;
@@ -162,7 +147,7 @@
         
         [self.managedObjectContext save:&error];
     } else {
-        NSLog(@"Error: Unable to load saved search bar");
+        CLS_LOG(kErrorSearchBarContentsSave);
     }
 }
 
@@ -182,7 +167,7 @@
             settings = [array objectAtIndex:0];
         }
     } else {
-        NSLog(@"Error: Unable to load saved search bar");
+        CLS_LOG(kErrorSettingsLoad);
     }
     
     return settings;
@@ -210,7 +195,7 @@
         
         [self.managedObjectContext save:&error];
     } else {
-        NSLog(@"Error: Unable to load saved search bar");
+        CLS_LOG(kErrorSettingsSave);
     }
 }
 
@@ -249,7 +234,7 @@
             [self.managedObjectContext save:&error];
         }
     } else {
-        NSLog(@"And Error Happened");
+        CLS_LOG(kErrorCoreDataLoad, error, [error userInfo]);
     }
     
     return list;
@@ -273,7 +258,7 @@
             [self.managedObjectContext save:&error];
         }
     } else {
-        NSLog(@"Yeah, yeah, error");
+        CLS_LOG(kErrorCoreDataLoad, error, [error userInfo]);
     }
     
     return allLists;

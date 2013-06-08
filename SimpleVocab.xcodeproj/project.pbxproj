@@ -35,6 +35,7 @@
 		0B54406B165F0C29001E7D05 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B54406A165F0C29001E7D05 /* Settings.m */; };
 		0B6AAC1E158EF0B30043FD80 /* ListTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AAC1D158EF0B30043FD80 /* ListTemplateViewController.m */; };
 		0B6AAC23158EF1080043FD80 /* ListModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6AAC22158EF1080043FD80 /* ListModalViewController.m */; };
+		0B6BA76C1762E4CF00216DCE /* SimpleVocab.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 0B6BA76B1762E4CF00216DCE /* SimpleVocab.sqlite */; };
 		0B6C920C167FF9FB00689DEF /* WordNetDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C920A167FF9FB00689DEF /* WordNetDictionary.m */; };
 		0B6C920D167FF9FB00689DEF /* WordNetDictionary.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 0B6C920B167FF9FB00689DEF /* WordNetDictionary.sqlite */; };
 		0B71392F157D2F360018D022 /* DictionarySearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B71392E157D2F360018D022 /* DictionarySearchViewController.m */; };
@@ -69,6 +70,8 @@
 		0BEC698F17603BBE00EBD5E8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BEC698917603BBE00EBD5E8 /* Icon.png */; };
 		0BEC699017603BBE00EBD5E8 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BEC698A17603BBE00EBD5E8 /* Icon@2x.png */; };
 		0BEC699417603C3500EBD5E8 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0BEC699317603C3500EBD5E8 /* SVProgressHUD.bundle */; };
+		0BEC699517603D9300EBD5E8 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 0BEC698B17603BBE00EBD5E8 /* iTunesArtwork */; };
+		0BEC699617603D9300EBD5E8 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 0BEC698C17603BBE00EBD5E8 /* iTunesArtwork@2x */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +127,7 @@
 		0B6AAC1D158EF0B30043FD80 /* ListTemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTemplateViewController.m; sourceTree = "<group>"; };
 		0B6AAC21158EF1080043FD80 /* ListModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListModalViewController.h; sourceTree = "<group>"; };
 		0B6AAC22158EF1080043FD80 /* ListModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListModalViewController.m; sourceTree = "<group>"; };
+		0B6BA76B1762E4CF00216DCE /* SimpleVocab.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleVocab.sqlite; sourceTree = "<group>"; };
 		0B6C9209167FF9FB00689DEF /* WordNetDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordNetDictionary.h; path = External/WordNetDictionary/WordNetDictionary/WordNetDictionary.h; sourceTree = SOURCE_ROOT; };
 		0B6C920A167FF9FB00689DEF /* WordNetDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordNetDictionary.m; path = External/WordNetDictionary/WordNetDictionary/WordNetDictionary.m; sourceTree = SOURCE_ROOT; };
 		0B6C920B167FF9FB00689DEF /* WordNetDictionary.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = WordNetDictionary.sqlite; path = External/WordNetDictionary/WordNetDictionary/WordNetDictionary.sqlite; sourceTree = SOURCE_ROOT; };
@@ -170,8 +174,8 @@
 		0BEC698817603BBE00EBD5E8 /* Icon-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-iPad@2x.png"; path = "Images/Icons/Icon-iPad@2x.png"; sourceTree = "<group>"; };
 		0BEC698917603BBE00EBD5E8 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Images/Icons/Icon.png; sourceTree = "<group>"; };
 		0BEC698A17603BBE00EBD5E8 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Images/Icons/Icon@2x.png"; sourceTree = "<group>"; };
-		0BEC698B17603BBE00EBD5E8 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = Images/Icons/iTunesArtwork.png; sourceTree = "<group>"; };
-		0BEC698C17603BBE00EBD5E8 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "Images/Icons/iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		0BEC698B17603BBE00EBD5E8 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Images/Icons/iTunesArtwork; sourceTree = "<group>"; };
+		0BEC698C17603BBE00EBD5E8 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iTunesArtwork@2x"; path = "Images/Icons/iTunesArtwork@2x"; sourceTree = "<group>"; };
 		0BEC699317603C3500EBD5E8 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = Images/SVProgressHUD.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -410,6 +414,7 @@
 				0BBCFFD8157EC1AB0062B82F /* SearchBarContents.m */,
 				0B544069165F0C29001E7D05 /* Settings.h */,
 				0B54406A165F0C29001E7D05 /* Settings.m */,
+				0B6BA76B1762E4CF00216DCE /* SimpleVocab.sqlite */,
 				0BADF912162BAD4400C5D89E /* SimpleVocab.xcdatamodeld */,
 				0BBCFFD3157EC1AB0062B82F /* Word.h */,
 				0BBCFFD4157EC1AB0062B82F /* Word.m */,
@@ -431,8 +436,8 @@
 				0BEC698817603BBE00EBD5E8 /* Icon-iPad@2x.png */,
 				0BEC698917603BBE00EBD5E8 /* Icon.png */,
 				0BEC698A17603BBE00EBD5E8 /* Icon@2x.png */,
-				0BEC698B17603BBE00EBD5E8 /* iTunesArtwork.png */,
-				0BEC698C17603BBE00EBD5E8 /* iTunesArtwork@2x.png */,
+				0BEC698B17603BBE00EBD5E8 /* iTunesArtwork */,
+				0BEC698C17603BBE00EBD5E8 /* iTunesArtwork@2x */,
 			);
 			name = Icon;
 			sourceTree = "<group>";
@@ -509,6 +514,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BEC699517603D9300EBD5E8 /* iTunesArtwork in Resources */,
+				0BEC699617603D9300EBD5E8 /* iTunesArtwork@2x in Resources */,
 				0B0A6772157C275D00C79FC2 /* InfoPlist.strings in Resources */,
 				0B0A677B157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard in Resources */,
 				0B0A677E157C275E00C79FC2 /* MainStoryboard_iPad.storyboard in Resources */,
@@ -531,6 +538,7 @@
 				0BEC698F17603BBE00EBD5E8 /* Icon.png in Resources */,
 				0BEC699017603BBE00EBD5E8 /* Icon@2x.png in Resources */,
 				0BEC699417603C3500EBD5E8 /* SVProgressHUD.bundle in Resources */,
+				0B6BA76C1762E4CF00216DCE /* SimpleVocab.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
