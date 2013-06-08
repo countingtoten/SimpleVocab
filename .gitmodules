@@ -1,9 +1,6 @@
 [submodule "External/SVProgressHUD"]
 	path = External/SVProgressHUD
 	url = https://github.com/samvermette/SVProgressHUD.git
-[submodule "External/SQLite"]
-	path = External/SQLite
-	url = https://github.com/countingtoten/SQLite-iOS.git
 [submodule "External/FMDB"]
 	path = External/FMDB
 	url = https://github.com/ccgus/fmdb.git
