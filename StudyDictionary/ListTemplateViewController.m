@@ -122,7 +122,7 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         List *list = [self.lists.userOrderedLists objectAtIndex:indexPath.row];
-        //[self.lists removeUserOrderedListsObject:list];
+        [self.lists removeUserOrderedListsObject:list];
         [moc deleteObject:list];
         
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
@@ -130,7 +130,7 @@
         List *list = [NSEntityDescription insertNewObjectForEntityForName:kListEntityName inManagedObjectContext:moc];
         
         list.listName = @"";
-        list.allLists = [[SimpleVocabData sharedInstance] getOrCreateAllLists];
+        [self.lists addUserOrderedListsObject:list];
         
         UITableViewRowAnimation animationStyle = UITableViewRowAnimationFade;
         
@@ -172,8 +172,8 @@
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
     List *listToMove = [self.lists.userOrderedLists objectAtIndex:fromIndexPath.row];
-    [lists removeUserOrderedListsObject:listToMove];
-    [lists insertObject:listToMove inUserOrderedListsAtIndex:toIndexPath.row];
+    [self.lists removeUserOrderedListsObject:listToMove];
+    [self.lists insertObject:listToMove inUserOrderedListsAtIndex:toIndexPath.row];
 }
 
 #pragma mark - Table view delegate

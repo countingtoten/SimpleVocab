@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class List;
 
 @interface Word : NSManagedObject
 
@@ -19,8 +20,8 @@
 
 @interface Word (CoreDataGeneratedAccessors)
 
-- (void)addBelongsToListObject:(NSManagedObject *)value;
-- (void)removeBelongsToListObject:(NSManagedObject *)value;
+- (void)addBelongsToListObject:(List *)value;
+- (void)removeBelongsToListObject:(List *)value;
 - (void)addBelongsToList:(NSSet *)values;
 - (void)removeBelongsToList:(NSSet *)values;
 
