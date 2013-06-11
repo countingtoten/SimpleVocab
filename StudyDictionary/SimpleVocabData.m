@@ -13,7 +13,6 @@
 #import "AllLists.h"
 #import "List.h"
 #import "SearchBarContents.h"
-#import "Settings.h"
 #import "SimpleVocabConstants.h"
 
 @implementation SimpleVocabData
@@ -101,7 +100,7 @@
     return _persistentStoreCoordinator;
 }
 
-#pragma mark - Application Settings
+#pragma mark - Application State
 
 - (SearchBarContents *)searchBarContents {
     SearchBarContents *searchBar;
@@ -148,54 +147,6 @@
         [self.managedObjectContext save:&error];
     } else {
         CLS_LOG(kErrorSearchBarContentsSave);
-    }
-}
-
-- (Settings *)appSettings {
-    Settings *settings;
-    
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:kAppSettingsEntityName inManagedObjectContext:self.managedObjectContext];
-    
-    [request setEntity:entity];
-    
-    NSError *error = nil;
-    NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
-    
-    if (array != nil) {
-        if ([array count] > 0) {
-            settings = [array objectAtIndex:0];
-        }
-    } else {
-        CLS_LOG(kErrorSettingsLoad);
-    }
-    
-    return settings;
-}
-
-- (void)setAppSettings:(Settings *)appSettings {
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:kAppSettingsEntityName inManagedObjectContext:self.managedObjectContext];
-    
-    [request setEntity:entity];
-    
-    NSError *error = nil;
-    NSArray *array = [self.managedObjectContext executeFetchRequest:request error:&error];
-    
-    if (array != nil) {
-        Settings *settings = nil;
-        if ([array count] > 0) {
-            settings = [array objectAtIndex:0];
-        } else {
-            settings = [NSEntityDescription insertNewObjectForEntityForName:kAppSettingsEntityName inManagedObjectContext:self.managedObjectContext];
-        }
-        
-        settings.showAddWordToList = appSettings.showAddWordToList;
-        settings.showEditWordList = appSettings.showEditWordList;
-        
-        [self.managedObjectContext save:&error];
-    } else {
-        CLS_LOG(kErrorSettingsSave);
     }
 }
 
