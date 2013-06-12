@@ -21,9 +21,9 @@
 #define kAddWordToListText  @"Add a word to the list"
 
 // Developer Information
-#define kDeveloperWebsite   @"http://www.simplevocablists.com"
-#define kDeveloperEmail     @"support@simplevocablists.com"
-#define kDeveloperTwitter   @"@test"
+#define kDeveloperWebsite   @"http://www.vocablistcreator.com"
+#define kDeveloperEmail     @"support@vocablistcreator.com"
+#define kDeveloperTwitter   @"@VocabLists"
 
 // Default Cell Texts
 #define kAddListText        @"Add New List"

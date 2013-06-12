@@ -193,10 +193,10 @@
             </objects>
             <point key="canvasLocation" x="1183" y="1140"/>
         </scene>
-        <!--About View Controller - About-->
+        <!--Contact View Controller - About-->
         <scene sceneID="5qx-Yx-Ipa">
             <objects>
-                <tableViewController id="b2T-su-SFC" customClass="AboutViewController" sceneMemberID="viewController">
+                <tableViewController id="b2T-su-SFC" customClass="ContactViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="XT6-4Q-EPR">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -502,11 +502,11 @@
             </objects>
             <point key="canvasLocation" x="1685" y="1140"/>
         </scene>
-        <!--Navigation Controller - About-->
+        <!--Navigation Controller - Contact-->
         <scene sceneID="f8H-Q7-Uz5">
             <objects>
                 <navigationController id="gjP-gk-0sO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About" image="info.png" id="ozv-py-VMI"/>
+                    <tabBarItem key="tabBarItem" title="Contact" image="envelope.png" id="ozv-py-VMI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="S67-fb-36O">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -524,13 +524,13 @@
     </scenes>
     <resources>
         <image name="book.png" width="18" height="26"/>
+        <image name="envelope.png" width="24" height="16"/>
         <image name="flashcards.png" width="24" height="22"/>
-        <image name="info.png" width="28" height="28"/>
         <image name="notepad.png" width="22" height="28"/>
     </resources>
     <classes>
-        <class className="AboutViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutViewController.h"/>
+        <class className="ContactViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContactViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="emailLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="twitterLabel" candidateClass="UILabel"/>

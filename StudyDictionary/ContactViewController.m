@@ -6,16 +6,16 @@
 //  Copyright (c) 2012 Weinert Works. All rights reserved.
 //
 
-#import "AboutViewController.h"
+#import "ContactViewController.h"
 
 #import "SimpleVocabConstants.h"
 
-@interface AboutViewController ()
+@interface ContactViewController ()
 - (void)displayMailComposer;
 - (void)displayTweetComposer;
 @end
 
-@implementation AboutViewController
+@implementation ContactViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

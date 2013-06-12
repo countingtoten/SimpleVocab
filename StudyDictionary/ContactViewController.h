@@ -11,7 +11,7 @@
 #import <Twitter/Twitter.h>
 #import <UIKit/UIKit.h>
 
-@interface AboutViewController : UITableViewController <MFMailComposeViewControllerDelegate> {
+@interface ContactViewController : UITableViewController <MFMailComposeViewControllerDelegate> {
     
 }
 
