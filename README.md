@@ -1,0 +1,4 @@
+SimpleVocab
+===========
+
+A better dictionary
