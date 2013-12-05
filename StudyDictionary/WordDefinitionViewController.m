@@ -63,7 +63,7 @@
                 }
             }
         } else {
-            definitionsFormated = [NSString stringWithFormat:@"Could not find definition for %@, sorry.", wordToDefine.word];
+            definitionsFormated = [NSMutableString stringWithFormat:@"Could not find definition for %@, sorry.", wordToDefine.word];
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{

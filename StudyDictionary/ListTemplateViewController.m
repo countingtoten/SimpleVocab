@@ -27,6 +27,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = kWordListsTitleText;
+    
     self.tableView.allowsSelectionDuringEditing = YES;
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
@@ -81,6 +83,7 @@
         
         List *list = [self.lists.userOrderedLists objectAtIndex:indexPath.row];
         cell.textField.text = list.listName;
+        cell.textField.font = [UIFont systemFontOfSize:kDefaultFontSize];
         cell.textField.delegate = self;
         
         return cell;
@@ -89,7 +92,7 @@
     static NSString *AddCellIdentifier = kAddListCellIdentifier;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:AddCellIdentifier];
     
-    cell.textLabel.text = kAddListText;
+    cell.textLabel.text = kAddListCellText;
     cell.textLabel.textColor = [UIColor grayColor];
     
     return cell;
@@ -102,7 +105,7 @@
     NSUInteger row = indexPath.row;
     if (row < [self.lists.userOrderedLists count]) {
         List *list = [self.lists.userOrderedLists objectAtIndex:row];
-        if ([list.listName isEqualToString:kDefaultListText]) {
+        if ([list.listName isEqualToString:kDefaultListCellText]) {
             return NO;
         }
     }
@@ -195,7 +198,7 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     NSString *listNewName = [textField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if ([listNewName length] == 0) {
-        listNewName = kBlankListText;
+        listNewName = kBlankCellText;
     }
     
     if (![self.listOldName isEqualToString:listNewName]) {

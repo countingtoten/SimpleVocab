@@ -27,6 +27,7 @@
 	
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStyleDone target:self action:@selector(cancelFlashCardSelect)];
     
+    self.title = kSelectFlashCardsTitleText;
     self.navigationItem.rightBarButtonItem = cancelButton;
     self.listsWithWords = [NSMutableArray array];
     
@@ -76,6 +77,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ListCellIdentifier];
     
     cell.textLabel.text = [self.listsWithWords objectAtIndex:indexPath.row];
+    cell.textLabel.font = [UIFont systemFontOfSize:kDefaultFontSize];
     
     return cell;
 }

@@ -84,6 +84,7 @@
     
     Word *word = [self.wordsInListSorted objectAtIndex:indexPath.row];
     cell.textLabel.text = word.word;
+    cell.textLabel.font = [UIFont systemFontOfSize:kDefaultFontSize];
     
     return cell;
 }

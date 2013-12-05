@@ -34,6 +34,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = kSearchTitleText;
+    
     self.dictionary = [WordNetDictionary sharedInstance];
     queue = dispatch_queue_create(kDefaultQueueIdentifier, NULL);
 

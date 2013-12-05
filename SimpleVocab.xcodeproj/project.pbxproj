@@ -15,12 +15,13 @@
 		0B0A6774157C275D00C79FC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A6773157C275D00C79FC2 /* main.m */; };
 		0B0A6778157C275D00C79FC2 /* SimpleVocabAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A6777157C275D00C79FC2 /* SimpleVocabAppDelegate.m */; };
 		0B0A677B157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A6779157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard */; };
-		0B0A677E157C275E00C79FC2 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A677C157C275E00C79FC2 /* MainStoryboard_iPad.storyboard */; };
+		0B0A677E157C275E00C79FC2 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A677C157C275E00C79FC2 /* Main_iPad.storyboard */; };
 		0B0A6794157C275E00C79FC2 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0A6793157C275E00C79FC2 /* SenTestingKit.framework */; };
 		0B0A6795157C275E00C79FC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0A6767157C275D00C79FC2 /* UIKit.framework */; };
 		0B0A6796157C275E00C79FC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0A6769157C275D00C79FC2 /* Foundation.framework */; };
 		0B0A679E157C275E00C79FC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A679C157C275E00C79FC2 /* InfoPlist.strings */; };
 		0B0A67A1157C275E00C79FC2 /* SimpleVocabTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A67A0157C275E00C79FC2 /* SimpleVocabTests.m */; };
+		0B0BF2321803AB7F007DB7DF /* FlashCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BF2311803AB7F007DB7DF /* FlashCardViewController.m */; };
 		0B0CFBF1158E8927000C029C /* ListContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0CFBF0158E8927000C029C /* ListContentsViewController.m */; };
 		0B129D6B15D0D1C900DEE694 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B129D6615D0D1C900DEE694 /* FMDatabase.m */; };
 		0B129D6C15D0D1C900DEE694 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B129D6815D0D1C900DEE694 /* FMDatabaseAdditions.m */; };
@@ -28,6 +29,7 @@
 		0B26B1051623CF4000293D69 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B26B1041623CF4000293D69 /* Social.framework */; };
 		0B2FBDAB172F78B400423EB6 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2FBDAA172F78B400423EB6 /* Crashlytics.framework */; };
 		0B344A1115892E68003C7722 /* EditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B344A1015892E68003C7722 /* EditableTableViewCell.m */; };
+		0B49741417E0080500AC5A09 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B49741317E0080500AC5A09 /* Main_iPhone.storyboard */; };
 		0B53C78815DB79D5009DA3DF /* contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B53C78615DB79D5009DA3DF /* contact.png */; };
 		0B53C78915DB79D5009DA3DF /* contact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B53C78715DB79D5009DA3DF /* contact@2x.png */; };
 		0B53C78C15DB7B0F009DA3DF /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B53C78B15DB7B0F009DA3DF /* ContactViewController.m */; };
@@ -57,7 +59,7 @@
 		0B8FD9FD157E9EC900AE370B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8FD9FC157E9EC900AE370B /* CoreData.framework */; };
 		0BABEA9C16335C8700D0B237 /* SimpleVocabData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BABEA9B16335C8700D0B237 /* SimpleVocabData.m */; };
 		0BADF914162BAD4400C5D89E /* SimpleVocab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BADF912162BAD4400C5D89E /* SimpleVocab.xcdatamodeld */; };
-		0BB50A9915D1FA3800417EDD /* FlashCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB50A9815D1FA3800417EDD /* FlashCardViewController.m */; };
+		0BB50A9915D1FA3800417EDD /* FlashCardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB50A9815D1FA3800417EDD /* FlashCardGameViewController.m */; };
 		0BBC0032157EF3E10062B82F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBC0031157EF3E00062B82F /* ListViewController.m */; };
 		0BBCFFD5157EC1AB0062B82F /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFD4157EC1AB0062B82F /* Word.m */; };
 		0BBCFFD9157EC1AB0062B82F /* SearchBarContents.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFD8157EC1AB0062B82F /* SearchBarContents.m */; };
@@ -98,13 +100,15 @@
 		0B0A6776157C275D00C79FC2 /* SimpleVocabAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleVocabAppDelegate.h; sourceTree = "<group>"; };
 		0B0A6777157C275D00C79FC2 /* SimpleVocabAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleVocabAppDelegate.m; sourceTree = "<group>"; };
 		0B0A677A157C275D00C79FC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		0B0A677D157C275E00C79FC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		0B0A677D157C275E00C79FC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		0B0A6792157C275E00C79FC2 /* SimpleVocabTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleVocabTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B0A6793157C275E00C79FC2 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		0B0A679B157C275E00C79FC2 /* SimpleVocabTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleVocabTests-Info.plist"; sourceTree = "<group>"; };
 		0B0A679D157C275E00C79FC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0B0A679F157C275E00C79FC2 /* SimpleVocabTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleVocabTests.h; sourceTree = "<group>"; };
 		0B0A67A0157C275E00C79FC2 /* SimpleVocabTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleVocabTests.m; sourceTree = "<group>"; };
+		0B0BF2301803AB7F007DB7DF /* FlashCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashCardViewController.h; sourceTree = "<group>"; };
+		0B0BF2311803AB7F007DB7DF /* FlashCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashCardViewController.m; sourceTree = "<group>"; };
 		0B0CFBEF158E8927000C029C /* ListContentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListContentsViewController.h; sourceTree = "<group>"; };
 		0B0CFBF0158E8927000C029C /* ListContentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListContentsViewController.m; sourceTree = "<group>"; };
 		0B129D6515D0D1C900DEE694 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = External/FMDB/src/FMDatabase.h; sourceTree = SOURCE_ROOT; };
@@ -117,6 +121,7 @@
 		0B2FBDAA172F78B400423EB6 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = External/Crashlytics.framework; sourceTree = "<group>"; };
 		0B344A0F15892E68003C7722 /* EditableTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableTableViewCell.h; sourceTree = "<group>"; };
 		0B344A1015892E68003C7722 /* EditableTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableTableViewCell.m; sourceTree = "<group>"; };
+		0B49741317E0080500AC5A09 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		0B53C78615DB79D5009DA3DF /* contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact.png; sourceTree = "<group>"; };
 		0B53C78715DB79D5009DA3DF /* contact@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact@2x.png"; sourceTree = "<group>"; };
 		0B53C78A15DB7B0F009DA3DF /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
@@ -156,8 +161,8 @@
 		0BABEA9A16335C8700D0B237 /* SimpleVocabData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleVocabData.h; sourceTree = "<group>"; };
 		0BABEA9B16335C8700D0B237 /* SimpleVocabData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleVocabData.m; sourceTree = "<group>"; };
 		0BADF913162BAD4400C5D89E /* SimpleVocab.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleVocab.xcdatamodel; sourceTree = "<group>"; };
-		0BB50A9715D1FA3800417EDD /* FlashCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashCardViewController.h; sourceTree = "<group>"; };
-		0BB50A9815D1FA3800417EDD /* FlashCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashCardViewController.m; sourceTree = "<group>"; };
+		0BB50A9715D1FA3800417EDD /* FlashCardGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashCardGameViewController.h; sourceTree = "<group>"; };
+		0BB50A9815D1FA3800417EDD /* FlashCardGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashCardGameViewController.m; sourceTree = "<group>"; };
 		0BBC0030157EF3E00062B82F /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		0BBC0031157EF3E00062B82F /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		0BBCFFD3157EC1AB0062B82F /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
@@ -257,7 +262,8 @@
 				0B0A6777157C275D00C79FC2 /* SimpleVocabAppDelegate.m */,
 				0B713941157D32700018D022 /* SimpleVocabConstants.h */,
 				0B0A6779157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard */,
-				0B0A677C157C275E00C79FC2 /* MainStoryboard_iPad.storyboard */,
+				0B49741317E0080500AC5A09 /* Main_iPhone.storyboard */,
+				0B0A677C157C275E00C79FC2 /* Main_iPad.storyboard */,
 				0B71392D157D2F360018D022 /* DictionarySearchViewController.h */,
 				0B71392E157D2F360018D022 /* DictionarySearchViewController.m */,
 				0B344A0F15892E68003C7722 /* EditableTableViewCell.h */,
@@ -272,8 +278,10 @@
 				0B0CFBF0158E8927000C029C /* ListContentsViewController.m */,
 				0B71395E157D400A0018D022 /* WordDefinitionViewController.h */,
 				0B71395F157D400A0018D022 /* WordDefinitionViewController.m */,
-				0BB50A9715D1FA3800417EDD /* FlashCardViewController.h */,
-				0BB50A9815D1FA3800417EDD /* FlashCardViewController.m */,
+				0BB50A9715D1FA3800417EDD /* FlashCardGameViewController.h */,
+				0BB50A9815D1FA3800417EDD /* FlashCardGameViewController.m */,
+				0B0BF2301803AB7F007DB7DF /* FlashCardViewController.h */,
+				0B0BF2311803AB7F007DB7DF /* FlashCardViewController.m */,
 				0BC722E815D250A700F3AF49 /* FlashCardSelectViewController.h */,
 				0BC722E915D250A800F3AF49 /* FlashCardSelectViewController.m */,
 				0B53C78A15DB7B0F009DA3DF /* ContactViewController.h */,
@@ -407,9 +415,9 @@
 		0BBCFFCA157EBC590062B82F /* Word History Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				0BBCFFDF157EC1AB0062B82F /* AllLists.h */,
 				0BABEA9A16335C8700D0B237 /* SimpleVocabData.h */,
 				0BABEA9B16335C8700D0B237 /* SimpleVocabData.m */,
-				0BBCFFDF157EC1AB0062B82F /* AllLists.h */,
 				0BBCFFE0157EC1AB0062B82F /* AllLists.m */,
 				0BBCFFDB157EC1AB0062B82F /* List.h */,
 				0BBCFFDC157EC1AB0062B82F /* List.m */,
@@ -489,8 +497,13 @@
 		0B0A675A157C275D00C79FC2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Weinert Works";
+				TargetAttributes = {
+					0B0A6762157C275D00C79FC2 = {
+						DevelopmentTeam = HWB2STPFVT;
+					};
+				};
 			};
 			buildConfigurationList = 0B0A675D157C275D00C79FC2 /* Build configuration list for PBXProject "SimpleVocab" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -519,12 +532,13 @@
 				0BEC699617603D9300EBD5E8 /* iTunesArtwork@2x in Resources */,
 				0B0A6772157C275D00C79FC2 /* InfoPlist.strings in Resources */,
 				0B0A677B157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard in Resources */,
-				0B0A677E157C275E00C79FC2 /* MainStoryboard_iPad.storyboard in Resources */,
+				0B0A677E157C275E00C79FC2 /* Main_iPad.storyboard in Resources */,
 				0B713954157D37F70018D022 /* book.png in Resources */,
 				0B713955157D37F70018D022 /* book@2x.png in Resources */,
 				0B713956157D37F70018D022 /* flashcards.png in Resources */,
 				0B713957157D37F70018D022 /* flashcards@2x.png in Resources */,
 				0B713958157D37F70018D022 /* gear.png in Resources */,
+				0B49741417E0080500AC5A09 /* Main_iPhone.storyboard in Resources */,
 				0B713959157D37F70018D022 /* gear@2x.png in Resources */,
 				0B71395A157D37F70018D022 /* info.png in Resources */,
 				0B71395B157D37F70018D022 /* info@2x.png in Resources */,
@@ -592,6 +606,7 @@
 				0B0A6774157C275D00C79FC2 /* main.m in Sources */,
 				0B0A6778157C275D00C79FC2 /* SimpleVocabAppDelegate.m in Sources */,
 				0B71392F157D2F360018D022 /* DictionarySearchViewController.m in Sources */,
+				0B0BF2321803AB7F007DB7DF /* FlashCardViewController.m in Sources */,
 				0B713960157D400A0018D022 /* WordDefinitionViewController.m in Sources */,
 				0B713966157D42930018D022 /* SVProgressHUD.m in Sources */,
 				0BBCFFD5157EC1AB0062B82F /* Word.m in Sources */,
@@ -606,7 +621,7 @@
 				0B129D6B15D0D1C900DEE694 /* FMDatabase.m in Sources */,
 				0B129D6C15D0D1C900DEE694 /* FMDatabaseAdditions.m in Sources */,
 				0B129D6D15D0D1C900DEE694 /* FMResultSet.m in Sources */,
-				0BB50A9915D1FA3800417EDD /* FlashCardViewController.m in Sources */,
+				0BB50A9915D1FA3800417EDD /* FlashCardGameViewController.m in Sources */,
 				0BC722EA15D250A800F3AF49 /* FlashCardSelectViewController.m in Sources */,
 				0B53C78C15DB7B0F009DA3DF /* ContactViewController.m in Sources */,
 				0BADF914162BAD4400C5D89E /* SimpleVocab.xcdatamodeld in Sources */,
@@ -650,12 +665,12 @@
 			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
-		0B0A677C157C275E00C79FC2 /* MainStoryboard_iPad.storyboard */ = {
+		0B0A677C157C275E00C79FC2 /* Main_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0B0A677D157C275E00C79FC2 /* en */,
 			);
-			name = MainStoryboard_iPad.storyboard;
+			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		0B0A679C157C275E00C79FC2 /* InfoPlist.strings */ = {
@@ -673,9 +688,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -693,9 +709,12 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "B39ABA7B-DCC0-4117-B59B-662CF4948C7E";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -706,9 +725,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -719,7 +739,9 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -733,6 +755,8 @@
 		0B0A67A5157C275E00C79FC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -745,6 +769,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = SimpleVocab;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -753,6 +778,8 @@
 		0B0A67A6157C275E00C79FC2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -765,6 +792,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = SimpleVocab;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

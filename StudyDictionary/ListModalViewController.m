@@ -43,6 +43,7 @@
         
         List *list = [self.lists.userOrderedLists objectAtIndex:indexPath.row];
         cell.textField.text = list.listName;
+        cell.textField.font = [UIFont systemFontOfSize:kDefaultFontSize];
         cell.textField.delegate = self;
         
         if ([self.word.belongsToList containsObject:list]) {
@@ -57,7 +58,7 @@
     static NSString *AddCellIdentifier = kAddListCellIdentifier;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:AddCellIdentifier];
     
-    cell.textLabel.text = kAddListText;
+    cell.textLabel.text = kAddListCellText;
     cell.textLabel.textColor = [UIColor grayColor];
     
     return cell;

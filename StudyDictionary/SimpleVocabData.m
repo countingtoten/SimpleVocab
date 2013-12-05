@@ -165,7 +165,7 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:kListEntityName inManagedObjectContext:self.managedObjectContext];
     [request setEntity:entity];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(listName = %@)", kDefaultListText];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(listName = %@)", kDefaultListCellText];
     [request setPredicate:predicate];
     
     NSError *error = nil;
@@ -177,7 +177,7 @@
             list = [listObjects objectAtIndex:0];
         } else {
             list = [NSEntityDescription insertNewObjectForEntityForName:kListEntityName inManagedObjectContext:self.managedObjectContext];
-            list.listName = kDefaultListText;
+            list.listName = kDefaultListCellText;
             
             AllLists *allLists = [self getOrCreateAllLists];
             list.allLists = allLists;

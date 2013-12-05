@@ -16,6 +16,7 @@
 #define kFlashCardFrontFontSize  40
 #define kFlashCardCornerRadius  25
 #define kFlashCardBackTextBorder  10
+#define kFlashCardEdgeBorder    20
 
 // Hint Text
 #define kAddWordToListText  @"Add a word to the list"
@@ -25,10 +26,19 @@
 #define kDeveloperEmail     @"support@vocablistcreator.com"
 #define kDeveloperTwitter   @"@VocabLists"
 
-// Default Cell Texts
-#define kAddListText        @"Add New List"
-#define kDefaultListText    @"Recent Words"
-#define kBlankListText      @"Unnamed Word List"
+// View Titles
+#define kSearchTitleText        @"Dictionary"
+#define kWordListsTitleText     @"Word Lists"
+#define kSelectFlashCardsTitleText  @"Select Flash Cards"
+#define kContactTitleText       @"Contact"
+
+// Cell Texts
+#define kAddListCellText        @"Add New List"
+#define kDefaultListCellText    @"Recent Words"
+#define kBlankCellText          @"Unnamed Word List"
+#define kEmailCellText          @"Email"
+#define kTwitterCellText        @"Twitter"
+#define kWebCellText            @"Web"
 
 // Segues
 #define kSearchToDefinitionSegue        @"WordDefinitionFromSearchSegue"
