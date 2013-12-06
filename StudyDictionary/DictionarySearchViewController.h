@@ -10,7 +10,7 @@
 
 @class WordNetDictionary;
 
-@interface DictionarySearchViewController : UITableViewController <UISearchBarDelegate> {
+@interface DictionarySearchViewController : UITableViewController <UISearchDisplayDelegate, UISearchBarDelegate> {
     NSArray *searchResults;
     WordNetDictionary *dictionary;
 

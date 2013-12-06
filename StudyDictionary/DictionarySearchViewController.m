@@ -21,9 +21,6 @@
 #import "WordNetDictionary.h"
 
 @interface DictionarySearchViewController ()
-- (void)applicationWillResignActive:(NSNotification *)notification;
-- (void)loadSearchBarState;
-- (void)saveSearchBarState;
 - (void)searchForWordFromString:(NSString *)searchString;
 - (Word *)updateWordLookupCount:(NSString *)wordToLookup;
 @end
@@ -37,23 +34,10 @@
     self.title = kSearchTitleText;
     
     self.dictionary = [WordNetDictionary sharedInstance];
-    queue = dispatch_queue_create(kDefaultQueueIdentifier, NULL);
-
-    UIApplication *app = [UIApplication sharedApplication];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(applicationWillResignActive:)
-												 name:UIApplicationWillResignActiveNotification
-											   object:app];
-    
-    [self loadSearchBarState];
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
-}
-
-- (void)applicationWillResignActive:(NSNotification *)notification {
-    [self saveSearchBarState];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -70,27 +54,6 @@
 }
 
 #pragma mark - Core Data Records
-- (void)loadSearchBarState {
-    SimpleVocabData *simpleVocabData = [SimpleVocabData sharedInstance];
-    SearchBarContents *searchBar = simpleVocabData.searchBarContents;
-    
-    if (searchBar.savedSearchString && ![searchBar.savedSearchString isEqualToString:@""]) {
-        [self.searchDisplayController setActive:[searchBar.searchWasActive boolValue]];
-        [self.searchDisplayController.searchBar setText:searchBar.savedSearchString];
-        
-        [self searchForWordFromString:searchBar.savedSearchString];
-    }
-}
-
-- (void)saveSearchBarState {
-    SimpleVocabData *simpleVocabData = [SimpleVocabData sharedInstance];
-    SearchBarContents *searchBar = simpleVocabData.searchBarContents;
-    
-    searchBar.savedSearchString = self.searchDisplayController.searchBar.text;
-    searchBar.searchWasActive = [NSNumber numberWithBool:[[self searchDisplayController] isActive]];
-    
-    simpleVocabData.searchBarContents = searchBar;
-}
 
 - (Word *)updateWordLookupCount:(NSString *)wordToLookup {
     NSManagedObjectContext *moc = [[SimpleVocabData sharedInstance] managedObjectContext];
@@ -138,7 +101,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [searchResults count];
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [self.searchResults count];
+    } else {
+        return 0;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -150,8 +117,10 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.textLabel.font = [UIFont systemFontOfSize:kDefaultFontSize];
     }
-    
-    cell.textLabel.text = [searchResults objectAtIndex:indexPath.row];
+
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        cell.textLabel.text = [searchResults objectAtIndex:indexPath.row];
+    }
     
     return cell;
 }
@@ -162,29 +131,26 @@
     [self performSegueWithIdentifier:kSearchToDefinitionSegue sender:indexPath];
 }
 
-#pragma mark Search Bar
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    [self searchForWordFromString:searchText];
+#pragma mark Search Display Controller delegate
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    [self searchForWordFromString:searchString];
+    
+    return YES;
 }
 
 - (void)searchForWordFromString:(NSString *)searchString {
     NSString *searchStringTrimmed = [searchString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     self.finalSearchText = searchStringTrimmed;
-    dispatch_async(queue, ^{
-        if ([searchStringTrimmed isEqualToString:self.finalSearchText]) {
-            if (searchStringTrimmed != nil && [searchStringTrimmed length] > 0) {
-                self.searchResults = [dictionary searchForWord:searchStringTrimmed];
-            } else {
-                // If the text field changed to an empty string, the user cleared the search bar
-                self.searchResults = nil;
-            }
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.searchDisplayController.searchResultsTableView reloadData];
-            });
+    if ([searchStringTrimmed isEqualToString:self.finalSearchText]) {
+        if (searchStringTrimmed != nil && [searchStringTrimmed length] > 0) {
+            self.searchResults = [dictionary searchForWord:searchStringTrimmed];
+        } else {
+            // If the text field changed to an empty string, the user cleared the search bar
+            self.searchResults = nil;
         }
-    });
+        [self.searchDisplayController.searchResultsTableView reloadData];
+    }
 }
 
 // Apparently the cancel button does not trigger textDidChange when pressed
