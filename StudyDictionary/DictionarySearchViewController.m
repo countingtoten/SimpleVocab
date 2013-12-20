@@ -34,6 +34,7 @@
     self.title = kSearchTitleText;
     
     self.dictionary = [WordNetDictionary sharedInstance];
+    queue = dispatch_queue_create(kDefaultQueueIdentifier, NULL);
 }
 
 - (void)viewDidUnload {
@@ -142,15 +143,19 @@
     NSString *searchStringTrimmed = [searchString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     self.finalSearchText = searchStringTrimmed;
-    if ([searchStringTrimmed isEqualToString:self.finalSearchText]) {
-        if (searchStringTrimmed != nil && [searchStringTrimmed length] > 0) {
-            self.searchResults = [dictionary searchForWord:searchStringTrimmed];
-        } else {
-            // If the text field changed to an empty string, the user cleared the search bar
-            self.searchResults = nil;
+    dispatch_async(queue, ^{
+        if ([searchStringTrimmed isEqualToString:self.finalSearchText]) {
+            NSArray *results = nil;
+            if (searchStringTrimmed != nil && [searchStringTrimmed length] > 0) {
+                 results = [dictionary searchForWord:searchStringTrimmed];
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.searchResults = results;
+                [self.searchDisplayController.searchResultsTableView reloadData];
+            });
         }
-        [self.searchDisplayController.searchResultsTableView reloadData];
-    }
+    });
 }
 
 // Apparently the cancel button does not trigger textDidChange when pressed
