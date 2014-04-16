@@ -224,7 +224,7 @@
                 }];
                 
                 if (idx != NSNotFound) {
-                    listNewName = [tempListName stringByAppendingString:[NSString stringWithFormat:@" %d", i]];
+                    listNewName = [tempListName stringByAppendingString:[NSString stringWithFormat:@" %lu", (unsigned long)i]];
                     i++;
                     hasSameName = YES;
                 }

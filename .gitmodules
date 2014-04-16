@@ -7,3 +7,6 @@
 [submodule "External/WordNetDictionary"]
 	path = External/WordNetDictionary
 	url = https://github.com/countingtoten/WordNetDictionary.git
+[submodule "External/DB5"]
+	path = External/DB5
+	url = https://github.com/quartermaster/DB5.git

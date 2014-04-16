@@ -15,7 +15,6 @@
 #import "SearchBarContents.h"
 #import "SimpleVocabData.h"
 #import "SimpleVocabConstants.h"
-#import "SVProgressHUD.h"
 #import "Word.h"
 #import "WordDefinitionViewController.h"
 #import "WordNetDictionary.h"

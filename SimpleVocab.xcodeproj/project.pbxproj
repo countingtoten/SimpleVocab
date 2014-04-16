@@ -26,6 +26,10 @@
 		0B129D6B15D0D1C900DEE694 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B129D6615D0D1C900DEE694 /* FMDatabase.m */; };
 		0B129D6C15D0D1C900DEE694 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B129D6815D0D1C900DEE694 /* FMDatabaseAdditions.m */; };
 		0B129D6D15D0D1C900DEE694 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B129D6A15D0D1C900DEE694 /* FMResultSet.m */; };
+		0B1809191867885400CA4483 /* VSTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1809161867885400CA4483 /* VSTheme.m */; };
+		0B18091A1867885400CA4483 /* VSThemeLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1809181867885400CA4483 /* VSThemeLoader.m */; };
+		0B18091E1867950700CA4483 /* SimpleVocabTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B18091D1867950700CA4483 /* SimpleVocabTheme.plist */; };
+		0B18092118679E3100CA4483 /* SimpleVocabTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B18092018679E3100CA4483 /* SimpleVocabTheme.m */; };
 		0B26B1051623CF4000293D69 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B26B1041623CF4000293D69 /* Social.framework */; };
 		0B274F8D1855195A00AD63DB /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B274F8B1855195A00AD63DB /* Icon-29.png */; };
 		0B274F8E1855195A00AD63DB /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B274F8C1855195A00AD63DB /* Icon-40.png */; };
@@ -126,6 +130,13 @@
 		0B129D6815D0D1C900DEE694 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = External/FMDB/src/FMDatabaseAdditions.m; sourceTree = SOURCE_ROOT; };
 		0B129D6915D0D1C900DEE694 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = External/FMDB/src/FMResultSet.h; sourceTree = SOURCE_ROOT; };
 		0B129D6A15D0D1C900DEE694 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = External/FMDB/src/FMResultSet.m; sourceTree = SOURCE_ROOT; };
+		0B1809151867885400CA4483 /* VSTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VSTheme.h; path = External/DB5/Source/VSTheme.h; sourceTree = SOURCE_ROOT; };
+		0B1809161867885400CA4483 /* VSTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VSTheme.m; path = External/DB5/Source/VSTheme.m; sourceTree = SOURCE_ROOT; };
+		0B1809171867885400CA4483 /* VSThemeLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VSThemeLoader.h; path = External/DB5/Source/VSThemeLoader.h; sourceTree = SOURCE_ROOT; };
+		0B1809181867885400CA4483 /* VSThemeLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VSThemeLoader.m; path = External/DB5/Source/VSThemeLoader.m; sourceTree = SOURCE_ROOT; };
+		0B18091D1867950700CA4483 /* SimpleVocabTheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SimpleVocabTheme.plist; sourceTree = "<group>"; };
+		0B18091F18679E3100CA4483 /* SimpleVocabTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleVocabTheme.h; sourceTree = "<group>"; };
+		0B18092018679E3100CA4483 /* SimpleVocabTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleVocabTheme.m; sourceTree = "<group>"; };
 		0B26B1041623CF4000293D69 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		0B274F8B1855195A00AD63DB /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-29.png"; path = "Images/Icons/Icon-29.png"; sourceTree = "<group>"; };
 		0B274F8C1855195A00AD63DB /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-40.png"; path = "Images/Icons/Icon-40.png"; sourceTree = "<group>"; };
@@ -276,39 +287,42 @@
 		0B0A676D157C275D00C79FC2 /* SimpleVocab */ = {
 			isa = PBXGroup;
 			children = (
-				0B0A6776157C275D00C79FC2 /* SimpleVocabAppDelegate.h */,
-				0B0A6777157C275D00C79FC2 /* SimpleVocabAppDelegate.m */,
-				0B713941157D32700018D022 /* SimpleVocabConstants.h */,
-				0B0A6779157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard */,
-				0B49741317E0080500AC5A09 /* Main_iPhone.storyboard */,
-				0B0A677C157C275E00C79FC2 /* Main_iPad.storyboard */,
+				0B53C78A15DB7B0F009DA3DF /* ContactViewController.h */,
+				0B53C78B15DB7B0F009DA3DF /* ContactViewController.m */,
 				0B71392D157D2F360018D022 /* DictionarySearchViewController.h */,
 				0B71392E157D2F360018D022 /* DictionarySearchViewController.m */,
 				0B344A0F15892E68003C7722 /* EditableTableViewCell.h */,
 				0B344A1015892E68003C7722 /* EditableTableViewCell.m */,
+				0BB50A9715D1FA3800417EDD /* FlashCardGameViewController.h */,
+				0BB50A9815D1FA3800417EDD /* FlashCardGameViewController.m */,
+				0BC722E815D250A700F3AF49 /* FlashCardSelectViewController.h */,
+				0BC722E915D250A800F3AF49 /* FlashCardSelectViewController.m */,
+				0B0BF2301803AB7F007DB7DF /* FlashCardViewController.h */,
+				0B0BF2311803AB7F007DB7DF /* FlashCardViewController.m */,
+				0B0CFBEF158E8927000C029C /* ListContentsViewController.h */,
+				0B0CFBF0158E8927000C029C /* ListContentsViewController.m */,
+				0B6AAC21158EF1080043FD80 /* ListModalViewController.h */,
+				0B6AAC22158EF1080043FD80 /* ListModalViewController.m */,
 				0B6AAC1C158EF0B30043FD80 /* ListTemplateViewController.h */,
 				0B6AAC1D158EF0B30043FD80 /* ListTemplateViewController.m */,
 				0BBC0030157EF3E00062B82F /* ListViewController.h */,
 				0BBC0031157EF3E00062B82F /* ListViewController.m */,
-				0B6AAC21158EF1080043FD80 /* ListModalViewController.h */,
-				0B6AAC22158EF1080043FD80 /* ListModalViewController.m */,
-				0B0CFBEF158E8927000C029C /* ListContentsViewController.h */,
-				0B0CFBF0158E8927000C029C /* ListContentsViewController.m */,
+				0B0A677C157C275E00C79FC2 /* Main_iPad.storyboard */,
+				0B49741317E0080500AC5A09 /* Main_iPhone.storyboard */,
+				0B0A6779157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard */,
+				0B0A6776157C275D00C79FC2 /* SimpleVocabAppDelegate.h */,
+				0B0A6777157C275D00C79FC2 /* SimpleVocabAppDelegate.m */,
+				0B713941157D32700018D022 /* SimpleVocabConstants.h */,
+				0B18091F18679E3100CA4483 /* SimpleVocabTheme.h */,
+				0B18092018679E3100CA4483 /* SimpleVocabTheme.m */,
 				0B71395E157D400A0018D022 /* WordDefinitionViewController.h */,
 				0B71395F157D400A0018D022 /* WordDefinitionViewController.m */,
-				0BB50A9715D1FA3800417EDD /* FlashCardGameViewController.h */,
-				0BB50A9815D1FA3800417EDD /* FlashCardGameViewController.m */,
-				0B0BF2301803AB7F007DB7DF /* FlashCardViewController.h */,
-				0B0BF2311803AB7F007DB7DF /* FlashCardViewController.m */,
-				0BC722E815D250A700F3AF49 /* FlashCardSelectViewController.h */,
-				0BC722E915D250A800F3AF49 /* FlashCardSelectViewController.m */,
-				0B53C78A15DB7B0F009DA3DF /* ContactViewController.h */,
-				0B53C78B15DB7B0F009DA3DF /* ContactViewController.m */,
+				0B1809141867882C00CA4483 /* DB5 */,
 				0B129D6415D0D1B400DEE694 /* FMDB */,
-				0B713961157D42930018D022 /* SVProgressHUD */,
-				0B0BAD5416734CD1005FA2B0 /* Word Net Dictionary */,
-				0BBCFFCA157EBC590062B82F /* Word History Core Data */,
 				0B0A676E157C275D00C79FC2 /* Supporting Files */,
+				0B713961157D42930018D022 /* SVProgressHUD */,
+				0BBCFFCA157EBC590062B82F /* Word History Core Data */,
+				0B0BAD5416734CD1005FA2B0 /* Word Net Dictionary */,
 			);
 			name = SimpleVocab;
 			path = StudyDictionary;
@@ -318,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				0B713946157D37D20018D022 /* Images */,
+				0B18091D1867950700CA4483 /* SimpleVocabTheme.plist */,
 				0B0A676F157C275D00C79FC2 /* SimpleVocab-Info.plist */,
 				0B0A6770157C275D00C79FC2 /* InfoPlist.strings */,
 				0B0A6773157C275D00C79FC2 /* main.m */,
@@ -368,6 +383,17 @@
 				0B129D6A15D0D1C900DEE694 /* FMResultSet.m */,
 			);
 			name = FMDB;
+			sourceTree = "<group>";
+		};
+		0B1809141867882C00CA4483 /* DB5 */ = {
+			isa = PBXGroup;
+			children = (
+				0B1809151867885400CA4483 /* VSTheme.h */,
+				0B1809161867885400CA4483 /* VSTheme.m */,
+				0B1809171867885400CA4483 /* VSThemeLoader.h */,
+				0B1809181867885400CA4483 /* VSThemeLoader.m */,
+			);
+			name = DB5;
 			sourceTree = "<group>";
 		};
 		0B713946157D37D20018D022 /* Images */ = {
@@ -524,7 +550,8 @@
 		0B0A675A157C275D00C79FC2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastTestingUpgradeCheck = 0510;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Weinert Works";
 				TargetAttributes = {
 					0B0A6762157C275D00C79FC2 = {
@@ -587,6 +614,7 @@
 				0BEC698E17603BBE00EBD5E8 /* Icon-144.png in Resources */,
 				0BEC698F17603BBE00EBD5E8 /* Icon-57.png in Resources */,
 				0BEC699017603BBE00EBD5E8 /* Icon-114.png in Resources */,
+				0B18091E1867950700CA4483 /* SimpleVocabTheme.plist in Resources */,
 				0BEC699417603C3500EBD5E8 /* SVProgressHUD.bundle in Resources */,
 				0B6BA76C1762E4CF00216DCE /* SimpleVocab.sqlite in Resources */,
 				0B728E4E176809C7006A0D70 /* envelope.png in Resources */,
@@ -658,11 +686,14 @@
 				0B129D6C15D0D1C900DEE694 /* FMDatabaseAdditions.m in Sources */,
 				0B129D6D15D0D1C900DEE694 /* FMResultSet.m in Sources */,
 				0BB50A9915D1FA3800417EDD /* FlashCardGameViewController.m in Sources */,
+				0B1809191867885400CA4483 /* VSTheme.m in Sources */,
 				0BC722EA15D250A800F3AF49 /* FlashCardSelectViewController.m in Sources */,
+				0B18092118679E3100CA4483 /* SimpleVocabTheme.m in Sources */,
 				0B53C78C15DB7B0F009DA3DF /* ContactViewController.m in Sources */,
 				0BADF914162BAD4400C5D89E /* SimpleVocab.xcdatamodeld in Sources */,
 				0BABEA9C16335C8700D0B237 /* SimpleVocabData.m in Sources */,
 				0B6C920C167FF9FB00689DEF /* WordNetDictionary.m in Sources */,
+				0B18091A1867885400CA4483 /* VSThemeLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -744,6 +775,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -774,6 +806,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;

@@ -57,7 +57,7 @@
                 if (definitions != nil) {
                     [definitionsFormated appendFormat:@"-%@\n", key];
                     for(NSString *def in definitions) {
-                        [definitionsFormated appendFormat:@"%d. %@\n\n", i, def];
+                        [definitionsFormated appendFormat:@"%ld. %@\n\n", (long)i, def];
                         i++;
                     }
                 }

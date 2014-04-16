@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Default</key>
+	<dict>
+		<key>PartsOfSpeechInOrderOfImportance</key>
+		<array>
+			<string>noun</string>
+			<string>verb</string>
+			<string>adjective</string>
+			<string>adverb</string>
+		</array>
+		<key>DefaultQueueIdentifier</key>
+		<string>com.weinertworks.queue</string>
+		<key>DefaultFontSize</key>
+		<integer>20</integer>
+		<key>FlashCardFontSize</key>
+		<integer>40</integer>
+		<key>FlashCardCornerRadius</key>
+		<integer>25</integer>
+		<key>FlashCardBackTextBorder</key>
+		<integer>10</integer>
+		<key>FlashCardEdgeBorder</key>
+		<integer>20</integer>
+		<key>AddWordToListText</key>
+		<string>Add a word to the list</string>
+		<key>DeveloperWebsite</key>
+		<string>http://www.vocablistcreator.com</string>
+		<key>DeveloperEmail</key>
+		<string>support@vocablistcreator.com</string>
+		<key>DeveloperTwitter</key>
+		<string>@VocabLists</string>
+		<key>SearchTitleText</key>
+		<string>Define</string>
+		<key>WordListsTitleText</key>
+		<string>Word Lists</string>
+		<key>SelectFlashCardsTitleText</key>
+		<string>Select Flash Cards</string>
+		<key>ContactTitleText</key>
+		<string>Contact</string>
+		<key>AddListCellText</key>
+		<string>Add New List</string>
+		<key>DefaultListCellText</key>
+		<string>RecentWords</string>
+		<key>BlankCellText</key>
+		<string>Unnamed Word List</string>
+		<key>EmailCellText</key>
+		<string>Email</string>
+		<key>TwitterCellText</key>
+		<string>Twitter</string>
+		<key>WebCellText</key>
+		<string>Web</string>
+	</dict>
+</dict>
+</plist>
