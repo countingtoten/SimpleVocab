@@ -11,7 +11,6 @@
 		0B0A6772157C275D00C79FC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A6770157C275D00C79FC2 /* InfoPlist.strings */; };
 		0B0A6774157C275D00C79FC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A6773157C275D00C79FC2 /* main.m */; };
 		0B0A6778157C275D00C79FC2 /* SimpleVocabAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A6777157C275D00C79FC2 /* SimpleVocabAppDelegate.m */; };
-		0B0A677B157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A6779157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard */; };
 		0B0A677E157C275E00C79FC2 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A677C157C275E00C79FC2 /* Main_iPad.storyboard */; };
 		0B0A679E157C275E00C79FC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B0A679C157C275E00C79FC2 /* InfoPlist.strings */; };
 		0B0A67A1157C275E00C79FC2 /* SimpleVocabTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A67A0157C275E00C79FC2 /* SimpleVocabTests.m */; };
@@ -97,7 +96,6 @@
 		0B0A6775157C275D00C79FC2 /* SimpleVocab-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleVocab-Prefix.pch"; sourceTree = "<group>"; };
 		0B0A6776157C275D00C79FC2 /* SimpleVocabAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleVocabAppDelegate.h; sourceTree = "<group>"; };
 		0B0A6777157C275D00C79FC2 /* SimpleVocabAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleVocabAppDelegate.m; sourceTree = "<group>"; };
-		0B0A677A157C275D00C79FC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		0B0A677D157C275E00C79FC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		0B0A6792157C275E00C79FC2 /* SimpleVocabTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleVocabTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B0A679B157C275E00C79FC2 /* SimpleVocabTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleVocabTests-Info.plist"; sourceTree = "<group>"; };
@@ -265,7 +263,6 @@
 				0BBC0031157EF3E00062B82F /* ListViewController.m */,
 				0B0A677C157C275E00C79FC2 /* Main_iPad.storyboard */,
 				0B49741317E0080500AC5A09 /* Main_iPhone.storyboard */,
-				0B0A6779157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard */,
 				0B0A6776157C275D00C79FC2 /* SimpleVocabAppDelegate.h */,
 				0B0A6777157C275D00C79FC2 /* SimpleVocabAppDelegate.m */,
 				0B713941157D32700018D022 /* SimpleVocabConstants.h */,
@@ -543,7 +540,6 @@
 				0BEC699617603D9300EBD5E8 /* iTunesArtwork@2x in Resources */,
 				0B0A6772157C275D00C79FC2 /* InfoPlist.strings in Resources */,
 				0B274F8D1855195A00AD63DB /* Icon-29.png in Resources */,
-				0B0A677B157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard in Resources */,
 				0B0A677E157C275E00C79FC2 /* Main_iPad.storyboard in Resources */,
 				0B713954157D37F70018D022 /* book.png in Resources */,
 				0B713955157D37F70018D022 /* book@2x.png in Resources */,
@@ -678,14 +674,6 @@
 				0B0A6771157C275D00C79FC2 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		0B0A6779157C275D00C79FC2 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0B0A677A157C275D00C79FC2 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		0B0A677C157C275E00C79FC2 /* Main_iPad.storyboard */ = {
