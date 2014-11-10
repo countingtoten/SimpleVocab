@@ -18,9 +18,9 @@
     dispatch_queue_t queue;
 }
 
-@property (strong, nonatomic) NSArray *searchResults;
-@property (strong, nonatomic) WordNetDictionary *dictionary;
+@property (nonatomic) NSArray *searchResults;
+@property (nonatomic) WordNetDictionary *dictionary;
 
-@property (strong, nonatomic) NSString *finalSearchText;
+@property (nonatomic) NSString *finalSearchText;
 
 @end

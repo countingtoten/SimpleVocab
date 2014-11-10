@@ -12,7 +12,7 @@
 
 @interface FlashCardGameViewController : UIViewController <UIGestureRecognizerDelegate, FlashCardSelectViewControllerDelegate>
 
-@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapRecognizer;
+@property (nonatomic) IBOutlet UITapGestureRecognizer *tapRecognizer;
 
 - (IBAction)handleTapFrom:(UITapGestureRecognizer *)recognizer;
 

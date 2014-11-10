@@ -10,9 +10,9 @@
 
 @interface FlashCardViewController : UIViewController <UIGestureRecognizerDelegate>
 
-@property (strong, nonatomic) IBOutlet UILabel *cardFront;
-@property (strong, nonatomic) IBOutlet UITextView *cardBack;
-@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapRecognizer;
+@property (nonatomic) IBOutlet UILabel *cardFront;
+@property (nonatomic) IBOutlet UITextView *cardBack;
+@property (nonatomic) IBOutlet UITapGestureRecognizer *tapRecognizer;
 
 - (IBAction)handleTapFrom:(UITapGestureRecognizer *)recognizer;
 

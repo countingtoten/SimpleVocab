@@ -15,8 +15,8 @@
     
 }
 
-@property (strong, nonatomic) IBOutlet UITableViewCell *emailCell;
-@property (strong, nonatomic) IBOutlet UITableViewCell *twitterCell;
-@property (strong, nonatomic) IBOutlet UITableViewCell *webCell;
+@property (nonatomic) IBOutlet UITableViewCell *emailCell;
+@property (nonatomic) IBOutlet UITableViewCell *twitterCell;
+@property (nonatomic) IBOutlet UITableViewCell *webCell;
 
 @end

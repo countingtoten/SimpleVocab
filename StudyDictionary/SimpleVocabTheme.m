@@ -9,7 +9,7 @@
 #import "SimpleVocabTheme.h"
 
 @interface SimpleVocabTheme()
-@property (nonatomic, strong) NSArray *otherThemes;
+@property (nonatomic) NSArray *otherThemes;
 @end
 
 @implementation SimpleVocabTheme

@@ -18,8 +18,8 @@
     NSMutableArray *listsWithWords;
 }
 
-@property (strong, nonatomic) NSMutableArray *listsWithWords;
+@property (nonatomic) NSMutableArray *listsWithWords;
 
-@property (weak, nonatomic) id <FlashCardSelectViewControllerDelegate> delegate;
+@property (nonatomic, weak) id <FlashCardSelectViewControllerDelegate> delegate;
 
 @end

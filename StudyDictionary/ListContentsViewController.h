@@ -17,7 +17,7 @@
     BOOL didViewJustLoad;
 }
 
-@property (strong, nonatomic) List *list;
-@property (strong, nonatomic) NSMutableArray *wordsInListSorted;
+@property (nonatomic) List *list;
+@property (nonatomic) NSMutableArray *wordsInListSorted;
 
 @end

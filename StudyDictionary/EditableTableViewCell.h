@@ -12,6 +12,6 @@
     UITextField *textField;
 }
 
-@property (strong, nonatomic) IBOutlet UITextField *textField;
+@property (nonatomic) IBOutlet UITextField *textField;
 
 @end

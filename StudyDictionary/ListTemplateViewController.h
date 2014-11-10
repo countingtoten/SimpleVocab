@@ -17,7 +17,7 @@
     BOOL didViewJustLoad;
 }
 
-@property (strong, nonatomic) AllLists *lists;
-@property (strong, nonatomic) NSString *listOldName;
+@property (nonatomic) AllLists *lists;
+@property (nonatomic) NSString *listOldName;
 
 @end

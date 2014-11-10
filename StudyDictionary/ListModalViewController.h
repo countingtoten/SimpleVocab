@@ -16,6 +16,6 @@
     Word *word;
 }
 
-@property (strong, nonatomic) Word *word;
+@property (nonatomic) Word *word;
 
 @end

@@ -24,9 +24,9 @@
     NSArray *wholeList;
 }
 
-@property (strong, nonatomic) NSString *currentWord;
-@property (strong, nonatomic) NSMutableArray *wordsInList;
-@property (strong, nonatomic) NSArray *wholeList;
+@property (nonatomic) NSString *currentWord;
+@property (nonatomic) NSMutableArray *wordsInList;
+@property (nonatomic) NSArray *wholeList;
 
 - (void)fillWordList;
 @end
