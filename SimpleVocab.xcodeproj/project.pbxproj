@@ -468,6 +468,7 @@
 				0B0A6760157C275D00C79FC2 /* Frameworks */,
 				0B0A6761157C275D00C79FC2 /* Resources */,
 				0B17619D172A12A4007C73FD /* ShellScript */,
+				0B35A1C11A11C5F500852076 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -611,6 +612,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./External/Crashlytics.framework/run 11bee23f6e449407d34a542118f1d544183478cf 02603ff3611a7e6ad34e59bb6a119254b8819a70b5d35930156522767a7d9667";
+		};
+		0B35A1C11A11C5F500852076 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./Scripts/update_build_number.sh;
 		};
 /* End PBXShellScriptBuildPhase section */
 
