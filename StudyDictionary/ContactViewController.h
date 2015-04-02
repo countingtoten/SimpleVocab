@@ -17,6 +17,5 @@
 
 @property (nonatomic) IBOutlet UITableViewCell *emailCell;
 @property (nonatomic) IBOutlet UITableViewCell *twitterCell;
-@property (nonatomic) IBOutlet UITableViewCell *webCell;
 
 @end

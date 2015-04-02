@@ -16,7 +16,7 @@
 @end
 
 @implementation ContactViewController
-@synthesize emailCell, twitterCell, webCell;
+@synthesize emailCell, twitterCell;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,9 +26,6 @@
     
     twitterCell.textLabel.text = kTwitterCellText;
     twitterCell.textLabel.font = [UIFont systemFontOfSize:kDefaultFontSize];
-    
-    webCell.textLabel.text = kWebCellText;
-    webCell.textLabel.font = [UIFont systemFontOfSize:kDefaultFontSize];
 }
 
 - (void)viewDidUnload {
