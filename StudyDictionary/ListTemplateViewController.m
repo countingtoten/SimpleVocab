@@ -8,8 +8,6 @@
 
 #import "ListTemplateViewController.h"
 
-#import <Crashlytics/Crashlytics.h>
-
 #import "AllLists.h"
 #import "EditableTableViewCell.h"
 #import "List.h"
@@ -144,7 +142,7 @@
     
     NSError *error = nil;
     if (![moc save:&error]) {
-        CLS_LOG(kErrorCommitEditTemplate, error, [error userInfo]);
+//        CLS_LOG(kErrorCommitEditTemplate, error, [error userInfo]);
     }
 }
 

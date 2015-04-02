@@ -16,9 +16,6 @@
 		0B0A67A1157C275E00C79FC2 /* SimpleVocabTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A67A0157C275E00C79FC2 /* SimpleVocabTests.m */; };
 		0B0BF2321803AB7F007DB7DF /* FlashCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BF2311803AB7F007DB7DF /* FlashCardViewController.m */; };
 		0B0CFBF1158E8927000C029C /* ListContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0CFBF0158E8927000C029C /* ListContentsViewController.m */; };
-		0B129D6B15D0D1C900DEE694 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B129D6615D0D1C900DEE694 /* FMDatabase.m */; };
-		0B129D6C15D0D1C900DEE694 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B129D6815D0D1C900DEE694 /* FMDatabaseAdditions.m */; };
-		0B129D6D15D0D1C900DEE694 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B129D6A15D0D1C900DEE694 /* FMResultSet.m */; };
 		0B1809191867885400CA4483 /* VSTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1809161867885400CA4483 /* VSTheme.m */; };
 		0B18091A1867885400CA4483 /* VSThemeLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1809181867885400CA4483 /* VSThemeLoader.m */; };
 		0B18091E1867950700CA4483 /* SimpleVocabTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B18091D1867950700CA4483 /* SimpleVocabTheme.plist */; };
@@ -32,7 +29,6 @@
 		0B274F981855197400AD63DB /* Icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B274F931855197400AD63DB /* Icon-152.png */; };
 		0B274F9B1855198300AD63DB /* Icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B274F991855198300AD63DB /* Icon-512.png */; };
 		0B274F9C1855198300AD63DB /* Icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B274F9A1855198300AD63DB /* Icon-1024.png */; };
-		0B2FBDAB172F78B400423EB6 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2FBDAA172F78B400423EB6 /* Crashlytics.framework */; };
 		0B344A1115892E68003C7722 /* EditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B344A1015892E68003C7722 /* EditableTableViewCell.m */; };
 		0B49741417E0080500AC5A09 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B49741317E0080500AC5A09 /* Main_iPhone.storyboard */; };
 		0B53C78815DB79D5009DA3DF /* contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B53C78615DB79D5009DA3DF /* contact.png */; };
@@ -60,6 +56,11 @@
 		0B728E4F176809C7006A0D70 /* envelope@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B728E4D176809C7006A0D70 /* envelope@2x.png */; };
 		0BABEA9C16335C8700D0B237 /* SimpleVocabData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BABEA9B16335C8700D0B237 /* SimpleVocabData.m */; };
 		0BADF914162BAD4400C5D89E /* SimpleVocab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0BADF912162BAD4400C5D89E /* SimpleVocab.xcdatamodeld */; };
+		0BB30F7E1ACCED1100BF8CB3 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB30F751ACCED1100BF8CB3 /* FMDatabase.m */; };
+		0BB30F7F1ACCED1100BF8CB3 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB30F771ACCED1100BF8CB3 /* FMDatabaseAdditions.m */; };
+		0BB30F801ACCED1100BF8CB3 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB30F791ACCED1100BF8CB3 /* FMDatabasePool.m */; };
+		0BB30F811ACCED1100BF8CB3 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB30F7B1ACCED1100BF8CB3 /* FMDatabaseQueue.m */; };
+		0BB30F821ACCED1100BF8CB3 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB30F7D1ACCED1100BF8CB3 /* FMResultSet.m */; };
 		0BB50A9915D1FA3800417EDD /* FlashCardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB50A9815D1FA3800417EDD /* FlashCardGameViewController.m */; };
 		0BBC0032157EF3E10062B82F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBC0031157EF3E00062B82F /* ListViewController.m */; };
 		0BBCFFD5157EC1AB0062B82F /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBCFFD4157EC1AB0062B82F /* Word.m */; };
@@ -106,12 +107,6 @@
 		0B0BF2311803AB7F007DB7DF /* FlashCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashCardViewController.m; sourceTree = "<group>"; };
 		0B0CFBEF158E8927000C029C /* ListContentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListContentsViewController.h; sourceTree = "<group>"; };
 		0B0CFBF0158E8927000C029C /* ListContentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListContentsViewController.m; sourceTree = "<group>"; };
-		0B129D6515D0D1C900DEE694 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = External/FMDB/src/FMDatabase.h; sourceTree = SOURCE_ROOT; };
-		0B129D6615D0D1C900DEE694 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = External/FMDB/src/FMDatabase.m; sourceTree = SOURCE_ROOT; };
-		0B129D6715D0D1C900DEE694 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = External/FMDB/src/FMDatabaseAdditions.h; sourceTree = SOURCE_ROOT; };
-		0B129D6815D0D1C900DEE694 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = External/FMDB/src/FMDatabaseAdditions.m; sourceTree = SOURCE_ROOT; };
-		0B129D6915D0D1C900DEE694 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = External/FMDB/src/FMResultSet.h; sourceTree = SOURCE_ROOT; };
-		0B129D6A15D0D1C900DEE694 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = External/FMDB/src/FMResultSet.m; sourceTree = SOURCE_ROOT; };
 		0B1809151867885400CA4483 /* VSTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VSTheme.h; path = External/DB5/Source/VSTheme.h; sourceTree = SOURCE_ROOT; };
 		0B1809161867885400CA4483 /* VSTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VSTheme.m; path = External/DB5/Source/VSTheme.m; sourceTree = SOURCE_ROOT; };
 		0B1809171867885400CA4483 /* VSThemeLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VSThemeLoader.h; path = External/DB5/Source/VSThemeLoader.h; sourceTree = SOURCE_ROOT; };
@@ -167,6 +162,17 @@
 		0BABEA9A16335C8700D0B237 /* SimpleVocabData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleVocabData.h; sourceTree = "<group>"; };
 		0BABEA9B16335C8700D0B237 /* SimpleVocabData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleVocabData.m; sourceTree = "<group>"; };
 		0BADF913162BAD4400C5D89E /* SimpleVocab.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleVocab.xcdatamodel; sourceTree = "<group>"; };
+		0BB30F731ACCECF400BF8CB3 /* FMDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		0BB30F741ACCED1100BF8CB3 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		0BB30F751ACCED1100BF8CB3 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		0BB30F761ACCED1100BF8CB3 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		0BB30F771ACCED1100BF8CB3 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		0BB30F781ACCED1100BF8CB3 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		0BB30F791ACCED1100BF8CB3 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		0BB30F7A1ACCED1100BF8CB3 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		0BB30F7B1ACCED1100BF8CB3 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		0BB30F7C1ACCED1100BF8CB3 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		0BB30F7D1ACCED1100BF8CB3 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		0BB50A9715D1FA3800417EDD /* FlashCardGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashCardGameViewController.h; sourceTree = "<group>"; };
 		0BB50A9815D1FA3800417EDD /* FlashCardGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashCardGameViewController.m; sourceTree = "<group>"; };
 		0BBC0030157EF3E00062B82F /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
@@ -196,7 +202,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BEC6985176038C100EBD5E8 /* libsqlite3.dylib in Frameworks */,
-				0B2FBDAB172F78B400423EB6 /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,12 +333,17 @@
 		0B129D6415D0D1B400DEE694 /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
-				0B129D6515D0D1C900DEE694 /* FMDatabase.h */,
-				0B129D6615D0D1C900DEE694 /* FMDatabase.m */,
-				0B129D6715D0D1C900DEE694 /* FMDatabaseAdditions.h */,
-				0B129D6815D0D1C900DEE694 /* FMDatabaseAdditions.m */,
-				0B129D6915D0D1C900DEE694 /* FMResultSet.h */,
-				0B129D6A15D0D1C900DEE694 /* FMResultSet.m */,
+				0BB30F741ACCED1100BF8CB3 /* FMDatabase.h */,
+				0BB30F751ACCED1100BF8CB3 /* FMDatabase.m */,
+				0BB30F761ACCED1100BF8CB3 /* FMDatabaseAdditions.h */,
+				0BB30F771ACCED1100BF8CB3 /* FMDatabaseAdditions.m */,
+				0BB30F781ACCED1100BF8CB3 /* FMDatabasePool.h */,
+				0BB30F791ACCED1100BF8CB3 /* FMDatabasePool.m */,
+				0BB30F7A1ACCED1100BF8CB3 /* FMDatabaseQueue.h */,
+				0BB30F7B1ACCED1100BF8CB3 /* FMDatabaseQueue.m */,
+				0BB30F731ACCECF400BF8CB3 /* FMDB.h */,
+				0BB30F7C1ACCED1100BF8CB3 /* FMResultSet.h */,
+				0BB30F7D1ACCED1100BF8CB3 /* FMResultSet.m */,
 			);
 			name = FMDB;
 			sourceTree = "<group>";
@@ -467,7 +477,6 @@
 				0B0A675F157C275D00C79FC2 /* Sources */,
 				0B0A6760157C275D00C79FC2 /* Frameworks */,
 				0B0A6761157C275D00C79FC2 /* Resources */,
-				0B17619D172A12A4007C73FD /* ShellScript */,
 				0B35A1C11A11C5F500852076 /* ShellScript */,
 			);
 			buildRules = (
@@ -600,19 +609,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
-		0B17619D172A12A4007C73FD /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./External/Crashlytics.framework/run 11bee23f6e449407d34a542118f1d544183478cf 02603ff3611a7e6ad34e59bb6a119254b8819a70b5d35930156522767a7d9667";
-		};
 		0B35A1C11A11C5F500852076 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -646,16 +642,18 @@
 				0BBC0032157EF3E10062B82F /* ListViewController.m in Sources */,
 				0B344A1115892E68003C7722 /* EditableTableViewCell.m in Sources */,
 				0B0CFBF1158E8927000C029C /* ListContentsViewController.m in Sources */,
+				0BB30F801ACCED1100BF8CB3 /* FMDatabasePool.m in Sources */,
+				0BB30F7E1ACCED1100BF8CB3 /* FMDatabase.m in Sources */,
 				0B6AAC1E158EF0B30043FD80 /* ListTemplateViewController.m in Sources */,
 				0B6AAC23158EF1080043FD80 /* ListModalViewController.m in Sources */,
-				0B129D6B15D0D1C900DEE694 /* FMDatabase.m in Sources */,
-				0B129D6C15D0D1C900DEE694 /* FMDatabaseAdditions.m in Sources */,
-				0B129D6D15D0D1C900DEE694 /* FMResultSet.m in Sources */,
+				0BB30F811ACCED1100BF8CB3 /* FMDatabaseQueue.m in Sources */,
+				0BB30F821ACCED1100BF8CB3 /* FMResultSet.m in Sources */,
 				0BB50A9915D1FA3800417EDD /* FlashCardGameViewController.m in Sources */,
 				0B1809191867885400CA4483 /* VSTheme.m in Sources */,
 				0BC722EA15D250A800F3AF49 /* FlashCardSelectViewController.m in Sources */,
 				0B18092118679E3100CA4483 /* SimpleVocabTheme.m in Sources */,
 				0B53C78C15DB7B0F009DA3DF /* ContactViewController.m in Sources */,
+				0BB30F7F1ACCED1100BF8CB3 /* FMDatabaseAdditions.m in Sources */,
 				0BADF914162BAD4400C5D89E /* SimpleVocab.xcdatamodeld in Sources */,
 				0BABEA9C16335C8700D0B237 /* SimpleVocabData.m in Sources */,
 				0B6C920C167FF9FB00689DEF /* WordNetDictionary.m in Sources */,
@@ -733,7 +731,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -741,7 +739,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "B39ABA7B-DCC0-4117-B59B-662CF4948C7E";
 				SDKROOT = iphoneos;
@@ -766,7 +764,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -774,7 +772,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "B39ABA7B-DCC0-4117-B59B-662CF4948C7E";
 				SDKROOT = iphoneos;
@@ -796,9 +794,9 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StudyDictionary/SimpleVocab-Prefix.pch";
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "StudyDictionary/SimpleVocab-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = SimpleVocab;
 				PROVISIONING_PROFILE = "";
@@ -820,9 +818,9 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StudyDictionary/SimpleVocab-Prefix.pch";
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "StudyDictionary/SimpleVocab-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = SimpleVocab;
 				PROVISIONING_PROFILE = "";

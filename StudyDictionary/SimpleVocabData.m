@@ -8,8 +8,6 @@
 
 #import "SimpleVocabData.h"
 
-#import <Crashlytics/Crashlytics.h>
-
 #import "AllLists.h"
 #import "List.h"
 #import "SearchBarContents.h"
@@ -39,7 +37,7 @@
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            CLS_LOG(kErrorCoreDataSave, error, [error userInfo]);
+//            CLS_LOG(kErrorCoreDataSave, error, [error userInfo]);
         }
     }
 }
@@ -87,14 +85,14 @@
         NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"SimpleVocab" ofType:@"sqlite"]];
         
         if (![[NSFileManager defaultManager] copyItemAtURL:preloadURL toURL:storeURL error:&error]) {
-            CLS_LOG(kStatusCopiedCoreDataFile);
+//            CLS_LOG(kStatusCopiedCoreDataFile);
         }
     }
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
 
-        CLS_LOG(kErrorPersistentStore, error, [error userInfo]);
+//        CLS_LOG(kErrorPersistentStore, error, [error userInfo]);
     }
     
     return _persistentStoreCoordinator;
@@ -118,7 +116,7 @@
             searchBar = [array objectAtIndex:0];
         }
     } else {
-        CLS_LOG(kErrorSearchBarContentsLoad);
+//        CLS_LOG(kErrorSearchBarContentsLoad);
     }
     
     return searchBar;
@@ -146,7 +144,7 @@
         
         [self.managedObjectContext save:&error];
     } else {
-        CLS_LOG(kErrorSearchBarContentsSave);
+//        CLS_LOG(kErrorSearchBarContentsSave);
     }
 }
 
@@ -185,7 +183,7 @@
             [self.managedObjectContext save:&error];
         }
     } else {
-        CLS_LOG(kErrorCoreDataLoad, error, [error userInfo]);
+//        CLS_LOG(kErrorCoreDataLoad, error, [error userInfo]);
     }
     
     return list;
@@ -209,7 +207,7 @@
             [self.managedObjectContext save:&error];
         }
     } else {
-        CLS_LOG(kErrorCoreDataLoad, error, [error userInfo]);
+//        CLS_LOG(kErrorCoreDataLoad, error, [error userInfo]);
     }
     
     return allLists;

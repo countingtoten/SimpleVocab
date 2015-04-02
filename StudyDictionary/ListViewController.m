@@ -8,8 +8,6 @@
 
 #import "ListViewController.h"
 
-#import <Crashlytics/Crashlytics.h>
-
 #import "AllLists.h"
 #import "ListContentsViewController.h"
 #import "SimpleVocabData.h"
@@ -62,7 +60,7 @@
         
         NSError *error = nil;
         if (![moc save:&error]) {
-            CLS_LOG(kErrorCommitEditView, error, [error userInfo]);
+//            CLS_LOG(kErrorCommitEditView, error, [error userInfo]);
         }
     }
 }

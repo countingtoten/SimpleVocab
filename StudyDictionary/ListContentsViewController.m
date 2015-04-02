@@ -8,8 +8,6 @@
 
 #import "ListContentsViewController.h"
 
-#import <Crashlytics/Crashlytics.h>
-
 #import "List.h"
 #import "SimpleVocabData.h"
 #import "SimpleVocabConstants.h"
@@ -106,7 +104,7 @@
         
         NSError *error = nil;
         if (![moc save:&error]) {
-            CLS_LOG(kErrorCommitEditContents, error, [error userInfo]);
+//            CLS_LOG(kErrorCommitEditContents, error, [error userInfo]);
         }
     }
 }

@@ -8,8 +8,6 @@
 
 #import "SimpleVocabAppDelegate.h"
 
-#import <Crashlytics/Crashlytics.h>
-
 #import "SimpleVocabData.h"
 
 @implementation SimpleVocabAppDelegate
@@ -17,7 +15,6 @@
 @synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [Crashlytics startWithAPIKey:@"11bee23f6e449407d34a542118f1d544183478cf"];
     
     // Create default list if it doesn't exist
     [[SimpleVocabData sharedInstance] getOrCreateDefaultList];

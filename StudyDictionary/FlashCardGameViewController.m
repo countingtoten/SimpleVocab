@@ -8,7 +8,6 @@
 
 #import "FlashCardGameViewController.h"
 
-#import <Crashlytics/Crashlytics.h>
 #import <QuartzCore/QuartzCore.h>
 
 #import "FlashCardViewController.h"
@@ -158,7 +157,7 @@
             // and we won't have to worry about this
         }
     } else {
-        CLS_LOG(kErrorFlashCardLoad, error, [error userInfo]);
+//        CLS_LOG(kErrorFlashCardLoad, error, [error userInfo]);
     }
     
     NSMutableArray *wordList = [NSMutableArray array];
