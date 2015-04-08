@@ -184,46 +184,6 @@
             </objects>
             <point key="canvasLocation" x="1724" y="-314"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="2gY-nW-IcP">
-            <objects>
-                <tableViewController id="vE8-CH-6bM" customClass="FlashCardSelectViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xcK-Lp-5Gn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FlashCardCell" id="je6-IY-qDc">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="je6-IY-qDc" id="Qii-dx-G0F">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="tjB-YZ-1uY"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LGc-08-ngZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2888" y="429"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="sXW-gm-r52">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="FvF-Tt-WtT" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kKd-4K-Uta">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="vE8-CH-6bM" kind="relationship" relationship="rootViewController" id="ke5-gx-Bqz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BEW-zG-r1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2413" y="429"/>
-        </scene>
         <!--Contact-->
         <scene sceneID="LCp-Lz-ZJC">
             <objects>
@@ -297,98 +257,6 @@
             </objects>
             <point key="canvasLocation" x="737" y="-314"/>
         </scene>
-        <!--Flash Cards-->
-        <scene sceneID="RVN-cD-CQd">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="Rsj-5B-s0e" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Flash Cards" image="flashcards.png" id="Lmm-px-YUS"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fhu-wP-ehQ">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="u2g-ar-fmC" kind="relationship" relationship="rootViewController" id="d2J-K8-uPC"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fhN-f7-sPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="737" y="429"/>
-        </scene>
-        <!--Flash Card Game View Controller-->
-        <scene sceneID="4Kx-wl-p61">
-            <objects>
-                <viewController id="u2g-ar-fmC" customClass="FlashCardGameViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DL9-0Z-xcJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="7xu-Vv-WBO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gJC-eF-2yP">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" id="zGH-rr-cU7">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Select" id="2ub-Iy-n5N">
-                            <connections>
-                                <segue destination="FvF-Tt-WtT" kind="modal" identifier="FlashCardsSelect" id="qvM-Yb-tzO"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TVC-zv-OUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1236" y="429"/>
-        </scene>
-        <!--Flash Card View Controller-->
-        <scene sceneID="9aj-on-8Yp">
-            <objects>
-                <viewController storyboardIdentifier="FlashCardViewController" id="CoR-34-DSU" customClass="FlashCardViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uPM-dL-gDO"/>
-                        <viewControllerLayoutGuide type="bottom" id="v76-WW-MfS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bJh-Og-Jg1">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="15V-zf-ohE" appends="YES" id="sQr-6I-mca"/>
-                        </connections>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
-                    <connections>
-                        <outlet property="cardBack" destination="E09-ji-vtU" id="TQN-za-wr3"/>
-                        <outlet property="cardFront" destination="jEh-ui-WR3" id="8zg-uZ-rph"/>
-                        <outlet property="tapRecognizer" destination="15V-zf-ohE" id="8XH-bc-SFB"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D8e-Jb-MKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="15V-zf-ohE">
-                    <connections>
-                        <action selector="handleTapFrom:" destination="CoR-34-DSU" id="iwP-E0-bTH"/>
-                        <outlet property="delegate" destination="CoR-34-DSU" id="QKX-4R-AYS"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jEh-ui-WR3">
-                    <rect key="frame" x="0.0" y="0.0" width="136" height="79"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="E09-ji-vtU">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
-            </objects>
-            <point key="canvasLocation" x="1782" y="429"/>
-        </scene>
         <!--List Modal View Controller-->
         <scene sceneID="z94-Bm-ZW9">
             <objects>
@@ -456,7 +324,6 @@
     <resources>
         <image name="book.png" width="18" height="26"/>
         <image name="envelope.png" width="24" height="16"/>
-        <image name="flashcards.png" width="24" height="22"/>
         <image name="notepad.png" width="22" height="28"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -796,7 +796,7 @@
 				GCC_PREFIX_HEADER = "StudyDictionary/SimpleVocab-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "StudyDictionary/SimpleVocab-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = SimpleVocab;
 				PROVISIONING_PROFILE = "";
@@ -820,7 +820,7 @@
 				GCC_PREFIX_HEADER = "StudyDictionary/SimpleVocab-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "StudyDictionary/SimpleVocab-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = SimpleVocab;
 				PROVISIONING_PROFILE = "";
